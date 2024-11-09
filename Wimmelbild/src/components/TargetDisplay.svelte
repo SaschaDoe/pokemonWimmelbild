@@ -5,35 +5,55 @@
 </script>
 
 <div class="target-display">
-    <h3>Find this Pokémon:</h3>
-    <img 
-        src={targetPokemon.image} 
-        alt="Target Pokemon" 
-        class="target-image"
-    />
+    <h2>Find this Pokemon:</h2>
+    <img src={targetPokemon.image} alt={targetPokemon.name} />
+    <div class="pokemon-info">
+        <p class="pokemon-name">{targetPokemon.name}</p>
+        <div class="pokemon-types">
+            {#each targetPokemon.types as type}
+                <span class="type-badge">{type}</span>
+            {/each}
+        </div>
+    </div>
 </div>
 
 <style>
     .target-display {
         position: fixed;
         top: 20px;
-        left: 20px;
-        width: 130px;
-        background: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        z-index: 100;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
-    .target-image {
+    .pokemon-info {
+        text-align: center;
+    }
+
+    .pokemon-name {
+        margin: 0.5rem 0;
+        font-weight: bold;
+    }
+
+    .pokemon-types {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .type-badge {
+        background: #4a90e2;
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+    }
+
+    img {
         width: 100px;
         height: 100px;
         object-fit: contain;
-    }
-
-    h3 {
-        margin: 0 0 10px 0;
-        font-size: 1.2rem;
     }
 </style> 

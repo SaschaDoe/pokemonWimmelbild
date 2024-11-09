@@ -1,5 +1,7 @@
 export interface Pokemon {
     id: number;
+    name: string;
+    types: string[];
     x: number;
     y: number;
     size: number;
@@ -27,6 +29,6 @@ export interface IPositionService {
 }
 
 export interface IPokemonService {
-    generatePokemon(position: Position): Pokemon;
+    generatePokemon(position: Position): Promise<Pokemon>;
     getImagePath(id: number): string;
 } 

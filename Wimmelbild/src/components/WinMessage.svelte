@@ -87,25 +87,6 @@
         margin: 0 0 1rem 0;
     }
 
-    .stars {
-        margin: 1rem 0;
-        font-size: 1.5rem;
-    }
-
-    .stars span {
-        display: inline-block;
-        animation: spin 2s ease-in-out infinite;
-        margin: 0 0.5rem;
-    }
-
-    .stars span:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .stars span:nth-child(3) {
-        animation-delay: 0.4s;
-    }
-
     @keyframes bounce {
         from { transform: translateY(0); }
         to { transform: translateY(-10px); }
