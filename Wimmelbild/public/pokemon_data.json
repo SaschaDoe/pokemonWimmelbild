@@ -70,21 +70,21 @@
     "id": "0010",
     "name": "Raupy",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0011",
     "name": "Safcon",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0012",
     "name": "Smettbo",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -92,7 +92,7 @@
     "id": "0013",
     "name": "Hornliu",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -100,7 +100,7 @@
     "id": "0014",
     "name": "Kokuna",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -108,7 +108,7 @@
     "id": "0015",
     "name": "Bibor",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -340,7 +340,7 @@
     "id": "0046",
     "name": "Paras",
     "types": [
-      "Käfer",
+      "Kfer",
       "Pflanze"
     ]
   },
@@ -348,7 +348,7 @@
     "id": "0047",
     "name": "Parasek",
     "types": [
-      "Käfer",
+      "Kfer",
       "Pflanze"
     ]
   },
@@ -356,7 +356,7 @@
     "id": "0048",
     "name": "Bluzuk",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -364,7 +364,7 @@
     "id": "0049",
     "name": "Omot",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -911,7 +911,7 @@
     "id": "0123",
     "name": "Sichlor",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -941,7 +941,7 @@
     "id": "0127",
     "name": "Pinsir",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -1220,7 +1220,7 @@
     "id": "0165",
     "name": "Ledyba",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -1228,7 +1228,7 @@
     "id": "0166",
     "name": "Ledian",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -1236,7 +1236,7 @@
     "id": "0167",
     "name": "Webarak",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -1244,7 +1244,7 @@
     "id": "0168",
     "name": "Ariados",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -1432,7 +1432,7 @@
     "id": "0193",
     "name": "Yanma",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -1515,14 +1515,14 @@
     "id": "0204",
     "name": "Tannza",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0205",
     "name": "Forstellka",
     "types": [
-      "Käfer",
+      "Kfer",
       "Stahl"
     ]
   },
@@ -1575,7 +1575,7 @@
     "id": "0212",
     "name": "Scherox",
     "types": [
-      "Käfer",
+      "Kfer",
       "Stahl"
     ]
   },
@@ -1583,7 +1583,7 @@
     "id": "0213",
     "name": "Pottrott",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gestein"
     ]
   },
@@ -1591,7 +1591,7 @@
     "id": "0214",
     "name": "Skaraborn",
     "types": [
-      "Käfer",
+      "Kfer",
       "Kampf"
     ]
   },
@@ -1971,21 +1971,21 @@
     "id": "0265",
     "name": "Waumpel",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0266",
     "name": "Schaloko",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0267",
     "name": "Papinella",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -1993,14 +1993,14 @@
     "id": "0268",
     "name": "Panekon",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0269",
     "name": "Pudox",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -2111,7 +2111,7 @@
     "id": "0283",
     "name": "Gehweiher",
     "types": [
-      "Käfer",
+      "Kfer",
       "Wasser"
     ]
   },
@@ -2119,7 +2119,7 @@
     "id": "0284",
     "name": "Maskeregen",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -2163,7 +2163,7 @@
     "id": "0290",
     "name": "Nincada",
     "types": [
-      "Käfer",
+      "Kfer",
       "Boden"
     ]
   },
@@ -2171,7 +2171,7 @@
     "id": "0291",
     "name": "Ninjask",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -2179,7 +2179,7 @@
     "id": "0292",
     "name": "Ninjatom",
     "types": [
-      "Käfer",
+      "Kfer",
       "Geist"
     ]
   },
@@ -2335,14 +2335,14 @@
     "id": "0313",
     "name": "Volbeat",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0314",
     "name": "Illumise",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -2593,7 +2593,7 @@
     "name": "Anorith",
     "types": [
       "Gestein",
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -2601,7 +2601,7 @@
     "name": "Armaldo",
     "types": [
       "Gestein",
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -2993,14 +2993,14 @@
     "id": "0401",
     "name": "Zirpurze",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0402",
     "name": "Zirpeise",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -3074,14 +3074,14 @@
     "id": "0412",
     "name": "Burmy",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0413",
     "name": "Burmadame",
     "types": [
-      "Käfer",
+      "Kfer",
       "Pflanze"
     ]
   },
@@ -3089,7 +3089,7 @@
     "id": "0414",
     "name": "Moterpel",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -3097,7 +3097,7 @@
     "id": "0415",
     "name": "Wadribie",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -3105,7 +3105,7 @@
     "id": "0416",
     "name": "Honweisel",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -3367,7 +3367,7 @@
     "name": "Pionskora",
     "types": [
       "Gift",
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -3503,7 +3503,7 @@
     "id": "0469",
     "name": "Yanmega",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -4022,7 +4022,7 @@
     "id": "0540",
     "name": "Strawickl",
     "types": [
-      "Käfer",
+      "Kfer",
       "Pflanze"
     ]
   },
@@ -4030,7 +4030,7 @@
     "id": "0541",
     "name": "Folikon",
     "types": [
-      "Käfer",
+      "Kfer",
       "Pflanze"
     ]
   },
@@ -4038,7 +4038,7 @@
     "id": "0542",
     "name": "Matrifol",
     "types": [
-      "Käfer",
+      "Kfer",
       "Pflanze"
     ]
   },
@@ -4046,7 +4046,7 @@
     "id": "0543",
     "name": "Toxiped",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -4054,7 +4054,7 @@
     "id": "0544",
     "name": "Rollum",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -4062,7 +4062,7 @@
     "id": "0545",
     "name": "Cerapendra",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gift"
     ]
   },
@@ -4152,7 +4152,7 @@
     "id": "0557",
     "name": "Lithomith",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gestein"
     ]
   },
@@ -4160,7 +4160,7 @@
     "id": "0558",
     "name": "Castellith",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gestein"
     ]
   },
@@ -4383,14 +4383,14 @@
     "id": "0588",
     "name": "Laukaps",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0589",
     "name": "Cavalanzas",
     "types": [
-      "Käfer",
+      "Kfer",
       "Stahl"
     ]
   },
@@ -4437,7 +4437,7 @@
     "id": "0595",
     "name": "Wattzapf",
     "types": [
-      "Käfer",
+      "Kfer",
       "Elektro"
     ]
   },
@@ -4445,7 +4445,7 @@
     "id": "0596",
     "name": "Voltula",
     "types": [
-      "Käfer",
+      "Kfer",
       "Elektro"
     ]
   },
@@ -4591,14 +4591,14 @@
     "id": "0616",
     "name": "Schnuthelm",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0617",
     "name": "Hydragil",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -4712,7 +4712,7 @@
     "id": "0632",
     "name": "Fermicula",
     "types": [
-      "Käfer",
+      "Kfer",
       "Stahl"
     ]
   },
@@ -4744,7 +4744,7 @@
     "id": "0636",
     "name": "Ignivor",
     "types": [
-      "Käfer",
+      "Kfer",
       "Feuer"
     ]
   },
@@ -4752,7 +4752,7 @@
     "id": "0637",
     "name": "Ramoth",
     "types": [
-      "Käfer",
+      "Kfer",
       "Feuer"
     ]
   },
@@ -4847,7 +4847,7 @@
     "id": "0649",
     "name": "Genesect",
     "types": [
-      "Käfer",
+      "Kfer",
       "Stahl"
     ]
   },
@@ -4960,21 +4960,21 @@
     "id": "0664",
     "name": "Purmel",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0665",
     "name": "Puponcho",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0666",
     "name": "Vivillon",
     "types": [
-      "Käfer",
+      "Kfer",
       "Flug"
     ]
   },
@@ -5506,14 +5506,14 @@
     "id": "0736",
     "name": "Mabula",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0737",
     "name": "Akkup",
     "types": [
-      "Käfer",
+      "Kfer",
       "Elektro"
     ]
   },
@@ -5521,7 +5521,7 @@
     "id": "0738",
     "name": "Donarion",
     "types": [
-      "Käfer",
+      "Kfer",
       "Elektro"
     ]
   },
@@ -5552,7 +5552,7 @@
     "id": "0742",
     "name": "Wommel",
     "types": [
-      "Käfer",
+      "Kfer",
       "Fee"
     ]
   },
@@ -5560,7 +5560,7 @@
     "id": "0743",
     "name": "Bandelby",
     "types": [
-      "Käfer",
+      "Kfer",
       "Fee"
     ]
   },
@@ -5620,7 +5620,7 @@
     "name": "Araqua",
     "types": [
       "Wasser",
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -5628,7 +5628,7 @@
     "name": "Aranestro",
     "types": [
       "Wasser",
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -5740,7 +5740,7 @@
     "id": "0767",
     "name": "Reilaus",
     "types": [
-      "Käfer",
+      "Kfer",
       "Wasser"
     ]
   },
@@ -5748,7 +5748,7 @@
     "id": "0768",
     "name": "Tectass",
     "types": [
-      "Käfer",
+      "Kfer",
       "Wasser"
     ]
   },
@@ -5949,7 +5949,7 @@
     "id": "0794",
     "name": "Masskito",
     "types": [
-      "Käfer",
+      "Kfer",
       "Kampf"
     ]
   },
@@ -5957,7 +5957,7 @@
     "id": "0795",
     "name": "Schabelle",
     "types": [
-      "Käfer",
+      "Kfer",
       "Kampf"
     ]
   },
@@ -6170,14 +6170,14 @@
     "id": "0824",
     "name": "Sensect",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0825",
     "name": "Keradar",
     "types": [
-      "Käfer",
+      "Kfer",
       "Psycho"
     ]
   },
@@ -6185,7 +6185,7 @@
     "id": "0826",
     "name": "Maritellit",
     "types": [
-      "Käfer",
+      "Kfer",
       "Psycho"
     ]
   },
@@ -6364,7 +6364,7 @@
     "name": "Thermopod",
     "types": [
       "Feuer",
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -6372,7 +6372,7 @@
     "name": "Infernopod",
     "types": [
       "Feuer",
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -6527,7 +6527,7 @@
     "name": "Snomnom",
     "types": [
       "Eis",
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -6535,7 +6535,7 @@
     "name": "Mottineva",
     "types": [
       "Eis",
-      "Käfer"
+      "Kfer"
     ]
   },
   {
@@ -6739,7 +6739,7 @@
     "id": "0900",
     "name": "Axantor",
     "types": [
-      "Käfer",
+      "Kfer",
       "Gestein"
     ]
   },
@@ -6867,28 +6867,28 @@
     "id": "0917",
     "name": "Tarundel",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0918",
     "name": "Spinsidias",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0919",
     "name": "Micrick",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0920",
     "name": "Lextremo",
     "types": [
-      "Käfer",
+      "Kfer",
       "Unlicht"
     ]
   },
@@ -7137,14 +7137,14 @@
     "id": "0953",
     "name": "Relluk",
     "types": [
-      "Käfer"
+      "Kfer"
     ]
   },
   {
     "id": "0954",
     "name": "Skarabaks",
     "types": [
-      "Käfer",
+      "Kfer",
       "Psycho"
     ]
   },
@@ -7403,7 +7403,7 @@
     "id": "0988",
     "name": "Kriechflgel",
     "types": [
-      "Käfer",
+      "Kfer",
       "Kampf"
     ]
   },

@@ -83,10 +83,11 @@
                             height: {pokemon.size}px;
                         "
                         on:click={() => handlePokemonClick(pokemon)}
+                        title="ID: {pokemon.id} - {pokemon.name}"
                     >
                         <img
                             src={pokemon.image}
-                            alt="Pokemon"
+                            alt="{pokemon.name}"
                             class="pokemon-image"
                         />
                     </button>
