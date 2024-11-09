@@ -24,13 +24,29 @@
   const OVERLAP_THRESHOLD = 40;
   const BACKGROUND_WIDTH = 1920;  // adjust to actual width
   const BACKGROUND_HEIGHT = 1080; // adjust to actual height
+  const TARGET_PANEL_WIDTH = 150;  // Width of target panel
+  const TARGET_PANEL_HEIGHT = 150; // Height of target panel
 
   // Generate random position that ensures Pokemon is fully visible
   function getRandomPosition(size: number) {
-    return {
-      x: SCREEN_PADDING + Math.random() * (BACKGROUND_WIDTH - size - SCREEN_PADDING * 2),
-      y: SCREEN_PADDING + Math.random() * (BACKGROUND_HEIGHT - size - SCREEN_PADDING * 2)
-    };
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    
+    // Try first position
+    let x = SCREEN_PADDING + Math.random() * (viewportWidth - size - SCREEN_PADDING * 2);
+    let y = SCREEN_PADDING + Math.random() * (viewportHeight - size - SCREEN_PADDING * 2);
+    
+    // Adjust if position overlaps with target panel
+    if (x < TARGET_PANEL_WIDTH && y < TARGET_PANEL_HEIGHT) {
+      // Move either below panel or to the right of panel
+      if (Math.random() > 0.5) {
+        y = TARGET_PANEL_HEIGHT + SCREEN_PADDING;
+      } else {
+        x = TARGET_PANEL_WIDTH + SCREEN_PADDING;
+      }
+    }
+    
+    return { x, y };
   }
 
   // Check if a new position would overlap with existing Pokemon
@@ -126,7 +142,18 @@
     {#if showWinMessage}
       <div class="win-message">
         <h2>Congratulations! You found the Pokemon!</h2>
-        <button on:click={startNewGame}>Play Again</button>
+        <button class="play-again-btn" on:click={startNewGame}>Play Again</button>
+        <div class="confetti-container">
+          {#each Array(50) as _, i}
+            <div 
+              class="confetti" 
+              style="
+                --delay: {Math.random() * 2}s; 
+                --left: {Math.random() * 100}%;
+              "
+            />
+          {/each}
+        </div>
       </div>
     {/if}
   </div>
@@ -149,9 +176,9 @@
   }
 
   .background-container {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
   }
 
   .background-image {
@@ -178,6 +205,7 @@
     position: fixed;
     top: 20px;
     left: 20px;
+    width: 130px;  /* Explicit width */
     background: white;
     padding: 15px;
     border-radius: 10px;
@@ -198,37 +226,63 @@
     transform: translate(-50%, -50%);
     background: white;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
     text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
     z-index: 1000;
-    animation: pop-in 0.5s ease-out;
   }
 
-  .win-message button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
+  .play-again-btn {
+    padding: 10px 20px;
+    font-size: 1.1em;
     background: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    margin-top: 1rem;
   }
 
-  .win-message button:hover {
+  .play-again-btn:hover {
     background: #45a049;
   }
 
-  @keyframes pop-in {
+  .confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #00ff00,
+      #0000ff,
+      #ffff00,
+      #ff00ff
+    );
+    top: -10px;
+    left: var(--left);
+    animation: fall 3s linear infinite;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes fall {
     0% {
-      transform: translate(-50%, -50%) scale(0.5);
-      opacity: 0;
+      transform: translateY(-10px) rotate(0deg);
+      opacity: 1;
     }
     100% {
-      transform: translate(-50%, -50%) scale(1);
-      opacity: 1;
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
     }
   }
 
