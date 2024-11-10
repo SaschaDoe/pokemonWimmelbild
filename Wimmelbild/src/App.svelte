@@ -15,11 +15,27 @@
         return [...items].sort(() => Math.random() - 0.5).slice(0, count);
     }
 
+    const BERRY_SIZE = 50;
+    const TARGET_PANEL_WIDTH = 200;  // Approximate width of target panel
+    const TARGET_PANEL_HEIGHT = 300; // Approximate height of target panel
+    const SCREEN_PADDING = 20;
+
     function getRandomPosition(): { x: number; y: number } {
-        return {
-            x: Math.random() * (window.innerWidth - 100), // Subtract berry size
-            y: Math.random() * (window.innerHeight - 100) // Subtract berry size
-        };
+        const maxX = window.innerWidth - BERRY_SIZE - SCREEN_PADDING;
+        const maxY = window.innerHeight - BERRY_SIZE - SCREEN_PADDING;
+        
+        // Keep trying until we get a valid position
+        let x, y;
+        do {
+            x = Math.random() * (maxX - SCREEN_PADDING) + SCREEN_PADDING;
+            y = Math.random() * (maxY - SCREEN_PADDING) + SCREEN_PADDING;
+        } while (
+            // Check if position overlaps with target panel
+            x > (window.innerWidth - TARGET_PANEL_WIDTH - BERRY_SIZE) &&
+            y < TARGET_PANEL_HEIGHT
+        );
+
+        return { x, y };
     }
 
     let pokemons: Pokemon[] = [];
@@ -31,6 +47,7 @@
     let selectedBerries: Berry[] = [];
     let targetBerries: Berry[] = [];
     let harvestedBerries: Set<string> = new Set();
+    let harvestingBerries: Set<string> = new Set();
 
     let foundItems: (Pokemon | Berry)[] = [];
     let targets: (Pokemon | Berry)[] = [];
@@ -59,6 +76,7 @@
         isLoading = true;
         harvestedBerries = new Set();
         foundBerryCount = 0;
+        harvestingBerries = new Set();
         
         try {
             const newPokemons: Pokemon[] = [];
@@ -88,10 +106,7 @@
 
             selectedBerries = getRandomItems(berryData, 5).map(berry => ({
                 ...berry,
-                position: {
-                    x: Math.random() * (window.innerWidth - 60),
-                    y: Math.random() * (window.innerHeight - 60)
-                }
+                position: getRandomPosition()
             }));
             
             targetBerries = getRandomItems(selectedBerries, 3);
@@ -118,14 +133,16 @@
                 showWinMessage = true;
             }
         } else {
-            harvestedBerries.add(item.index);
             if (targetBerries.some(berry => berry.index === item.index)) {
+                harvestingBerries.add(item.index);
+                harvestingBerries = harvestingBerries;
                 foundItems = [...foundItems, item];
                 foundBerryCount++;
+            } else {
+                harvestedBerries.add(item.index);
+                harvestedBerries = harvestedBerries;
             }
         }
-
-        harvestedBerries = harvestedBerries;
     }
 
     function closeDetails() {
@@ -179,6 +196,15 @@
                             class="berry-button"
                             style="left: {berry.position?.x}px; top: {berry.position?.y}px;"
                             on:click={() => handleClick(berry)}
+                            class:harvesting={harvestingBerries.has(berry.index)}
+                            on:animationend={() => {
+                                if (harvestingBerries.has(berry.index)) {
+                                    harvestingBerries.delete(berry.index);
+                                    harvestedBerries.add(berry.index);
+                                    harvestingBerries = harvestingBerries;
+                                    harvestedBerries = harvestedBerries;
+                                }
+                            }}
                         >
                             <img 
                                 src={berry.local_image} 
@@ -299,10 +325,30 @@
         transform: scale(1.1);
     }
 
+    .berry-button.harvesting {
+        animation: harvestBerry 0.5s ease-out forwards;
+        pointer-events: none;
+    }
+
     .berry-image {
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+
+    @keyframes harvestBerry {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.5) rotate(180deg);
+            opacity: 0.7;
+        }
+        100% {
+            transform: scale(0) rotate(360deg);
+            opacity: 0;
+        }
     }
 
     .target-panel {
