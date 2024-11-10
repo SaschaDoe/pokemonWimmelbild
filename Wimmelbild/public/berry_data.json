@@ -1,0 +1,410 @@
+[
+  {
+    "index": "01",
+    "name": "Amrenabeere",
+    "image_url": "https://www.pokewiki.de/images/4/47/Itemicon_Amrenabeere.png",
+    "local_image": "berry_images\\01_Amrenabeere.png"
+  },
+  {
+    "index": "02",
+    "name": "Maronbeere",
+    "image_url": "https://www.pokewiki.de/images/6/6c/Itemicon_Maronbeere.png",
+    "local_image": "berry_images\\02_Maronbeere.png"
+  },
+  {
+    "index": "03",
+    "name": "Pirsifbeere",
+    "image_url": "https://www.pokewiki.de/images/9/96/Itemicon_Pirsifbeere.png",
+    "local_image": "berry_images\\03_Pirsifbeere.png"
+  },
+  {
+    "index": "04",
+    "name": "Fragiabeere",
+    "image_url": "https://www.pokewiki.de/images/c/c7/Itemicon_Fragiabeere.png",
+    "local_image": "berry_images\\04_Fragiabeere.png"
+  },
+  {
+    "index": "05",
+    "name": "Wilbirbeere",
+    "image_url": "https://www.pokewiki.de/images/7/77/Itemicon_Wilbirbeere.png",
+    "local_image": "berry_images\\05_Wilbirbeere.png"
+  },
+  {
+    "index": "06",
+    "name": "Jonagobeere",
+    "image_url": "https://www.pokewiki.de/images/c/cb/Itemicon_Jonagobeere.png",
+    "local_image": "berry_images\\06_Jonagobeere.png"
+  },
+  {
+    "index": "07",
+    "name": "Sinelbeere",
+    "image_url": "https://www.pokewiki.de/images/d/db/Itemicon_Sinelbeere.png",
+    "local_image": "berry_images\\07_Sinelbeere.png"
+  },
+  {
+    "index": "08",
+    "name": "Persimbeere",
+    "image_url": "https://www.pokewiki.de/images/7/7e/Itemicon_Persimbeere.png",
+    "local_image": "berry_images\\08_Persimbeere.png"
+  },
+  {
+    "index": "09",
+    "name": "Prunusbeere",
+    "image_url": "https://www.pokewiki.de/images/9/9a/Itemicon_Prunusbeere.png",
+    "local_image": "berry_images\\09_Prunusbeere.png"
+  },
+  {
+    "index": "10",
+    "name": "Tsitrubeere",
+    "image_url": "https://www.pokewiki.de/images/d/d3/Itemicon_Tsitrubeere.png",
+    "local_image": "berry_images\\10_Tsitrubeere.png"
+  },
+  {
+    "index": "11",
+    "name": "Giefebeere",
+    "image_url": "https://www.pokewiki.de/images/b/b8/Itemicon_Giefebeere.png",
+    "local_image": "berry_images\\11_Giefebeere.png"
+  },
+  {
+    "index": "12",
+    "name": "Wikibeere",
+    "image_url": "https://www.pokewiki.de/images/f/f0/Itemicon_Wikibeere.png",
+    "local_image": "berry_images\\12_Wikibeere.png"
+  },
+  {
+    "index": "13",
+    "name": "Magobeere",
+    "image_url": "https://www.pokewiki.de/images/2/28/Itemicon_Magobeere.png",
+    "local_image": "berry_images\\13_Magobeere.png"
+  },
+  {
+    "index": "14",
+    "name": "Gauvebeere",
+    "image_url": "https://www.pokewiki.de/images/e/e9/Itemicon_Gauvebeere.png",
+    "local_image": "berry_images\\14_Gauvebeere.png"
+  },
+  {
+    "index": "15",
+    "name": "Yapabeere",
+    "image_url": "https://www.pokewiki.de/images/f/f4/Itemicon_Yapabeere.png",
+    "local_image": "berry_images\\15_Yapabeere.png"
+  },
+  {
+    "index": "16",
+    "name": "Himmihbeere",
+    "image_url": "https://www.pokewiki.de/images/e/e6/Itemicon_Himmihbeere.png",
+    "local_image": "berry_images\\16_Himmihbeere.png"
+  },
+  {
+    "index": "17",
+    "name": "Morbbeere",
+    "image_url": "https://www.pokewiki.de/images/5/5e/Itemicon_Morbbeere.png",
+    "local_image": "berry_images\\17_Morbbeere.png"
+  },
+  {
+    "index": "18",
+    "name": "Nanabbeere",
+    "image_url": "https://www.pokewiki.de/images/5/59/Itemicon_Nanabbeere.png",
+    "local_image": "berry_images\\18_Nanabbeere.png"
+  },
+  {
+    "index": "19",
+    "name": "Nirbebeere",
+    "image_url": "https://www.pokewiki.de/images/7/79/Itemicon_Nirbebeere.png",
+    "local_image": "berry_images\\19_Nirbebeere.png"
+  },
+  {
+    "index": "20",
+    "name": "Sananabeere",
+    "image_url": "https://www.pokewiki.de/images/9/9b/Itemicon_Sananabeere.png",
+    "local_image": "berry_images\\20_Sananabeere.png"
+  },
+  {
+    "index": "21",
+    "name": "Granabeere",
+    "image_url": "https://www.pokewiki.de/images/9/99/Itemicon_Granabeere.png",
+    "local_image": "berry_images\\21_Granabeere.png"
+  },
+  {
+    "index": "22",
+    "name": "Setangbeere",
+    "image_url": "https://www.pokewiki.de/images/2/2a/Itemicon_Setangbeere.png",
+    "local_image": "berry_images\\22_Setangbeere.png"
+  },
+  {
+    "index": "23",
+    "name": "Qualotbeere",
+    "image_url": "https://www.pokewiki.de/images/0/01/Itemicon_Qualotbeere.png",
+    "local_image": "berry_images\\23_Qualotbeere.png"
+  },
+  {
+    "index": "24",
+    "name": "Honmelbeere",
+    "image_url": "https://www.pokewiki.de/images/9/93/Itemicon_Honmelbeere.png",
+    "local_image": "berry_images\\24_Honmelbeere.png"
+  },
+  {
+    "index": "25",
+    "name": "Labrusbeere",
+    "image_url": "https://www.pokewiki.de/images/f/fd/Itemicon_Labrusbeere.png",
+    "local_image": "berry_images\\25_Labrusbeere.png"
+  },
+  {
+    "index": "26",
+    "name": "Tamotbeere",
+    "image_url": "https://www.pokewiki.de/images/e/e4/Itemicon_Tamotbeere.png",
+    "local_image": "berry_images\\26_Tamotbeere.png"
+  },
+  {
+    "index": "27",
+    "name": "Saimbeere",
+    "image_url": "https://www.pokewiki.de/images/1/17/Itemicon_Saimbeere.png",
+    "local_image": "berry_images\\27_Saimbeere.png"
+  },
+  {
+    "index": "28",
+    "name": "Magostbeere",
+    "image_url": "https://www.pokewiki.de/images/0/0e/Itemicon_Magostbeere.png",
+    "local_image": "berry_images\\28_Magostbeere.png"
+  },
+  {
+    "index": "29",
+    "name": "Rabutabeere",
+    "image_url": "https://www.pokewiki.de/images/0/0c/Itemicon_Rabutabeere.png",
+    "local_image": "berry_images\\29_Rabutabeere.png"
+  },
+  {
+    "index": "30",
+    "name": "Tronzibeere",
+    "image_url": "https://www.pokewiki.de/images/4/41/Itemicon_Tronzibeere.png",
+    "local_image": "berry_images\\30_Tronzibeere.png"
+  },
+  {
+    "index": "31",
+    "name": "Kiwanbeere",
+    "image_url": "https://www.pokewiki.de/images/6/6a/Itemicon_Kiwanbeere.png",
+    "local_image": "berry_images\\31_Kiwanbeere.png"
+  },
+  {
+    "index": "32",
+    "name": "Pallmbeere",
+    "image_url": "https://www.pokewiki.de/images/8/8f/Itemicon_Pallmbeere.png",
+    "local_image": "berry_images\\32_Pallmbeere.png"
+  },
+  {
+    "index": "33",
+    "name": "Wasmelbeere",
+    "image_url": "https://www.pokewiki.de/images/c/c5/Itemicon_Wasmelbeere.png",
+    "local_image": "berry_images\\33_Wasmelbeere.png"
+  },
+  {
+    "index": "34",
+    "name": "Durinbeere",
+    "image_url": "https://www.pokewiki.de/images/c/c8/Itemicon_Durinbeere.png",
+    "local_image": "berry_images\\34_Durinbeere.png"
+  },
+  {
+    "index": "35",
+    "name": "Myrtilbeere",
+    "image_url": "https://www.pokewiki.de/images/4/4f/Itemicon_Myrtilbeere.png",
+    "local_image": "berry_images\\35_Myrtilbeere.png"
+  },
+  {
+    "index": "36",
+    "name": "Koakobeere",
+    "image_url": "https://www.pokewiki.de/images/0/04/Itemicon_Koakobeere.png",
+    "local_image": "berry_images\\36_Koakobeere.png"
+  },
+  {
+    "index": "37",
+    "name": "Foepasbeere",
+    "image_url": "https://www.pokewiki.de/images/b/ba/Itemicon_Foepasbeere.png",
+    "local_image": "berry_images\\37_Foepasbeere.png"
+  },
+  {
+    "index": "38",
+    "name": "Kerzalbeere",
+    "image_url": "https://www.pokewiki.de/images/0/09/Itemicon_Kerzalbeere.png",
+    "local_image": "berry_images\\38_Kerzalbeere.png"
+  },
+  {
+    "index": "39",
+    "name": "Grindobeere",
+    "image_url": "https://www.pokewiki.de/images/4/4a/Itemicon_Grindobeere.png",
+    "local_image": "berry_images\\39_Grindobeere.png"
+  },
+  {
+    "index": "40",
+    "name": "Kiroyabeere",
+    "image_url": "https://www.pokewiki.de/images/a/a7/Itemicon_Kiroyabeere.png",
+    "local_image": "berry_images\\40_Kiroyabeere.png"
+  },
+  {
+    "index": "41",
+    "name": "Rospelbeere",
+    "image_url": "https://www.pokewiki.de/images/f/f0/Itemicon_Rospelbeere.png",
+    "local_image": "berry_images\\41_Rospelbeere.png"
+  },
+  {
+    "index": "42",
+    "name": "Grarzbeere",
+    "image_url": "https://www.pokewiki.de/images/1/1e/Itemicon_Grarzbeere.png",
+    "local_image": "berry_images\\42_Grarzbeere.png"
+  },
+  {
+    "index": "43",
+    "name": "Schukebeere",
+    "image_url": "https://www.pokewiki.de/images/9/95/Itemicon_Schukebeere.png",
+    "local_image": "berry_images\\43_Schukebeere.png"
+  },
+  {
+    "index": "44",
+    "name": "Kobabeere",
+    "image_url": "https://www.pokewiki.de/images/5/55/Itemicon_Kobabeere.png",
+    "local_image": "berry_images\\44_Kobabeere.png"
+  },
+  {
+    "index": "45",
+    "name": "Pyapabeere",
+    "image_url": "https://www.pokewiki.de/images/0/04/Itemicon_Pyapabeere.png",
+    "local_image": "berry_images\\45_Pyapabeere.png"
+  },
+  {
+    "index": "46",
+    "name": "Tanigabeere",
+    "image_url": "https://www.pokewiki.de/images/f/ff/Itemicon_Tanigabeere.png",
+    "local_image": "berry_images\\46_Tanigabeere.png"
+  },
+  {
+    "index": "47",
+    "name": "Chiaribeere",
+    "image_url": "https://www.pokewiki.de/images/2/26/Itemicon_Chiaribeere.png",
+    "local_image": "berry_images\\47_Chiaribeere.png"
+  },
+  {
+    "index": "48",
+    "name": "Zitarzbeere",
+    "image_url": "https://www.pokewiki.de/images/5/53/Itemicon_Zitarzbeere.png",
+    "local_image": "berry_images\\48_Zitarzbeere.png"
+  },
+  {
+    "index": "49",
+    "name": "Terirobeere",
+    "image_url": "https://www.pokewiki.de/images/f/fd/Itemicon_Terirobeere.png",
+    "local_image": "berry_images\\49_Terirobeere.png"
+  },
+  {
+    "index": "50",
+    "name": "Burleobeere",
+    "image_url": "https://www.pokewiki.de/images/5/50/Itemicon_Burleobeere.png",
+    "local_image": "berry_images\\50_Burleobeere.png"
+  },
+  {
+    "index": "51",
+    "name": "Babiribeere",
+    "image_url": "https://www.pokewiki.de/images/d/dd/Itemicon_Babiribeere.png",
+    "local_image": "berry_images\\51_Babiribeere.png"
+  },
+  {
+    "index": "52",
+    "name": "Latchibeere",
+    "image_url": "https://www.pokewiki.de/images/4/4d/Itemicon_Latchibeere.png",
+    "local_image": "berry_images\\52_Latchibeere.png"
+  },
+  {
+    "index": "53",
+    "name": "Lydzibeere",
+    "image_url": "https://www.pokewiki.de/images/4/42/Itemicon_Lydzibeere.png",
+    "local_image": "berry_images\\53_Lydzibeere.png"
+  },
+  {
+    "index": "54",
+    "name": "Linganbeere",
+    "image_url": "https://www.pokewiki.de/images/d/dd/Itemicon_Linganbeere.png",
+    "local_image": "berry_images\\54_Linganbeere.png"
+  },
+  {
+    "index": "55",
+    "name": "Salkabeere",
+    "image_url": "https://www.pokewiki.de/images/a/a1/Itemicon_Salkabeere.png",
+    "local_image": "berry_images\\55_Salkabeere.png"
+  },
+  {
+    "index": "56",
+    "name": "Tahaybeere",
+    "image_url": "https://www.pokewiki.de/images/3/30/Itemicon_Tahaybeere.png",
+    "local_image": "berry_images\\56_Tahaybeere.png"
+  },
+  {
+    "index": "57",
+    "name": "Apikobeere",
+    "image_url": "https://www.pokewiki.de/images/e/eb/Itemicon_Apikobeere.png",
+    "local_image": "berry_images\\57_Apikobeere.png"
+  },
+  {
+    "index": "58",
+    "name": "Lansatbeere",
+    "image_url": "https://www.pokewiki.de/images/d/d6/Itemicon_Lansatbeere.png",
+    "local_image": "berry_images\\58_Lansatbeere.png"
+  },
+  {
+    "index": "59",
+    "name": "Krambobeere",
+    "image_url": "https://www.pokewiki.de/images/6/65/Itemicon_Krambobeere.png",
+    "local_image": "berry_images\\59_Krambobeere.png"
+  },
+  {
+    "index": "60",
+    "name": "Enigmabeere",
+    "image_url": "https://www.pokewiki.de/images/a/af/Itemicon_Enigmabeere.png",
+    "local_image": "berry_images\\60_Enigmabeere.png"
+  },
+  {
+    "index": "61",
+    "name": "Wunfrubeere",
+    "image_url": "https://www.pokewiki.de/images/5/5c/Itemicon_Wunfrubeere.png",
+    "local_image": "berry_images\\61_Wunfrubeere.png"
+  },
+  {
+    "index": "62",
+    "name": "Eipfelbeere",
+    "image_url": "https://www.pokewiki.de/images/b/b1/Itemicon_Eipfelbeere.png",
+    "local_image": "berry_images\\62_Eipfelbeere.png"
+  },
+  {
+    "index": "63",
+    "name": "Jabocabeere",
+    "image_url": "https://www.pokewiki.de/images/3/38/Itemicon_Jabocabeere.png",
+    "local_image": "berry_images\\63_Jabocabeere.png"
+  },
+  {
+    "index": "64",
+    "name": "Roselbeere",
+    "image_url": "https://www.pokewiki.de/images/0/01/Itemicon_Roselbeere.png",
+    "local_image": "berry_images\\64_Roselbeere.png"
+  },
+  {
+    "index": "—",
+    "name": "Hibisbeere",
+    "image_url": "https://www.pokewiki.de/images/8/8d/Itemicon_Hibisbeere.png",
+    "local_image": "berry_images\\Hibisbeere.png"
+  },
+  {
+    "index": "—",
+    "name": "Akibeere",
+    "image_url": "https://www.pokewiki.de/images/a/a5/Itemicon_Akibeere.png",
+    "local_image": "berry_images\\Akibeere.png"
+  },
+  {
+    "index": "—",
+    "name": "Tarabeere",
+    "image_url": "https://www.pokewiki.de/images/2/24/Itemicon_Tarabeere.png",
+    "local_image": "berry_images\\Tarabeere.png"
+  },
+  {
+    "index": "—",
+    "name": "Pfohbeere",
+    "image_url": "https://www.pokewiki.de/images/thumb/8/8b/Itemsprite_Pfohbeere_PLA.png/30px-Itemsprite_Pfohbeere_PLA.png",
+    "local_image": "berry_images\\Pfohbeere.png"
+  }
+]

@@ -6,6 +6,7 @@ export interface Pokemon {
     y: number;
     size: number;
     image: string;
+    url: string;
 }
 
 export interface GameConfig {

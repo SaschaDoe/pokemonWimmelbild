@@ -5,7 +5,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bisasam"
   },
   {
     "id": "0002",
@@ -13,7 +14,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bisaknosp"
   },
   {
     "id": "0003",
@@ -21,21 +23,24 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bisaflor"
   },
   {
     "id": "0004",
     "name": "Glumanda",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Glumanda"
   },
   {
     "id": "0005",
     "name": "Glutexo",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Glutexo"
   },
   {
     "id": "0006",
@@ -43,42 +48,48 @@
     "types": [
       "Feuer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Glurak"
   },
   {
     "id": "0007",
     "name": "Schiggy",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schiggy"
   },
   {
     "id": "0008",
     "name": "Schillok",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schillok"
   },
   {
     "id": "0009",
     "name": "Turtok",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Turtok"
   },
   {
     "id": "0010",
     "name": "Raupy",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Raupy"
   },
   {
     "id": "0011",
     "name": "Safcon",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Safcon"
   },
   {
     "id": "0012",
@@ -86,7 +97,8 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Smettbo"
   },
   {
     "id": "0013",
@@ -94,7 +106,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hornliu"
   },
   {
     "id": "0014",
@@ -102,7 +115,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kokuna"
   },
   {
     "id": "0015",
@@ -110,7 +124,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bibor"
   },
   {
     "id": "0016",
@@ -118,7 +133,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Taubsi"
   },
   {
     "id": "0017",
@@ -126,7 +142,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tauboga"
   },
   {
     "id": "0018",
@@ -134,21 +151,24 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tauboss"
   },
   {
     "id": "0019",
     "name": "Rattfratz",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rattfratz"
   },
   {
     "id": "0020",
     "name": "Rattikarl",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rattikarl"
   },
   {
     "id": "0021",
@@ -156,7 +176,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Habitak"
   },
   {
     "id": "0022",
@@ -164,63 +185,72 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ibitak"
   },
   {
     "id": "0023",
     "name": "Rettan",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rettan"
   },
   {
     "id": "0024",
     "name": "Arbok",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Arbok"
   },
   {
     "id": "0025",
     "name": "Pikachu",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pikachu"
   },
   {
     "id": "0026",
     "name": "Raichu",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Raichu"
   },
   {
     "id": "0027",
     "name": "Sandan",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sandan"
   },
   {
     "id": "0028",
     "name": "Sandamer",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sandamer"
   },
   {
     "id": "0029",
     "name": "Nidoran",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nidoran%E2%99%80"
   },
   {
     "id": "0030",
     "name": "Nidorina",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nidorina"
   },
   {
     "id": "0031",
@@ -228,21 +258,24 @@
     "types": [
       "Gift",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nidoqueen"
   },
   {
     "id": "0032",
     "name": "Nidoran",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nidoran%E2%99%82"
   },
   {
     "id": "0033",
     "name": "Nidorino",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nidorino"
   },
   {
     "id": "0034",
@@ -250,35 +283,40 @@
     "types": [
       "Gift",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nidoking"
   },
   {
     "id": "0035",
     "name": "Piepi",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Piepi"
   },
   {
     "id": "0036",
     "name": "Pixi",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pixi"
   },
   {
     "id": "0037",
     "name": "Vulpix",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Vulpix"
   },
   {
     "id": "0038",
     "name": "Vulnona",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Vulnona"
   },
   {
     "id": "0039",
@@ -286,7 +324,8 @@
     "types": [
       "Normal",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pummeluff"
   },
   {
     "id": "0040",
@@ -294,7 +333,8 @@
     "types": [
       "Normal",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knuddeluff"
   },
   {
     "id": "0041",
@@ -302,7 +342,8 @@
     "types": [
       "Gift",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zubat"
   },
   {
     "id": "0042",
@@ -310,7 +351,8 @@
     "types": [
       "Gift",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Golbat"
   },
   {
     "id": "0043",
@@ -318,7 +360,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Myrapla"
   },
   {
     "id": "0044",
@@ -326,7 +369,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Duflor"
   },
   {
     "id": "0045",
@@ -334,7 +378,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Giflor"
   },
   {
     "id": "0046",
@@ -342,7 +387,8 @@
     "types": [
       "Kfer",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Paras"
   },
   {
     "id": "0047",
@@ -350,7 +396,8 @@
     "types": [
       "Kfer",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Parasek"
   },
   {
     "id": "0048",
@@ -358,7 +405,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bluzuk"
   },
   {
     "id": "0049",
@@ -366,91 +414,104 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Omot"
   },
   {
     "id": "0050",
     "name": "Digda",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Digda"
   },
   {
     "id": "0051",
     "name": "Digdri",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Digdri"
   },
   {
     "id": "0052",
     "name": "Mauzi",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mauzi"
   },
   {
     "id": "0053",
     "name": "Snobilikat",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Snobilikat"
   },
   {
     "id": "0054",
     "name": "Enton",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Enton"
   },
   {
     "id": "0055",
     "name": "Entoron",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Entoron"
   },
   {
     "id": "0056",
     "name": "Menki",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Menki"
   },
   {
     "id": "0057",
     "name": "Rasaff",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rasaff"
   },
   {
     "id": "0058",
     "name": "Fukano",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fukano"
   },
   {
     "id": "0059",
     "name": "Arkani",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Arkani"
   },
   {
     "id": "0060",
     "name": "Quapsel",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Quapsel"
   },
   {
     "id": "0061",
     "name": "Quaputzi",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Quaputzi"
   },
   {
     "id": "0062",
@@ -458,49 +519,56 @@
     "types": [
       "Wasser",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Quappo"
   },
   {
     "id": "0063",
     "name": "Abra",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Abra"
   },
   {
     "id": "0064",
     "name": "Kadabra",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kadabra"
   },
   {
     "id": "0065",
     "name": "Simsala",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Simsala"
   },
   {
     "id": "0066",
     "name": "Machollo",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Machollo"
   },
   {
     "id": "0067",
     "name": "Maschock",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Maschock"
   },
   {
     "id": "0068",
     "name": "Machomei",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Machomei"
   },
   {
     "id": "0069",
@@ -508,7 +576,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knofensa"
   },
   {
     "id": "0070",
@@ -516,7 +585,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ultrigaria"
   },
   {
     "id": "0071",
@@ -524,7 +594,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sarzenia"
   },
   {
     "id": "0072",
@@ -532,7 +603,8 @@
     "types": [
       "Wasser",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tentacha"
   },
   {
     "id": "0073",
@@ -540,7 +612,8 @@
     "types": [
       "Wasser",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tentoxa"
   },
   {
     "id": "0074",
@@ -548,7 +621,8 @@
     "types": [
       "Gestein",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kleinstein"
   },
   {
     "id": "0075",
@@ -556,7 +630,8 @@
     "types": [
       "Gestein",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Georok"
   },
   {
     "id": "0076",
@@ -564,21 +639,24 @@
     "types": [
       "Gestein",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Geowaz"
   },
   {
     "id": "0077",
     "name": "Ponita",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ponita"
   },
   {
     "id": "0078",
     "name": "Gallopa",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gallopa"
   },
   {
     "id": "0079",
@@ -586,7 +664,8 @@
     "types": [
       "Wasser",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flegmon"
   },
   {
     "id": "0080",
@@ -594,7 +673,8 @@
     "types": [
       "Wasser",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lahmus"
   },
   {
     "id": "0081",
@@ -602,7 +682,8 @@
     "types": [
       "Elektro",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Magnetilo"
   },
   {
     "id": "0082",
@@ -610,7 +691,8 @@
     "types": [
       "Elektro",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Magneton"
   },
   {
     "id": "0083",
@@ -618,7 +700,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Porenta"
   },
   {
     "id": "0084",
@@ -626,7 +709,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dodu"
   },
   {
     "id": "0085",
@@ -634,14 +718,16 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dodri"
   },
   {
     "id": "0086",
     "name": "Jurob",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Jurob"
   },
   {
     "id": "0087",
@@ -649,28 +735,32 @@
     "types": [
       "Wasser",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Jugong"
   },
   {
     "id": "0088",
     "name": "Sleima",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sleima"
   },
   {
     "id": "0089",
     "name": "Sleimok",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sleimok"
   },
   {
     "id": "0090",
     "name": "Muschas",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Muschas"
   },
   {
     "id": "0091",
@@ -678,7 +768,8 @@
     "types": [
       "Wasser",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Austos"
   },
   {
     "id": "0092",
@@ -686,7 +777,8 @@
     "types": [
       "Geist",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nebulak"
   },
   {
     "id": "0093",
@@ -694,7 +786,8 @@
     "types": [
       "Geist",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Alpollo"
   },
   {
     "id": "0094",
@@ -702,7 +795,8 @@
     "types": [
       "Geist",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gengar"
   },
   {
     "id": "0095",
@@ -710,49 +804,56 @@
     "types": [
       "Gestein",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Onix"
   },
   {
     "id": "0096",
     "name": "Traumato",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Traumato"
   },
   {
     "id": "0097",
     "name": "Hypno",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hypno"
   },
   {
     "id": "0098",
     "name": "Krabby",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krabby"
   },
   {
     "id": "0099",
     "name": "Kingler",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kingler"
   },
   {
     "id": "0100",
     "name": "Voltobal",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voltobal"
   },
   {
     "id": "0101",
     "name": "Lektrobal",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lektrobal"
   },
   {
     "id": "0102",
@@ -760,7 +861,8 @@
     "types": [
       "Pflanze",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Owei"
   },
   {
     "id": "0103",
@@ -768,56 +870,64 @@
     "types": [
       "Pflanze",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kokowei"
   },
   {
     "id": "0104",
     "name": "Tragosso",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tragosso"
   },
   {
     "id": "0105",
     "name": "Knogga",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knogga"
   },
   {
     "id": "0106",
     "name": "Kicklee",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kicklee"
   },
   {
     "id": "0107",
     "name": "Nockchan",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nockchan"
   },
   {
     "id": "0108",
     "name": "Schlurp",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schlurp"
   },
   {
     "id": "0109",
     "name": "Smogon",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Smogon"
   },
   {
     "id": "0110",
     "name": "Smogmog",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Smogmog"
   },
   {
     "id": "0111",
@@ -825,7 +935,8 @@
     "types": [
       "Boden",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rihorn"
   },
   {
     "id": "0112",
@@ -833,63 +944,72 @@
     "types": [
       "Boden",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rizeros"
   },
   {
     "id": "0113",
     "name": "Chaneira",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chaneira"
   },
   {
     "id": "0114",
     "name": "Tangela",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tangela"
   },
   {
     "id": "0115",
     "name": "Kangama",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kangama"
   },
   {
     "id": "0116",
     "name": "Seeper",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Seeper"
   },
   {
     "id": "0117",
     "name": "Seemon",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Seemon"
   },
   {
     "id": "0118",
     "name": "Goldini",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Goldini"
   },
   {
     "id": "0119",
     "name": "Golking",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Golking"
   },
   {
     "id": "0120",
     "name": "Sterndu",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sterndu"
   },
   {
     "id": "0121",
@@ -897,7 +1017,8 @@
     "types": [
       "Wasser",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Starmie"
   },
   {
     "id": "0122",
@@ -905,7 +1026,8 @@
     "types": [
       "Psycho",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pantimos"
   },
   {
     "id": "0123",
@@ -913,7 +1035,8 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sichlor"
   },
   {
     "id": "0124",
@@ -921,42 +1044,48 @@
     "types": [
       "Eis",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rossana"
   },
   {
     "id": "0125",
     "name": "Elektek",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Elektek"
   },
   {
     "id": "0126",
     "name": "Magmar",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Magmar"
   },
   {
     "id": "0127",
     "name": "Pinsir",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pinsir"
   },
   {
     "id": "0128",
     "name": "Tauros",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tauros"
   },
   {
     "id": "0129",
     "name": "Karpador",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Karpador"
   },
   {
     "id": "0130",
@@ -964,7 +1093,8 @@
     "types": [
       "Wasser",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Garados"
   },
   {
     "id": "0131",
@@ -972,49 +1102,56 @@
     "types": [
       "Wasser",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lapras"
   },
   {
     "id": "0132",
     "name": "Ditto",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ditto"
   },
   {
     "id": "0133",
     "name": "Evoli",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Evoli"
   },
   {
     "id": "0134",
     "name": "Aquana",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Aquana"
   },
   {
     "id": "0135",
     "name": "Blitza",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Blitza"
   },
   {
     "id": "0136",
     "name": "Flamara",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flamara"
   },
   {
     "id": "0137",
     "name": "Porygon",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Porygon"
   },
   {
     "id": "0138",
@@ -1022,7 +1159,8 @@
     "types": [
       "Gestein",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Amonitas"
   },
   {
     "id": "0139",
@@ -1030,7 +1168,8 @@
     "types": [
       "Gestein",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Amoroso"
   },
   {
     "id": "0140",
@@ -1038,7 +1177,8 @@
     "types": [
       "Gestein",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kabuto"
   },
   {
     "id": "0141",
@@ -1046,7 +1186,8 @@
     "types": [
       "Gestein",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kabutops"
   },
   {
     "id": "0142",
@@ -1054,14 +1195,16 @@
     "types": [
       "Gestein",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Aerodactyl"
   },
   {
     "id": "0143",
     "name": "Relaxo",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Relaxo"
   },
   {
     "id": "0144",
@@ -1069,7 +1212,8 @@
     "types": [
       "Eis",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Arktos"
   },
   {
     "id": "0145",
@@ -1077,7 +1221,8 @@
     "types": [
       "Elektro",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zapdos"
   },
   {
     "id": "0146",
@@ -1085,21 +1230,24 @@
     "types": [
       "Feuer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lavados"
   },
   {
     "id": "0147",
     "name": "Dratini",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dratini"
   },
   {
     "id": "0148",
     "name": "Dragonir",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dragonir"
   },
   {
     "id": "0149",
@@ -1107,98 +1255,112 @@
     "types": [
       "Drache",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dragoran"
   },
   {
     "id": "0150",
     "name": "Mewtu",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mewtu"
   },
   {
     "id": "0151",
     "name": "Mew",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mew"
   },
   {
     "id": "0152",
     "name": "Endivie",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Endivie"
   },
   {
     "id": "0153",
     "name": "Lorblatt",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lorblatt"
   },
   {
     "id": "0154",
     "name": "Meganie",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Meganie"
   },
   {
     "id": "0155",
     "name": "Feurigel",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Feurigel"
   },
   {
     "id": "0156",
     "name": "Igelavar",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Igelavar"
   },
   {
     "id": "0157",
     "name": "Tornupto",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tornupto"
   },
   {
     "id": "0158",
     "name": "Karnimani",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Karnimani"
   },
   {
     "id": "0159",
     "name": "Tyracroc",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tyracroc"
   },
   {
     "id": "0160",
     "name": "Impergator",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Impergator"
   },
   {
     "id": "0161",
     "name": "Wiesor",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wiesor"
   },
   {
     "id": "0162",
     "name": "Wiesenior",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wiesenior"
   },
   {
     "id": "0163",
@@ -1206,7 +1368,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hoothoot"
   },
   {
     "id": "0164",
@@ -1214,7 +1377,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Noctuh"
   },
   {
     "id": "0165",
@@ -1222,7 +1386,8 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ledyba"
   },
   {
     "id": "0166",
@@ -1230,7 +1395,8 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ledian"
   },
   {
     "id": "0167",
@@ -1238,7 +1404,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Webarak"
   },
   {
     "id": "0168",
@@ -1246,7 +1413,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ariados"
   },
   {
     "id": "0169",
@@ -1254,7 +1422,8 @@
     "types": [
       "Gift",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Iksbat"
   },
   {
     "id": "0170",
@@ -1262,7 +1431,8 @@
     "types": [
       "Wasser",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lampi"
   },
   {
     "id": "0171",
@@ -1270,21 +1440,24 @@
     "types": [
       "Wasser",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lanturn"
   },
   {
     "id": "0172",
     "name": "Pichu",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pichu"
   },
   {
     "id": "0173",
     "name": "Pii",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pii"
   },
   {
     "id": "0174",
@@ -1292,14 +1465,16 @@
     "types": [
       "Normal",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fluffeluff"
   },
   {
     "id": "0175",
     "name": "Togepi",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Togepi"
   },
   {
     "id": "0176",
@@ -1307,7 +1482,8 @@
     "types": [
       "Fee",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Togetic"
   },
   {
     "id": "0177",
@@ -1315,7 +1491,8 @@
     "types": [
       "Psycho",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Natu"
   },
   {
     "id": "0178",
@@ -1323,35 +1500,40 @@
     "types": [
       "Psycho",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Xatu"
   },
   {
     "id": "0179",
     "name": "Voltilamm",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voltilamm"
   },
   {
     "id": "0180",
     "name": "Waaty",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Waaty"
   },
   {
     "id": "0181",
     "name": "Ampharos",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ampharos"
   },
   {
     "id": "0182",
     "name": "Blubella",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Blubella"
   },
   {
     "id": "0183",
@@ -1359,7 +1541,8 @@
     "types": [
       "Wasser",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Marill"
   },
   {
     "id": "0184",
@@ -1367,21 +1550,24 @@
     "types": [
       "Wasser",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Azumarill"
   },
   {
     "id": "0185",
     "name": "Mogelbaum",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mogelbaum"
   },
   {
     "id": "0186",
     "name": "Quaxo",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Quaxo"
   },
   {
     "id": "0187",
@@ -1389,7 +1575,8 @@
     "types": [
       "Pflanze",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hoppspross"
   },
   {
     "id": "0188",
@@ -1397,7 +1584,8 @@
     "types": [
       "Pflanze",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hubelupf"
   },
   {
     "id": "0189",
@@ -1405,28 +1593,32 @@
     "types": [
       "Pflanze",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Papungha"
   },
   {
     "id": "0190",
     "name": "Griffel",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Griffel"
   },
   {
     "id": "0191",
     "name": "Sonnkern",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sonnkern"
   },
   {
     "id": "0192",
     "name": "Sonnflora",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sonnflora"
   },
   {
     "id": "0193",
@@ -1434,7 +1626,8 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Yanma"
   },
   {
     "id": "0194",
@@ -1442,7 +1635,8 @@
     "types": [
       "Wasser",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Felino"
   },
   {
     "id": "0195",
@@ -1450,21 +1644,24 @@
     "types": [
       "Wasser",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Morlord"
   },
   {
     "id": "0196",
     "name": "Psiana",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Psiana"
   },
   {
     "id": "0197",
     "name": "Nachtara",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nachtara"
   },
   {
     "id": "0198",
@@ -1472,7 +1669,8 @@
     "types": [
       "Unlicht",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kramurx"
   },
   {
     "id": "0199",
@@ -1480,28 +1678,32 @@
     "types": [
       "Wasser",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Laschoking"
   },
   {
     "id": "0200",
     "name": "Traunfugil",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Traunfugil"
   },
   {
     "id": "0201",
     "name": "Icognito",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Icognito"
   },
   {
     "id": "0202",
     "name": "Woingenau",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Woingenau"
   },
   {
     "id": "0203",
@@ -1509,14 +1711,16 @@
     "types": [
       "Normal",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Girafarig"
   },
   {
     "id": "0204",
     "name": "Tannza",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tannza"
   },
   {
     "id": "0205",
@@ -1524,14 +1728,16 @@
     "types": [
       "Kfer",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Forstellka"
   },
   {
     "id": "0206",
     "name": "Dummisel",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dummisel"
   },
   {
     "id": "0207",
@@ -1539,7 +1745,8 @@
     "types": [
       "Boden",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Skorgla"
   },
   {
     "id": "0208",
@@ -1547,21 +1754,24 @@
     "types": [
       "Stahl",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Stahlos"
   },
   {
     "id": "0209",
     "name": "Snubbull",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Snubbull"
   },
   {
     "id": "0210",
     "name": "Granbull",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Granbull"
   },
   {
     "id": "0211",
@@ -1569,7 +1779,8 @@
     "types": [
       "Wasser",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Baldorfish"
   },
   {
     "id": "0212",
@@ -1577,7 +1788,8 @@
     "types": [
       "Kfer",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Scherox"
   },
   {
     "id": "0213",
@@ -1585,7 +1797,8 @@
     "types": [
       "Kfer",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pottrott"
   },
   {
     "id": "0214",
@@ -1593,7 +1806,8 @@
     "types": [
       "Kfer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Skaraborn"
   },
   {
     "id": "0215",
@@ -1601,28 +1815,32 @@
     "types": [
       "Unlicht",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sniebel"
   },
   {
     "id": "0216",
     "name": "Teddiursa",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Teddiursa"
   },
   {
     "id": "0217",
     "name": "Ursaring",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ursaring"
   },
   {
     "id": "0218",
     "name": "Schneckmag",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schneckmag"
   },
   {
     "id": "0219",
@@ -1630,7 +1848,8 @@
     "types": [
       "Feuer",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Magcargo"
   },
   {
     "id": "0220",
@@ -1638,7 +1857,8 @@
     "types": [
       "Eis",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Quiekel"
   },
   {
     "id": "0221",
@@ -1646,7 +1866,8 @@
     "types": [
       "Eis",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Keifel"
   },
   {
     "id": "0222",
@@ -1654,21 +1875,24 @@
     "types": [
       "Wasser",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Corasonn"
   },
   {
     "id": "0223",
     "name": "Remoraid",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Remoraid"
   },
   {
     "id": "0224",
     "name": "Octillery",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Octillery"
   },
   {
     "id": "0225",
@@ -1676,7 +1900,8 @@
     "types": [
       "Eis",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Botogel"
   },
   {
     "id": "0226",
@@ -1684,7 +1909,8 @@
     "types": [
       "Wasser",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mantax"
   },
   {
     "id": "0227",
@@ -1692,7 +1918,8 @@
     "types": [
       "Stahl",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Panzaeron"
   },
   {
     "id": "0228",
@@ -1700,7 +1927,8 @@
     "types": [
       "Unlicht",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hunduster"
   },
   {
     "id": "0229",
@@ -1708,7 +1936,8 @@
     "types": [
       "Unlicht",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hundemon"
   },
   {
     "id": "0230",
@@ -1716,56 +1945,64 @@
     "types": [
       "Wasser",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Seedraking"
   },
   {
     "id": "0231",
     "name": "Phanpy",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Phanpy"
   },
   {
     "id": "0232",
     "name": "Donphan",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Donphan"
   },
   {
     "id": "0233",
     "name": "Porygon2",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Porygon2"
   },
   {
     "id": "0234",
     "name": "Damhirplex",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Damhirplex"
   },
   {
     "id": "0235",
     "name": "Farbeagle",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Farbeagle"
   },
   {
     "id": "0236",
     "name": "Rabauz",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rabauz"
   },
   {
     "id": "0237",
     "name": "Kapoera",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kapoera"
   },
   {
     "id": "0238",
@@ -1773,56 +2010,64 @@
     "types": [
       "Eis",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kussilla"
   },
   {
     "id": "0239",
     "name": "Elekid",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Elekid"
   },
   {
     "id": "0240",
     "name": "Magby",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Magby"
   },
   {
     "id": "0241",
     "name": "Miltank",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Miltank"
   },
   {
     "id": "0242",
     "name": "Heiteira",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Heiteira"
   },
   {
     "id": "0243",
     "name": "Raikou",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Raikou"
   },
   {
     "id": "0244",
     "name": "Entei",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Entei"
   },
   {
     "id": "0245",
     "name": "Suicune",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Suicune"
   },
   {
     "id": "0246",
@@ -1830,7 +2075,8 @@
     "types": [
       "Gestein",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Larvitar"
   },
   {
     "id": "0247",
@@ -1838,7 +2084,8 @@
     "types": [
       "Gestein",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pupitar"
   },
   {
     "id": "0248",
@@ -1846,7 +2093,8 @@
     "types": [
       "Gestein",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Despotar"
   },
   {
     "id": "0249",
@@ -1854,7 +2102,8 @@
     "types": [
       "Psycho",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lugia"
   },
   {
     "id": "0250",
@@ -1862,7 +2111,8 @@
     "types": [
       "Feuer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ho-Oh"
   },
   {
     "id": "0251",
@@ -1870,35 +2120,40 @@
     "types": [
       "Psycho",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Celebi"
   },
   {
     "id": "0252",
     "name": "Geckarbor",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Geckarbor"
   },
   {
     "id": "0253",
     "name": "Reptain",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Reptain"
   },
   {
     "id": "0254",
     "name": "Gewaldro",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gewaldro"
   },
   {
     "id": "0255",
     "name": "Flemmli",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flemmli"
   },
   {
     "id": "0256",
@@ -1906,7 +2161,8 @@
     "types": [
       "Feuer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Jungglut"
   },
   {
     "id": "0257",
@@ -1914,14 +2170,16 @@
     "types": [
       "Feuer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lohgock"
   },
   {
     "id": "0258",
     "name": "Hydropi",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hydropi"
   },
   {
     "id": "0259",
@@ -1929,7 +2187,8 @@
     "types": [
       "Wasser",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Moorabbel"
   },
   {
     "id": "0260",
@@ -1937,49 +2196,56 @@
     "types": [
       "Wasser",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sumpex"
   },
   {
     "id": "0261",
     "name": "Fiffyen",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fiffyen"
   },
   {
     "id": "0262",
     "name": "Magnayen",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Magnayen"
   },
   {
     "id": "0263",
     "name": "Zigzachs",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zigzachs"
   },
   {
     "id": "0264",
     "name": "Geradaks",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Geradaks"
   },
   {
     "id": "0265",
     "name": "Waumpel",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Waumpel"
   },
   {
     "id": "0266",
     "name": "Schaloko",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schaloko"
   },
   {
     "id": "0267",
@@ -1987,14 +2253,16 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Papinella"
   },
   {
     "id": "0268",
     "name": "Panekon",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Panekon"
   },
   {
     "id": "0269",
@@ -2002,7 +2270,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pudox"
   },
   {
     "id": "0270",
@@ -2010,7 +2279,8 @@
     "types": [
       "Wasser",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Loturzel"
   },
   {
     "id": "0271",
@@ -2018,7 +2288,8 @@
     "types": [
       "Wasser",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lombrero"
   },
   {
     "id": "0272",
@@ -2026,14 +2297,16 @@
     "types": [
       "Wasser",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kappalores"
   },
   {
     "id": "0273",
     "name": "Samurzel",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Samurzel"
   },
   {
     "id": "0274",
@@ -2041,7 +2314,8 @@
     "types": [
       "Pflanze",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Blanas"
   },
   {
     "id": "0275",
@@ -2049,7 +2323,8 @@
     "types": [
       "Pflanze",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tengulist"
   },
   {
     "id": "0276",
@@ -2057,7 +2332,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schwalbini"
   },
   {
     "id": "0277",
@@ -2065,7 +2341,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schwalboss"
   },
   {
     "id": "0278",
@@ -2073,7 +2350,8 @@
     "types": [
       "Wasser",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wingull"
   },
   {
     "id": "0279",
@@ -2081,7 +2359,8 @@
     "types": [
       "Wasser",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pelipper"
   },
   {
     "id": "0280",
@@ -2089,7 +2368,8 @@
     "types": [
       "Psycho",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Trasla"
   },
   {
     "id": "0281",
@@ -2097,7 +2377,8 @@
     "types": [
       "Psycho",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kirlia"
   },
   {
     "id": "0282",
@@ -2105,7 +2386,8 @@
     "types": [
       "Psycho",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Guardevoir"
   },
   {
     "id": "0283",
@@ -2113,7 +2395,8 @@
     "types": [
       "Kfer",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gehweiher"
   },
   {
     "id": "0284",
@@ -2121,14 +2404,16 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Maskeregen"
   },
   {
     "id": "0285",
     "name": "Knilz",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knilz"
   },
   {
     "id": "0286",
@@ -2136,28 +2421,32 @@
     "types": [
       "Pflanze",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kapilz"
   },
   {
     "id": "0287",
     "name": "Bummelz",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bummelz"
   },
   {
     "id": "0288",
     "name": "Muntier",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Muntier"
   },
   {
     "id": "0289",
     "name": "Letarking",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Letarking"
   },
   {
     "id": "0290",
@@ -2165,7 +2454,8 @@
     "types": [
       "Kfer",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nincada"
   },
   {
     "id": "0291",
@@ -2173,7 +2463,8 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ninjask"
   },
   {
     "id": "0292",
@@ -2181,42 +2472,48 @@
     "types": [
       "Kfer",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ninjatom"
   },
   {
     "id": "0293",
     "name": "Flurmel",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flurmel"
   },
   {
     "id": "0294",
     "name": "Krakeelo",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krakeelo"
   },
   {
     "id": "0295",
     "name": "Krawumms",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krawumms"
   },
   {
     "id": "0296",
     "name": "Makuhita",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Makuhita"
   },
   {
     "id": "0297",
     "name": "Hariyama",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hariyama"
   },
   {
     "id": "0298",
@@ -2224,28 +2521,32 @@
     "types": [
       "Normal",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Azurill"
   },
   {
     "id": "0299",
     "name": "Nasgnet",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nasgnet"
   },
   {
     "id": "0300",
     "name": "Eneco",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eneco"
   },
   {
     "id": "0301",
     "name": "Enekoro",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Enekoro"
   },
   {
     "id": "0302",
@@ -2253,7 +2554,8 @@
     "types": [
       "Unlicht",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zobiris"
   },
   {
     "id": "0303",
@@ -2261,7 +2563,8 @@
     "types": [
       "Stahl",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flunkifer"
   },
   {
     "id": "0304",
@@ -2269,7 +2572,8 @@
     "types": [
       "Stahl",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Stollunior"
   },
   {
     "id": "0305",
@@ -2277,7 +2581,8 @@
     "types": [
       "Stahl",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Stollrak"
   },
   {
     "id": "0306",
@@ -2285,7 +2590,8 @@
     "types": [
       "Stahl",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Stolloss"
   },
   {
     "id": "0307",
@@ -2293,7 +2599,8 @@
     "types": [
       "Kampf",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Meditie"
   },
   {
     "id": "0308",
@@ -2301,49 +2608,56 @@
     "types": [
       "Kampf",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Meditalis"
   },
   {
     "id": "0309",
     "name": "Frizelbliz",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Frizelbliz"
   },
   {
     "id": "0310",
     "name": "Voltenso",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voltenso"
   },
   {
     "id": "0311",
     "name": "Plusle",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Plusle"
   },
   {
     "id": "0312",
     "name": "Minun",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Minun"
   },
   {
     "id": "0313",
     "name": "Volbeat",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Volbeat"
   },
   {
     "id": "0314",
     "name": "Illumise",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Illumise"
   },
   {
     "id": "0315",
@@ -2351,21 +2665,24 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Roselia"
   },
   {
     "id": "0316",
     "name": "Schluppuck",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schluppuck"
   },
   {
     "id": "0317",
     "name": "Schlukwech",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schlukwech"
   },
   {
     "id": "0318",
@@ -2373,7 +2690,8 @@
     "types": [
       "Wasser",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kanivanha"
   },
   {
     "id": "0319",
@@ -2381,21 +2699,24 @@
     "types": [
       "Wasser",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tohaido"
   },
   {
     "id": "0320",
     "name": "Wailmer",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wailmer"
   },
   {
     "id": "0321",
     "name": "Wailord",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wailord"
   },
   {
     "id": "0322",
@@ -2403,7 +2724,8 @@
     "types": [
       "Feuer",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Camaub"
   },
   {
     "id": "0323",
@@ -2411,42 +2733,48 @@
     "types": [
       "Feuer",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Camerupt"
   },
   {
     "id": "0324",
     "name": "Qurtel",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Qurtel"
   },
   {
     "id": "0325",
     "name": "Spoink",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Spoink"
   },
   {
     "id": "0326",
     "name": "Groink",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Groink"
   },
   {
     "id": "0327",
     "name": "Pandir",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pandir"
   },
   {
     "id": "0328",
     "name": "Knacklion",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knacklion"
   },
   {
     "id": "0329",
@@ -2454,7 +2782,8 @@
     "types": [
       "Boden",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Vibrava"
   },
   {
     "id": "0330",
@@ -2462,14 +2791,16 @@
     "types": [
       "Boden",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Libelldra"
   },
   {
     "id": "0331",
     "name": "Tuska",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tuska"
   },
   {
     "id": "0332",
@@ -2477,7 +2808,8 @@
     "types": [
       "Pflanze",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Noktuska"
   },
   {
     "id": "0333",
@@ -2485,7 +2817,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wablu"
   },
   {
     "id": "0334",
@@ -2493,21 +2826,24 @@
     "types": [
       "Drache",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Altaria"
   },
   {
     "id": "0335",
     "name": "Sengo",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sengo"
   },
   {
     "id": "0336",
     "name": "Vipitis",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Vipitis"
   },
   {
     "id": "0337",
@@ -2515,7 +2851,8 @@
     "types": [
       "Gestein",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lunastein"
   },
   {
     "id": "0338",
@@ -2523,7 +2860,8 @@
     "types": [
       "Gestein",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sonnfel"
   },
   {
     "id": "0339",
@@ -2531,7 +2869,8 @@
     "types": [
       "Wasser",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schmerbe"
   },
   {
     "id": "0340",
@@ -2539,14 +2878,16 @@
     "types": [
       "Wasser",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Welsar"
   },
   {
     "id": "0341",
     "name": "Krebscorps",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krebscorps"
   },
   {
     "id": "0342",
@@ -2554,7 +2895,8 @@
     "types": [
       "Wasser",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krebutack"
   },
   {
     "id": "0343",
@@ -2562,7 +2904,8 @@
     "types": [
       "Boden",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Puppance"
   },
   {
     "id": "0344",
@@ -2570,7 +2913,8 @@
     "types": [
       "Boden",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lepumentas"
   },
   {
     "id": "0345",
@@ -2578,7 +2922,8 @@
     "types": [
       "Gestein",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Liliep"
   },
   {
     "id": "0346",
@@ -2586,7 +2931,8 @@
     "types": [
       "Gestein",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wielie"
   },
   {
     "id": "0347",
@@ -2594,7 +2940,8 @@
     "types": [
       "Gestein",
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Anorith"
   },
   {
     "id": "0348",
@@ -2602,63 +2949,72 @@
     "types": [
       "Gestein",
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Armaldo"
   },
   {
     "id": "0349",
     "name": "Barschwa",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Barschwa"
   },
   {
     "id": "0350",
     "name": "Milotic",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Milotic"
   },
   {
     "id": "0351",
     "name": "Formeo",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Formeo"
   },
   {
     "id": "0352",
     "name": "Kecleon",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kecleon"
   },
   {
     "id": "0353",
     "name": "Shuppet",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Shuppet"
   },
   {
     "id": "0354",
     "name": "Banette",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Banette"
   },
   {
     "id": "0355",
     "name": "Zwirrlicht",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zwirrlicht"
   },
   {
     "id": "0356",
     "name": "Zwirrklop",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zwirrklop"
   },
   {
     "id": "0357",
@@ -2666,42 +3022,48 @@
     "types": [
       "Pflanze",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tropius"
   },
   {
     "id": "0358",
     "name": "Palimpalim",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Palimpalim"
   },
   {
     "id": "0359",
     "name": "Absol",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Absol"
   },
   {
     "id": "0360",
     "name": "Isso",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Isso"
   },
   {
     "id": "0361",
     "name": "Schneppke",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schneppke"
   },
   {
     "id": "0362",
     "name": "Firnontor",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Firnontor"
   },
   {
     "id": "0363",
@@ -2709,7 +3071,8 @@
     "types": [
       "Eis",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Seemops"
   },
   {
     "id": "0364",
@@ -2717,7 +3080,8 @@
     "types": [
       "Eis",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Seejong"
   },
   {
     "id": "0365",
@@ -2725,28 +3089,32 @@
     "types": [
       "Eis",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Walraisa"
   },
   {
     "id": "0366",
     "name": "Perlu",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Perlu"
   },
   {
     "id": "0367",
     "name": "Aalabyss",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Aalabyss"
   },
   {
     "id": "0368",
     "name": "Saganabyss",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Saganabyss"
   },
   {
     "id": "0369",
@@ -2754,28 +3122,32 @@
     "types": [
       "Wasser",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Relicanth"
   },
   {
     "id": "0370",
     "name": "Liebiskus",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Liebiskus"
   },
   {
     "id": "0371",
     "name": "Kindwurm",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kindwurm"
   },
   {
     "id": "0372",
     "name": "Draschel",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Draschel"
   },
   {
     "id": "0373",
@@ -2783,7 +3155,8 @@
     "types": [
       "Drache",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Brutalanda"
   },
   {
     "id": "0374",
@@ -2791,7 +3164,8 @@
     "types": [
       "Stahl",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tanhel"
   },
   {
     "id": "0375",
@@ -2799,7 +3173,8 @@
     "types": [
       "Stahl",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Metang"
   },
   {
     "id": "0376",
@@ -2807,28 +3182,32 @@
     "types": [
       "Stahl",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Metagross"
   },
   {
     "id": "0377",
     "name": "Regirock",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Regirock"
   },
   {
     "id": "0378",
     "name": "Regice",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Regice"
   },
   {
     "id": "0379",
     "name": "Registeel",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Registeel"
   },
   {
     "id": "0380",
@@ -2836,7 +3215,8 @@
     "types": [
       "Drache",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Latias"
   },
   {
     "id": "0381",
@@ -2844,21 +3224,24 @@
     "types": [
       "Drache",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Latios"
   },
   {
     "id": "0382",
     "name": "Kyogre",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kyogre"
   },
   {
     "id": "0383",
     "name": "Groudon",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Groudon"
   },
   {
     "id": "0384",
@@ -2866,7 +3249,8 @@
     "types": [
       "Drache",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rayquaza"
   },
   {
     "id": "0385",
@@ -2874,28 +3258,32 @@
     "types": [
       "Stahl",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Jirachi"
   },
   {
     "id": "0386",
     "name": "Deoxys",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Deoxys"
   },
   {
     "id": "0387",
     "name": "Chelast",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chelast"
   },
   {
     "id": "0388",
     "name": "Chelcarain",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chelcarain"
   },
   {
     "id": "0389",
@@ -2903,14 +3291,16 @@
     "types": [
       "Pflanze",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chelterrar"
   },
   {
     "id": "0390",
     "name": "Panflam",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Panflam"
   },
   {
     "id": "0391",
@@ -2918,7 +3308,8 @@
     "types": [
       "Feuer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Panpyro"
   },
   {
     "id": "0392",
@@ -2926,21 +3317,24 @@
     "types": [
       "Feuer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Panferno"
   },
   {
     "id": "0393",
     "name": "Plinfa",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Plinfa"
   },
   {
     "id": "0394",
     "name": "Pliprin",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pliprin"
   },
   {
     "id": "0395",
@@ -2948,7 +3342,8 @@
     "types": [
       "Wasser",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Impoleon"
   },
   {
     "id": "0396",
@@ -2956,7 +3351,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Staralili"
   },
   {
     "id": "0397",
@@ -2964,7 +3360,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Staravia"
   },
   {
     "id": "0398",
@@ -2972,14 +3369,16 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Staraptor"
   },
   {
     "id": "0399",
     "name": "Bidiza",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bidiza"
   },
   {
     "id": "0400",
@@ -2987,42 +3386,48 @@
     "types": [
       "Normal",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bidifas"
   },
   {
     "id": "0401",
     "name": "Zirpurze",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zirpurze"
   },
   {
     "id": "0402",
     "name": "Zirpeise",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zirpeise"
   },
   {
     "id": "0403",
     "name": "Sheinux",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sheinux"
   },
   {
     "id": "0404",
     "name": "Luxio",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Luxio"
   },
   {
     "id": "0405",
     "name": "Luxtra",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Luxtra"
   },
   {
     "id": "0406",
@@ -3030,7 +3435,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knospi"
   },
   {
     "id": "0407",
@@ -3038,21 +3444,24 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Roserade"
   },
   {
     "id": "0408",
     "name": "Koknodon",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Koknodon"
   },
   {
     "id": "0409",
     "name": "Rameidon",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rameidon"
   },
   {
     "id": "0410",
@@ -3060,7 +3469,8 @@
     "types": [
       "Gestein",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schilterus"
   },
   {
     "id": "0411",
@@ -3068,14 +3478,16 @@
     "types": [
       "Gestein",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bollterus"
   },
   {
     "id": "0412",
     "name": "Burmy",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Burmy"
   },
   {
     "id": "0413",
@@ -3083,7 +3495,8 @@
     "types": [
       "Kfer",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Burmadame"
   },
   {
     "id": "0414",
@@ -3091,7 +3504,8 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Moterpel"
   },
   {
     "id": "0415",
@@ -3099,7 +3513,8 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wadribie"
   },
   {
     "id": "0416",
@@ -3107,49 +3522,56 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Honweisel"
   },
   {
     "id": "0417",
     "name": "Pachirisu",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pachirisu"
   },
   {
     "id": "0418",
     "name": "Bamelin",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bamelin"
   },
   {
     "id": "0419",
     "name": "Bojelin",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bojelin"
   },
   {
     "id": "0420",
     "name": "Kikugi",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kikugi"
   },
   {
     "id": "0421",
     "name": "Kinoso",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kinoso"
   },
   {
     "id": "0422",
     "name": "Schalellos",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schalellos"
   },
   {
     "id": "0423",
@@ -3157,14 +3579,16 @@
     "types": [
       "Wasser",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gastrodon"
   },
   {
     "id": "0424",
     "name": "Ambidiffel",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ambidiffel"
   },
   {
     "id": "0425",
@@ -3172,7 +3596,8 @@
     "types": [
       "Geist",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Driftlon"
   },
   {
     "id": "0426",
@@ -3180,28 +3605,32 @@
     "types": [
       "Geist",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Drifzepeli"
   },
   {
     "id": "0427",
     "name": "Haspiror",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Haspiror"
   },
   {
     "id": "0428",
     "name": "Schlapor",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schlapor"
   },
   {
     "id": "0429",
     "name": "Traunmagil",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Traunmagil"
   },
   {
     "id": "0430",
@@ -3209,28 +3638,32 @@
     "types": [
       "Unlicht",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kramshef"
   },
   {
     "id": "0431",
     "name": "Charmian",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Charmian"
   },
   {
     "id": "0432",
     "name": "Shnurgarst",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Shnurgarst"
   },
   {
     "id": "0433",
     "name": "Klingplim",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Klingplim"
   },
   {
     "id": "0434",
@@ -3238,7 +3671,8 @@
     "types": [
       "Gift",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Skunkapuh"
   },
   {
     "id": "0435",
@@ -3246,7 +3680,8 @@
     "types": [
       "Gift",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Skuntank"
   },
   {
     "id": "0436",
@@ -3254,7 +3689,8 @@
     "types": [
       "Stahl",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bronzel"
   },
   {
     "id": "0437",
@@ -3262,14 +3698,16 @@
     "types": [
       "Stahl",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bronzong"
   },
   {
     "id": "0438",
     "name": "Mobai",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mobai"
   },
   {
     "id": "0439",
@@ -3277,14 +3715,16 @@
     "types": [
       "Psycho",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pantimimi"
   },
   {
     "id": "0440",
     "name": "Wonneira",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wonneira"
   },
   {
     "id": "0441",
@@ -3292,7 +3732,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Plaudagei"
   },
   {
     "id": "0442",
@@ -3300,7 +3741,8 @@
     "types": [
       "Geist",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kryppuk"
   },
   {
     "id": "0443",
@@ -3308,7 +3750,8 @@
     "types": [
       "Drache",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kaumalat"
   },
   {
     "id": "0444",
@@ -3316,7 +3759,8 @@
     "types": [
       "Drache",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knarksel"
   },
   {
     "id": "0445",
@@ -3324,21 +3768,24 @@
     "types": [
       "Drache",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knakrack"
   },
   {
     "id": "0446",
     "name": "Mampfaxo",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mampfaxo"
   },
   {
     "id": "0447",
     "name": "Riolu",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Riolu"
   },
   {
     "id": "0448",
@@ -3346,21 +3793,24 @@
     "types": [
       "Kampf",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lucario"
   },
   {
     "id": "0449",
     "name": "Hippopotas",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hippopotas"
   },
   {
     "id": "0450",
     "name": "Hippoterus",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hippoterus"
   },
   {
     "id": "0451",
@@ -3368,7 +3818,8 @@
     "types": [
       "Gift",
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pionskora"
   },
   {
     "id": "0452",
@@ -3376,7 +3827,8 @@
     "types": [
       "Gift",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Piondragi"
   },
   {
     "id": "0453",
@@ -3384,7 +3836,8 @@
     "types": [
       "Gift",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Glibunkel"
   },
   {
     "id": "0454",
@@ -3392,28 +3845,32 @@
     "types": [
       "Gift",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Toxiquak"
   },
   {
     "id": "0455",
     "name": "Venuflibis",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Venuflibis"
   },
   {
     "id": "0456",
     "name": "Finneon",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Finneon"
   },
   {
     "id": "0457",
     "name": "Lumineon",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lumineon"
   },
   {
     "id": "0458",
@@ -3421,7 +3878,8 @@
     "types": [
       "Wasser",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mantirps"
   },
   {
     "id": "0459",
@@ -3429,7 +3887,8 @@
     "types": [
       "Pflanze",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Shnebedeck"
   },
   {
     "id": "0460",
@@ -3437,7 +3896,8 @@
     "types": [
       "Pflanze",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rexblisar"
   },
   {
     "id": "0461",
@@ -3445,7 +3905,8 @@
     "types": [
       "Unlicht",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Snibunna"
   },
   {
     "id": "0462",
@@ -3453,14 +3914,16 @@
     "types": [
       "Elektro",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Magnezone"
   },
   {
     "id": "0463",
     "name": "Schlurplek",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schlurplek"
   },
   {
     "id": "0464",
@@ -3468,28 +3931,32 @@
     "types": [
       "Boden",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rihornior"
   },
   {
     "id": "0465",
     "name": "Tangoloss",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tangoloss"
   },
   {
     "id": "0466",
     "name": "Elevoltek",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Elevoltek"
   },
   {
     "id": "0467",
     "name": "Magbrant",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Magbrant"
   },
   {
     "id": "0468",
@@ -3497,7 +3964,8 @@
     "types": [
       "Fee",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Togekiss"
   },
   {
     "id": "0469",
@@ -3505,21 +3973,24 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Yanmega"
   },
   {
     "id": "0470",
     "name": "Folipurba",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Folipurba"
   },
   {
     "id": "0471",
     "name": "Glaziola",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Glaziola"
   },
   {
     "id": "0472",
@@ -3527,7 +3998,8 @@
     "types": [
       "Boden",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Skorgro"
   },
   {
     "id": "0473",
@@ -3535,14 +4007,16 @@
     "types": [
       "Eis",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mamutel"
   },
   {
     "id": "0474",
     "name": "Porygon-Z",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Porygon-Z"
   },
   {
     "id": "0475",
@@ -3550,7 +4024,8 @@
     "types": [
       "Psycho",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Galagladi"
   },
   {
     "id": "0476",
@@ -3558,14 +4033,16 @@
     "types": [
       "Gestein",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voluminas"
   },
   {
     "id": "0477",
     "name": "Zwirrfinst",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zwirrfinst"
   },
   {
     "id": "0478",
@@ -3573,7 +4050,8 @@
     "types": [
       "Eis",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Frosdedje"
   },
   {
     "id": "0479",
@@ -3581,28 +4059,32 @@
     "types": [
       "Elektro",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rotom"
   },
   {
     "id": "0480",
     "name": "Selfe",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Selfe"
   },
   {
     "id": "0481",
     "name": "Vesprit",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Vesprit"
   },
   {
     "id": "0482",
     "name": "Tobutz",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tobutz"
   },
   {
     "id": "0483",
@@ -3610,7 +4092,8 @@
     "types": [
       "Stahl",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dialga"
   },
   {
     "id": "0484",
@@ -3618,7 +4101,8 @@
     "types": [
       "Wasser",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Palkia"
   },
   {
     "id": "0485",
@@ -3626,14 +4110,16 @@
     "types": [
       "Feuer",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Heatran"
   },
   {
     "id": "0486",
     "name": "Regigigas",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Regigigas"
   },
   {
     "id": "0487",
@@ -3641,49 +4127,56 @@
     "types": [
       "Geist",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Giratina"
   },
   {
     "id": "0488",
     "name": "Cresselia",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Cresselia"
   },
   {
     "id": "0489",
     "name": "Phione",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Phione"
   },
   {
     "id": "0490",
     "name": "Manaphy",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Manaphy"
   },
   {
     "id": "0491",
     "name": "Darkrai",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Darkrai"
   },
   {
     "id": "0492",
     "name": "Shaymin",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Shaymin"
   },
   {
     "id": "0493",
     "name": "Arceus",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Arceus"
   },
   {
     "id": "0494",
@@ -3691,35 +4184,40 @@
     "types": [
       "Psycho",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Victini"
   },
   {
     "id": "0495",
     "name": "Serpifeu",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Serpifeu"
   },
   {
     "id": "0496",
     "name": "Efoserp",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Efoserp"
   },
   {
     "id": "0497",
     "name": "Serpiroyal",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Serpiroyal"
   },
   {
     "id": "0498",
     "name": "Floink",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Floink"
   },
   {
     "id": "0499",
@@ -3727,7 +4225,8 @@
     "types": [
       "Feuer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ferkokel"
   },
   {
     "id": "0500",
@@ -3735,133 +4234,152 @@
     "types": [
       "Feuer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flambirex"
   },
   {
     "id": "0501",
     "name": "Ottaro",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ottaro"
   },
   {
     "id": "0502",
     "name": "Zwottronin",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zwottronin"
   },
   {
     "id": "0503",
     "name": "Admurai",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Admurai"
   },
   {
     "id": "0504",
     "name": "Nagelotz",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nagelotz"
   },
   {
     "id": "0505",
     "name": "Kukmarda",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kukmarda"
   },
   {
     "id": "0506",
     "name": "Yorkleff",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Yorkleff"
   },
   {
     "id": "0507",
     "name": "Terribark",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Terribark"
   },
   {
     "id": "0508",
     "name": "Bissbark",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bissbark"
   },
   {
     "id": "0509",
     "name": "Felilou",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Felilou"
   },
   {
     "id": "0510",
     "name": "Kleoparda",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kleoparda"
   },
   {
     "id": "0511",
     "name": "Vegimak",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Vegimak"
   },
   {
     "id": "0512",
     "name": "Vegichita",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Vegichita"
   },
   {
     "id": "0513",
     "name": "Grillmak",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Grillmak"
   },
   {
     "id": "0514",
     "name": "Grillchita",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Grillchita"
   },
   {
     "id": "0515",
     "name": "Sodamak",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sodamak"
   },
   {
     "id": "0516",
     "name": "Sodachita",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sodachita"
   },
   {
     "id": "0517",
     "name": "Somniam",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Somniam"
   },
   {
     "id": "0518",
     "name": "Somnivora",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Somnivora"
   },
   {
     "id": "0519",
@@ -3869,7 +4387,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dusselgurr"
   },
   {
     "id": "0520",
@@ -3877,7 +4396,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Navitaub"
   },
   {
     "id": "0521",
@@ -3885,42 +4405,48 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fasasnob"
   },
   {
     "id": "0522",
     "name": "Elezeba",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Elezeba"
   },
   {
     "id": "0523",
     "name": "Zebritz",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zebritz"
   },
   {
     "id": "0524",
     "name": "Kiesling",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kiesling"
   },
   {
     "id": "0525",
     "name": "Sedimantur",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sedimantur"
   },
   {
     "id": "0526",
     "name": "Brockoloss",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Brockoloss"
   },
   {
     "id": "0527",
@@ -3928,7 +4454,8 @@
     "types": [
       "Psycho",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fleknoil"
   },
   {
     "id": "0528",
@@ -3936,14 +4463,16 @@
     "types": [
       "Psycho",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fletiamo"
   },
   {
     "id": "0529",
     "name": "Rotomurf",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rotomurf"
   },
   {
     "id": "0530",
@@ -3951,42 +4480,48 @@
     "types": [
       "Boden",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Stalobor"
   },
   {
     "id": "0531",
     "name": "Ohrdoch",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ohrdoch"
   },
   {
     "id": "0532",
     "name": "Praktibalk",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Praktibalk"
   },
   {
     "id": "0533",
     "name": "Strepoli",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Strepoli"
   },
   {
     "id": "0534",
     "name": "Meistagrif",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Meistagrif"
   },
   {
     "id": "0535",
     "name": "Schallquap",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schallquap"
   },
   {
     "id": "0536",
@@ -3994,7 +4529,8 @@
     "types": [
       "Wasser",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mebrana"
   },
   {
     "id": "0537",
@@ -4002,21 +4538,24 @@
     "types": [
       "Wasser",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Branawarz"
   },
   {
     "id": "0538",
     "name": "Jiutesto",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Jiutesto"
   },
   {
     "id": "0539",
     "name": "Karadonis",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Karadonis"
   },
   {
     "id": "0540",
@@ -4024,7 +4563,8 @@
     "types": [
       "Kfer",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Strawickl"
   },
   {
     "id": "0541",
@@ -4032,7 +4572,8 @@
     "types": [
       "Kfer",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Folikon"
   },
   {
     "id": "0542",
@@ -4040,7 +4581,8 @@
     "types": [
       "Kfer",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Matrifol"
   },
   {
     "id": "0543",
@@ -4048,7 +4590,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Toxiped"
   },
   {
     "id": "0544",
@@ -4056,7 +4599,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rollum"
   },
   {
     "id": "0545",
@@ -4064,7 +4608,8 @@
     "types": [
       "Kfer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Cerapendra"
   },
   {
     "id": "0546",
@@ -4072,7 +4617,8 @@
     "types": [
       "Pflanze",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Waumboll"
   },
   {
     "id": "0547",
@@ -4080,28 +4626,32 @@
     "types": [
       "Pflanze",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Elfun"
   },
   {
     "id": "0548",
     "name": "Lilminip",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lilminip"
   },
   {
     "id": "0549",
     "name": "Dressella",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dressella"
   },
   {
     "id": "0550",
     "name": "Barschuft",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Barschuft"
   },
   {
     "id": "0551",
@@ -4109,7 +4659,8 @@
     "types": [
       "Boden",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ganovil"
   },
   {
     "id": "0552",
@@ -4117,7 +4668,8 @@
     "types": [
       "Boden",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rokkaiman"
   },
   {
     "id": "0553",
@@ -4125,28 +4677,32 @@
     "types": [
       "Boden",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rabigator"
   },
   {
     "id": "0554",
     "name": "Flampion",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flampion"
   },
   {
     "id": "0555",
     "name": "Flampivian",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flampivian"
   },
   {
     "id": "0556",
     "name": "Maracamba",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Maracamba"
   },
   {
     "id": "0557",
@@ -4154,7 +4710,8 @@
     "types": [
       "Kfer",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lithomith"
   },
   {
     "id": "0558",
@@ -4162,7 +4719,8 @@
     "types": [
       "Kfer",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Castellith"
   },
   {
     "id": "0559",
@@ -4170,7 +4728,8 @@
     "types": [
       "Unlicht",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zurrokex"
   },
   {
     "id": "0560",
@@ -4178,7 +4737,8 @@
     "types": [
       "Unlicht",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Irokex"
   },
   {
     "id": "0561",
@@ -4186,21 +4746,24 @@
     "types": [
       "Psycho",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Symvolara"
   },
   {
     "id": "0562",
     "name": "Makabaja",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Makabaja"
   },
   {
     "id": "0563",
     "name": "Echnatoll",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Echnatoll"
   },
   {
     "id": "0564",
@@ -4208,7 +4771,8 @@
     "types": [
       "Wasser",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Galapaflos"
   },
   {
     "id": "0565",
@@ -4216,7 +4780,8 @@
     "types": [
       "Wasser",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Karippas"
   },
   {
     "id": "0566",
@@ -4224,7 +4789,8 @@
     "types": [
       "Gestein",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flapteryx"
   },
   {
     "id": "0567",
@@ -4232,91 +4798,104 @@
     "types": [
       "Gestein",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Aeropteryx"
   },
   {
     "id": "0568",
     "name": "Unrattox",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Unrat%C3%BCtox"
   },
   {
     "id": "0569",
     "name": "Deponitox",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Deponitox"
   },
   {
     "id": "0570",
     "name": "Zorua",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zorua"
   },
   {
     "id": "0571",
     "name": "Zoroark",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zoroark"
   },
   {
     "id": "0572",
     "name": "Picochilla",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Picochilla"
   },
   {
     "id": "0573",
     "name": "Chillabell",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chillabell"
   },
   {
     "id": "0574",
     "name": "Mollimorba",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mollimorba"
   },
   {
     "id": "0575",
     "name": "Hypnomorba",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hypnomorba"
   },
   {
     "id": "0576",
     "name": "Morbitesse",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Morbitesse"
   },
   {
     "id": "0577",
     "name": "Monozyto",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Monozyto"
   },
   {
     "id": "0578",
     "name": "Mitodos",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mitodos"
   },
   {
     "id": "0579",
     "name": "Zytomega",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zytomega"
   },
   {
     "id": "0580",
@@ -4324,7 +4903,8 @@
     "types": [
       "Wasser",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Piccolente"
   },
   {
     "id": "0581",
@@ -4332,28 +4912,32 @@
     "types": [
       "Wasser",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Swaroness"
   },
   {
     "id": "0582",
     "name": "Gelatini",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gelatini"
   },
   {
     "id": "0583",
     "name": "Gelatroppo",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gelatroppo"
   },
   {
     "id": "0584",
     "name": "Gelatwino",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gelatwino"
   },
   {
     "id": "0585",
@@ -4361,7 +4945,8 @@
     "types": [
       "Normal",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sesokitz"
   },
   {
     "id": "0586",
@@ -4369,7 +4954,8 @@
     "types": [
       "Normal",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kronjuwild"
   },
   {
     "id": "0587",
@@ -4377,14 +4963,16 @@
     "types": [
       "Elektro",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Emolga"
   },
   {
     "id": "0588",
     "name": "Laukaps",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Laukaps"
   },
   {
     "id": "0589",
@@ -4392,7 +4980,8 @@
     "types": [
       "Kfer",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Cavalanzas"
   },
   {
     "id": "0590",
@@ -4400,7 +4989,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tarnpignon"
   },
   {
     "id": "0591",
@@ -4408,7 +4998,8 @@
     "types": [
       "Pflanze",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hutsassa"
   },
   {
     "id": "0592",
@@ -4416,7 +5007,8 @@
     "types": [
       "Wasser",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Quabbel"
   },
   {
     "id": "0593",
@@ -4424,14 +5016,16 @@
     "types": [
       "Wasser",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Apoquallyp"
   },
   {
     "id": "0594",
     "name": "Mamolida",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mamolida"
   },
   {
     "id": "0595",
@@ -4439,7 +5033,8 @@
     "types": [
       "Kfer",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wattzapf"
   },
   {
     "id": "0596",
@@ -4447,7 +5042,8 @@
     "types": [
       "Kfer",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voltula"
   },
   {
     "id": "0597",
@@ -4455,7 +5051,8 @@
     "types": [
       "Pflanze",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kastadur"
   },
   {
     "id": "0598",
@@ -4463,63 +5060,72 @@
     "types": [
       "Pflanze",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tentantel"
   },
   {
     "id": "0599",
     "name": "Klikk",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Klikk"
   },
   {
     "id": "0600",
     "name": "Kliklak",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kliklak"
   },
   {
     "id": "0601",
     "name": "Klikdiklak",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Klikdiklak"
   },
   {
     "id": "0602",
     "name": "Zapplardin",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zapplardin"
   },
   {
     "id": "0603",
     "name": "Zapplalek",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zapplalek"
   },
   {
     "id": "0604",
     "name": "Zapplarang",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zapplarang"
   },
   {
     "id": "0605",
     "name": "Pygraulon",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pygraulon"
   },
   {
     "id": "0606",
     "name": "Megalon",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Megalon"
   },
   {
     "id": "0607",
@@ -4527,7 +5133,8 @@
     "types": [
       "Geist",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lichtel"
   },
   {
     "id": "0608",
@@ -4535,7 +5142,8 @@
     "types": [
       "Geist",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Laternecto"
   },
   {
     "id": "0609",
@@ -4543,63 +5151,72 @@
     "types": [
       "Geist",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Skelabra"
   },
   {
     "id": "0610",
     "name": "Milza",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Milza"
   },
   {
     "id": "0611",
     "name": "Sharfax",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sharfax"
   },
   {
     "id": "0612",
     "name": "Maxax",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Maxax"
   },
   {
     "id": "0613",
     "name": "Petznief",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Petznief"
   },
   {
     "id": "0614",
     "name": "Siberio",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Siberio"
   },
   {
     "id": "0615",
     "name": "Frigometri",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Frigometri"
   },
   {
     "id": "0616",
     "name": "Schnuthelm",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schnuthelm"
   },
   {
     "id": "0617",
     "name": "Hydragil",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hydragil"
   },
   {
     "id": "0618",
@@ -4607,28 +5224,32 @@
     "types": [
       "Boden",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flunschlik"
   },
   {
     "id": "0619",
     "name": "Lin-Fu",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lin-Fu"
   },
   {
     "id": "0620",
     "name": "Wie-Shu",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wie-Shu"
   },
   {
     "id": "0621",
     "name": "Shardrago",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Shardrago"
   },
   {
     "id": "0622",
@@ -4636,7 +5257,8 @@
     "types": [
       "Boden",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Golbit"
   },
   {
     "id": "0623",
@@ -4644,7 +5266,8 @@
     "types": [
       "Boden",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Golgantes"
   },
   {
     "id": "0624",
@@ -4652,7 +5275,8 @@
     "types": [
       "Unlicht",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gladiantri"
   },
   {
     "id": "0625",
@@ -4660,14 +5284,16 @@
     "types": [
       "Unlicht",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Caesurio"
   },
   {
     "id": "0626",
     "name": "Bisofank",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bisofank"
   },
   {
     "id": "0627",
@@ -4675,7 +5301,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Geronimatz"
   },
   {
     "id": "0628",
@@ -4683,7 +5310,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Washakwil"
   },
   {
     "id": "0629",
@@ -4691,7 +5319,8 @@
     "types": [
       "Unlicht",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Skallyk"
   },
   {
     "id": "0630",
@@ -4699,14 +5328,16 @@
     "types": [
       "Unlicht",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Grypheldis"
   },
   {
     "id": "0631",
     "name": "Furnifra",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Furnifra%C3%9F"
   },
   {
     "id": "0632",
@@ -4714,7 +5345,8 @@
     "types": [
       "Kfer",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fermicula"
   },
   {
     "id": "0633",
@@ -4722,7 +5354,8 @@
     "types": [
       "Unlicht",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kapuno"
   },
   {
     "id": "0634",
@@ -4730,7 +5363,8 @@
     "types": [
       "Unlicht",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Duodino"
   },
   {
     "id": "0635",
@@ -4738,7 +5372,8 @@
     "types": [
       "Unlicht",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Trikephalo"
   },
   {
     "id": "0636",
@@ -4746,7 +5381,8 @@
     "types": [
       "Kfer",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ignivor"
   },
   {
     "id": "0637",
@@ -4754,7 +5390,8 @@
     "types": [
       "Kfer",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ramoth"
   },
   {
     "id": "0638",
@@ -4762,7 +5399,8 @@
     "types": [
       "Stahl",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kobalium"
   },
   {
     "id": "0639",
@@ -4770,7 +5408,8 @@
     "types": [
       "Gestein",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Terrakium"
   },
   {
     "id": "0640",
@@ -4778,14 +5417,16 @@
     "types": [
       "Pflanze",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Viridium"
   },
   {
     "id": "0641",
     "name": "Boreos",
     "types": [
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Boreos"
   },
   {
     "id": "0642",
@@ -4793,7 +5434,8 @@
     "types": [
       "Elektro",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voltolos"
   },
   {
     "id": "0643",
@@ -4801,7 +5443,8 @@
     "types": [
       "Drache",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Reshiram"
   },
   {
     "id": "0644",
@@ -4809,7 +5452,8 @@
     "types": [
       "Drache",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zekrom"
   },
   {
     "id": "0645",
@@ -4817,7 +5461,8 @@
     "types": [
       "Boden",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Demeteros"
   },
   {
     "id": "0646",
@@ -4825,7 +5470,8 @@
     "types": [
       "Drache",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kyurem"
   },
   {
     "id": "0647",
@@ -4833,7 +5479,8 @@
     "types": [
       "Wasser",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Keldeo"
   },
   {
     "id": "0648",
@@ -4841,7 +5488,8 @@
     "types": [
       "Normal",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Meloetta"
   },
   {
     "id": "0649",
@@ -4849,21 +5497,24 @@
     "types": [
       "Kfer",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Genesect"
   },
   {
     "id": "0650",
     "name": "Igamaro",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Igamaro"
   },
   {
     "id": "0651",
     "name": "Igastarnish",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Igastarnish"
   },
   {
     "id": "0652",
@@ -4871,21 +5522,24 @@
     "types": [
       "Pflanze",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Brigaron"
   },
   {
     "id": "0653",
     "name": "Fynx",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fynx"
   },
   {
     "id": "0654",
     "name": "Rutena",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rutena"
   },
   {
     "id": "0655",
@@ -4893,21 +5547,24 @@
     "types": [
       "Feuer",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fennexis"
   },
   {
     "id": "0656",
     "name": "Froxy",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Froxy"
   },
   {
     "id": "0657",
     "name": "Amphizel",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Amphizel"
   },
   {
     "id": "0658",
@@ -4915,14 +5572,16 @@
     "types": [
       "Wasser",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Quajutsu"
   },
   {
     "id": "0659",
     "name": "Scoppel",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Scoppel"
   },
   {
     "id": "0660",
@@ -4930,7 +5589,8 @@
     "types": [
       "Normal",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Grebbit"
   },
   {
     "id": "0661",
@@ -4938,7 +5598,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dartiri"
   },
   {
     "id": "0662",
@@ -4946,7 +5607,8 @@
     "types": [
       "Feuer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dartignis"
   },
   {
     "id": "0663",
@@ -4954,21 +5616,24 @@
     "types": [
       "Feuer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fiaro"
   },
   {
     "id": "0664",
     "name": "Purmel",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Purmel"
   },
   {
     "id": "0665",
     "name": "Puponcho",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Puponcho"
   },
   {
     "id": "0666",
@@ -4976,7 +5641,8 @@
     "types": [
       "Kfer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Vivillon"
   },
   {
     "id": "0667",
@@ -4984,7 +5650,8 @@
     "types": [
       "Feuer",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Leufeo"
   },
   {
     "id": "0668",
@@ -4992,49 +5659,56 @@
     "types": [
       "Feuer",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pyroleo"
   },
   {
     "id": "0669",
     "name": "Flabb",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flab%C3%A9b%C3%A9"
   },
   {
     "id": "0670",
     "name": "Floette",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Floette"
   },
   {
     "id": "0671",
     "name": "Florges",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Florges"
   },
   {
     "id": "0672",
     "name": "Mhikel",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/M%C3%A4hikel"
   },
   {
     "id": "0673",
     "name": "Chevrumm",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chevrumm"
   },
   {
     "id": "0674",
     "name": "Pam-Pam",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pam-Pam"
   },
   {
     "id": "0675",
@@ -5042,28 +5716,32 @@
     "types": [
       "Kampf",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pandagro"
   },
   {
     "id": "0676",
     "name": "Coiffwaff",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Coiffwaff"
   },
   {
     "id": "0677",
     "name": "Psiau",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Psiau"
   },
   {
     "id": "0678",
     "name": "Psiaugon",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Psiaugon"
   },
   {
     "id": "0679",
@@ -5071,7 +5749,8 @@
     "types": [
       "Stahl",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gramokles"
   },
   {
     "id": "0680",
@@ -5079,7 +5758,8 @@
     "types": [
       "Stahl",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Duokles"
   },
   {
     "id": "0681",
@@ -5087,35 +5767,40 @@
     "types": [
       "Stahl",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Durengard"
   },
   {
     "id": "0682",
     "name": "Parfi",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Parfi"
   },
   {
     "id": "0683",
     "name": "Parfinesse",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Parfinesse"
   },
   {
     "id": "0684",
     "name": "Flauschling",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flauschling"
   },
   {
     "id": "0685",
     "name": "Sabbaione",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sabbaione"
   },
   {
     "id": "0686",
@@ -5123,7 +5808,8 @@
     "types": [
       "Unlicht",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Iscalar"
   },
   {
     "id": "0687",
@@ -5131,7 +5817,8 @@
     "types": [
       "Unlicht",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Calamanero"
   },
   {
     "id": "0688",
@@ -5139,7 +5826,8 @@
     "types": [
       "Gestein",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bithora"
   },
   {
     "id": "0689",
@@ -5147,7 +5835,8 @@
     "types": [
       "Gestein",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Thanathora"
   },
   {
     "id": "0690",
@@ -5155,7 +5844,8 @@
     "types": [
       "Gift",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Algitt"
   },
   {
     "id": "0691",
@@ -5163,21 +5853,24 @@
     "types": [
       "Gift",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tandrak"
   },
   {
     "id": "0692",
     "name": "Scampisto",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Scampisto"
   },
   {
     "id": "0693",
     "name": "Wummer",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wummer"
   },
   {
     "id": "0694",
@@ -5185,7 +5878,8 @@
     "types": [
       "Elektro",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eguana"
   },
   {
     "id": "0695",
@@ -5193,7 +5887,8 @@
     "types": [
       "Elektro",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Elezard"
   },
   {
     "id": "0696",
@@ -5201,7 +5896,8 @@
     "types": [
       "Gestein",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Balgoras"
   },
   {
     "id": "0697",
@@ -5209,7 +5905,8 @@
     "types": [
       "Gestein",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Monargoras"
   },
   {
     "id": "0698",
@@ -5217,7 +5914,8 @@
     "types": [
       "Gestein",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Amarino"
   },
   {
     "id": "0699",
@@ -5225,14 +5923,16 @@
     "types": [
       "Gestein",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Amagarga"
   },
   {
     "id": "0700",
     "name": "Feelinara",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Feelinara"
   },
   {
     "id": "0701",
@@ -5240,7 +5940,8 @@
     "types": [
       "Kampf",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Resladero"
   },
   {
     "id": "0702",
@@ -5248,7 +5949,8 @@
     "types": [
       "Elektro",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dedenne"
   },
   {
     "id": "0703",
@@ -5256,28 +5958,32 @@
     "types": [
       "Gestein",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rocara"
   },
   {
     "id": "0704",
     "name": "Viscora",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Viscora"
   },
   {
     "id": "0705",
     "name": "Viscargot",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Viscargot"
   },
   {
     "id": "0706",
     "name": "Viscogon",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Viscogon"
   },
   {
     "id": "0707",
@@ -5285,7 +5991,8 @@
     "types": [
       "Stahl",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Clavion"
   },
   {
     "id": "0708",
@@ -5293,7 +6000,8 @@
     "types": [
       "Geist",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Paragoni"
   },
   {
     "id": "0709",
@@ -5301,7 +6009,8 @@
     "types": [
       "Geist",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Trombork"
   },
   {
     "id": "0710",
@@ -5309,7 +6018,8 @@
     "types": [
       "Geist",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Irrbis"
   },
   {
     "id": "0711",
@@ -5317,21 +6027,24 @@
     "types": [
       "Geist",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pumpdjinn"
   },
   {
     "id": "0712",
     "name": "Arktip",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Arktip"
   },
   {
     "id": "0713",
     "name": "Arktilas",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Arktilas"
   },
   {
     "id": "0714",
@@ -5339,7 +6052,8 @@
     "types": [
       "Flug",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/EF-eM"
   },
   {
     "id": "0715",
@@ -5347,14 +6061,16 @@
     "types": [
       "Flug",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/UHaFnir"
   },
   {
     "id": "0716",
     "name": "Xerneas",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Xerneas"
   },
   {
     "id": "0717",
@@ -5362,7 +6078,8 @@
     "types": [
       "Unlicht",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Yveltal"
   },
   {
     "id": "0718",
@@ -5370,7 +6087,8 @@
     "types": [
       "Drache",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zygarde"
   },
   {
     "id": "0719",
@@ -5378,7 +6096,8 @@
     "types": [
       "Gestein",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Diancie"
   },
   {
     "id": "0720",
@@ -5386,7 +6105,8 @@
     "types": [
       "Psycho",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hoopa"
   },
   {
     "id": "0721",
@@ -5394,7 +6114,8 @@
     "types": [
       "Feuer",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Volcanion"
   },
   {
     "id": "0722",
@@ -5402,7 +6123,8 @@
     "types": [
       "Pflanze",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bauz"
   },
   {
     "id": "0723",
@@ -5410,7 +6132,8 @@
     "types": [
       "Pflanze",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Arboretoss"
   },
   {
     "id": "0724",
@@ -5418,21 +6141,24 @@
     "types": [
       "Pflanze",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Silvarro"
   },
   {
     "id": "0725",
     "name": "Flamiau",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flamiau"
   },
   {
     "id": "0726",
     "name": "Miezunder",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Miezunder"
   },
   {
     "id": "0727",
@@ -5440,21 +6166,24 @@
     "types": [
       "Feuer",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fuegro"
   },
   {
     "id": "0728",
     "name": "Robball",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Robball"
   },
   {
     "id": "0729",
     "name": "Marikeck",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Marikeck"
   },
   {
     "id": "0730",
@@ -5462,7 +6191,8 @@
     "types": [
       "Wasser",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Primarene"
   },
   {
     "id": "0731",
@@ -5470,7 +6200,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Peppeck"
   },
   {
     "id": "0732",
@@ -5478,7 +6209,8 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Trompeck"
   },
   {
     "id": "0733",
@@ -5486,28 +6218,32 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tukanon"
   },
   {
     "id": "0734",
     "name": "Mangunior",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mangunior"
   },
   {
     "id": "0735",
     "name": "Manguspektor",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Manguspektor"
   },
   {
     "id": "0736",
     "name": "Mabula",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mabula"
   },
   {
     "id": "0737",
@@ -5515,7 +6251,8 @@
     "types": [
       "Kfer",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Akkup"
   },
   {
     "id": "0738",
@@ -5523,14 +6260,16 @@
     "types": [
       "Kfer",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Donarion"
   },
   {
     "id": "0739",
     "name": "Krabbox",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krabbox"
   },
   {
     "id": "0740",
@@ -5538,7 +6277,8 @@
     "types": [
       "Kampf",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krawell"
   },
   {
     "id": "0741",
@@ -5546,7 +6286,8 @@
     "types": [
       "Feuer",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Choreogel"
   },
   {
     "id": "0742",
@@ -5554,7 +6295,8 @@
     "types": [
       "Kfer",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wommel"
   },
   {
     "id": "0743",
@@ -5562,28 +6304,32 @@
     "types": [
       "Kfer",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bandelby"
   },
   {
     "id": "0744",
     "name": "Wuffels",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wuffels"
   },
   {
     "id": "0745",
     "name": "Wolwerock",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wolwerock"
   },
   {
     "id": "0746",
     "name": "Lusardin",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lusardin"
   },
   {
     "id": "0747",
@@ -5591,7 +6337,8 @@
     "types": [
       "Gift",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Garstella"
   },
   {
     "id": "0748",
@@ -5599,21 +6346,24 @@
     "types": [
       "Gift",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Aggrostella"
   },
   {
     "id": "0749",
     "name": "Pampuli",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pampuli"
   },
   {
     "id": "0750",
     "name": "Pampross",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pampross"
   },
   {
     "id": "0751",
@@ -5621,7 +6371,8 @@
     "types": [
       "Wasser",
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Araqua"
   },
   {
     "id": "0752",
@@ -5629,21 +6380,24 @@
     "types": [
       "Wasser",
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Aranestro"
   },
   {
     "id": "0753",
     "name": "Imantis",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Imantis"
   },
   {
     "id": "0754",
     "name": "Mantidea",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mantidea"
   },
   {
     "id": "0755",
@@ -5651,7 +6405,8 @@
     "types": [
       "Pflanze",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bubungus"
   },
   {
     "id": "0756",
@@ -5659,7 +6414,8 @@
     "types": [
       "Pflanze",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lamellux"
   },
   {
     "id": "0757",
@@ -5667,7 +6423,8 @@
     "types": [
       "Gift",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Molunk"
   },
   {
     "id": "0758",
@@ -5675,7 +6432,8 @@
     "types": [
       "Gift",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Amfira"
   },
   {
     "id": "0759",
@@ -5683,7 +6441,8 @@
     "types": [
       "Normal",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Velursi"
   },
   {
     "id": "0760",
@@ -5691,35 +6450,40 @@
     "types": [
       "Normal",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kosturso"
   },
   {
     "id": "0761",
     "name": "Frubberl",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Frubberl"
   },
   {
     "id": "0762",
     "name": "Frubaila",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Frubaila"
   },
   {
     "id": "0763",
     "name": "Fruyal",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fruyal"
   },
   {
     "id": "0764",
     "name": "Curelei",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Curelei"
   },
   {
     "id": "0765",
@@ -5727,14 +6491,16 @@
     "types": [
       "Normal",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kommandutan"
   },
   {
     "id": "0766",
     "name": "Quartermak",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Quartermak"
   },
   {
     "id": "0767",
@@ -5742,7 +6508,8 @@
     "types": [
       "Kfer",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Rei%C3%9Flaus"
   },
   {
     "id": "0768",
@@ -5750,7 +6517,8 @@
     "types": [
       "Kfer",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tectass"
   },
   {
     "id": "0769",
@@ -5758,7 +6526,8 @@
     "types": [
       "Geist",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sankabuh"
   },
   {
     "id": "0770",
@@ -5766,28 +6535,32 @@
     "types": [
       "Geist",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Colossand"
   },
   {
     "id": "0771",
     "name": "Gufa",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gufa"
   },
   {
     "id": "0772",
     "name": "TypNull",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Typ:Null"
   },
   {
     "id": "0773",
     "name": "Amigento",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Amigento"
   },
   {
     "id": "0774",
@@ -5795,14 +6568,16 @@
     "types": [
       "Gestein",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Meteno"
   },
   {
     "id": "0775",
     "name": "Koalelu",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Koalelu"
   },
   {
     "id": "0776",
@@ -5810,7 +6585,8 @@
     "types": [
       "Feuer",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tortunator"
   },
   {
     "id": "0777",
@@ -5818,7 +6594,8 @@
     "types": [
       "Elektro",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Togedemaru"
   },
   {
     "id": "0778",
@@ -5826,7 +6603,8 @@
     "types": [
       "Geist",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mimigma"
   },
   {
     "id": "0779",
@@ -5834,7 +6612,8 @@
     "types": [
       "Wasser",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knirfish"
   },
   {
     "id": "0780",
@@ -5842,7 +6621,8 @@
     "types": [
       "Normal",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sen-Long"
   },
   {
     "id": "0781",
@@ -5850,14 +6630,16 @@
     "types": [
       "Geist",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Moruda"
   },
   {
     "id": "0782",
     "name": "Miniras",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Miniras"
   },
   {
     "id": "0783",
@@ -5865,7 +6647,8 @@
     "types": [
       "Drache",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mediras"
   },
   {
     "id": "0784",
@@ -5873,7 +6656,8 @@
     "types": [
       "Drache",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Grandiras"
   },
   {
     "id": "0785",
@@ -5881,7 +6665,8 @@
     "types": [
       "Elektro",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kapu-Riki"
   },
   {
     "id": "0786",
@@ -5889,7 +6674,8 @@
     "types": [
       "Psycho",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kapu-Fala"
   },
   {
     "id": "0787",
@@ -5897,7 +6683,8 @@
     "types": [
       "Pflanze",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kapu-Toro"
   },
   {
     "id": "0788",
@@ -5905,21 +6692,24 @@
     "types": [
       "Wasser",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kapu-Kime"
   },
   {
     "id": "0789",
     "name": "Cosmog",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Cosmog"
   },
   {
     "id": "0790",
     "name": "Cosmovum",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Cosmovum"
   },
   {
     "id": "0791",
@@ -5927,7 +6717,8 @@
     "types": [
       "Psycho",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Solgaleo"
   },
   {
     "id": "0792",
@@ -5935,7 +6726,8 @@
     "types": [
       "Psycho",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lunala"
   },
   {
     "id": "0793",
@@ -5943,7 +6735,8 @@
     "types": [
       "Gestein",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Anego"
   },
   {
     "id": "0794",
@@ -5951,7 +6744,8 @@
     "types": [
       "Kfer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Masskito"
   },
   {
     "id": "0795",
@@ -5959,14 +6753,16 @@
     "types": [
       "Kfer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schabelle"
   },
   {
     "id": "0796",
     "name": "Voltriant",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voltriant"
   },
   {
     "id": "0797",
@@ -5974,7 +6770,8 @@
     "types": [
       "Stahl",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kaguron"
   },
   {
     "id": "0798",
@@ -5982,7 +6779,8 @@
     "types": [
       "Pflanze",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Katagami"
   },
   {
     "id": "0799",
@@ -5990,14 +6788,16 @@
     "types": [
       "Unlicht",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schlingking"
   },
   {
     "id": "0800",
     "name": "Necrozma",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Necrozma"
   },
   {
     "id": "0801",
@@ -6005,7 +6805,8 @@
     "types": [
       "Stahl",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Magearna"
   },
   {
     "id": "0802",
@@ -6013,14 +6814,16 @@
     "types": [
       "Kampf",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Marshadow"
   },
   {
     "id": "0803",
     "name": "Venicro",
     "types": [
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Venicro"
   },
   {
     "id": "0804",
@@ -6028,7 +6831,8 @@
     "types": [
       "Gift",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Agoyon"
   },
   {
     "id": "0805",
@@ -6036,7 +6840,8 @@
     "types": [
       "Gestein",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Muramura"
   },
   {
     "id": "0806",
@@ -6044,119 +6849,136 @@
     "types": [
       "Feuer",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kopplosio"
   },
   {
     "id": "0807",
     "name": "Zeraora",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zeraora"
   },
   {
     "id": "0808",
     "name": "Meltan",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Meltan"
   },
   {
     "id": "0809",
     "name": "Melmetal",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Melmetal"
   },
   {
     "id": "0810",
     "name": "Chimpep",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chimpep"
   },
   {
     "id": "0811",
     "name": "Chimstix",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chimstix"
   },
   {
     "id": "0812",
     "name": "Gortrom",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gortrom"
   },
   {
     "id": "0813",
     "name": "Hopplo",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hopplo"
   },
   {
     "id": "0814",
     "name": "Kickerlo",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kickerlo"
   },
   {
     "id": "0815",
     "name": "Liberlo",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Liberlo"
   },
   {
     "id": "0816",
     "name": "Memmeon",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Memmeon"
   },
   {
     "id": "0817",
     "name": "Phlegleon",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Phlegleon"
   },
   {
     "id": "0818",
     "name": "Intelleon",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Intelleon"
   },
   {
     "id": "0819",
     "name": "Raffel",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Raffel"
   },
   {
     "id": "0820",
     "name": "Schlaraffel",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schlaraffel"
   },
   {
     "id": "0821",
     "name": "Meikro",
     "types": [
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Meikro"
   },
   {
     "id": "0822",
     "name": "Kranoviz",
     "types": [
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kranoviz"
   },
   {
     "id": "0823",
@@ -6164,14 +6986,16 @@
     "types": [
       "Flug",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krarmor"
   },
   {
     "id": "0824",
     "name": "Sensect",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sensect"
   },
   {
     "id": "0825",
@@ -6179,7 +7003,8 @@
     "types": [
       "Kfer",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Keradar"
   },
   {
     "id": "0826",
@@ -6187,56 +7012,64 @@
     "types": [
       "Kfer",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Maritellit"
   },
   {
     "id": "0827",
     "name": "Kleptifux",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kleptifux"
   },
   {
     "id": "0828",
     "name": "Gaunux",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gaunux"
   },
   {
     "id": "0829",
     "name": "Cottini",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Cottini"
   },
   {
     "id": "0830",
     "name": "Cottomi",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Cottomi"
   },
   {
     "id": "0831",
     "name": "Wolly",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wolly"
   },
   {
     "id": "0832",
     "name": "Zwollock",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zwollock"
   },
   {
     "id": "0833",
     "name": "Kamehaps",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kamehaps"
   },
   {
     "id": "0834",
@@ -6244,28 +7077,32 @@
     "types": [
       "Wasser",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kamalm"
   },
   {
     "id": "0835",
     "name": "Voldi",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voldi"
   },
   {
     "id": "0836",
     "name": "Bellektro",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bellektro"
   },
   {
     "id": "0837",
     "name": "Klonkett",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Klonkett"
   },
   {
     "id": "0838",
@@ -6273,7 +7110,8 @@
     "types": [
       "Gestein",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wagong"
   },
   {
     "id": "0839",
@@ -6281,7 +7119,8 @@
     "types": [
       "Gestein",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Montecarbo"
   },
   {
     "id": "0840",
@@ -6289,7 +7128,8 @@
     "types": [
       "Pflanze",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knapfel"
   },
   {
     "id": "0841",
@@ -6297,7 +7137,8 @@
     "types": [
       "Pflanze",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Drapfel"
   },
   {
     "id": "0842",
@@ -6305,21 +7146,24 @@
     "types": [
       "Pflanze",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schlapfel"
   },
   {
     "id": "0843",
     "name": "Salanga",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Salanga"
   },
   {
     "id": "0844",
     "name": "Sanaconda",
     "types": [
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sanaconda"
   },
   {
     "id": "0845",
@@ -6327,21 +7171,24 @@
     "types": [
       "Flug",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Urgl"
   },
   {
     "id": "0846",
     "name": "Pikuda",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pikuda"
   },
   {
     "id": "0847",
     "name": "Barrakiefa",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Barrakiefa"
   },
   {
     "id": "0848",
@@ -6349,7 +7196,8 @@
     "types": [
       "Elektro",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Toxel"
   },
   {
     "id": "0849",
@@ -6357,7 +7205,8 @@
     "types": [
       "Elektro",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Riffex"
   },
   {
     "id": "0850",
@@ -6365,7 +7214,8 @@
     "types": [
       "Feuer",
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Thermopod"
   },
   {
     "id": "0851",
@@ -6373,49 +7223,56 @@
     "types": [
       "Feuer",
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Infernopod"
   },
   {
     "id": "0852",
     "name": "Klopptopus",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Klopptopus"
   },
   {
     "id": "0853",
     "name": "Kaocto",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kaocto"
   },
   {
     "id": "0854",
     "name": "Fatalitee",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fatalitee"
   },
   {
     "id": "0855",
     "name": "Mortipot",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mortipot"
   },
   {
     "id": "0856",
     "name": "Brimova",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Brimova"
   },
   {
     "id": "0857",
     "name": "Brimano",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Brimano"
   },
   {
     "id": "0858",
@@ -6423,7 +7280,8 @@
     "types": [
       "Psycho",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Silembrim"
   },
   {
     "id": "0859",
@@ -6431,7 +7289,8 @@
     "types": [
       "Unlicht",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/B%C3%A4hmon"
   },
   {
     "id": "0860",
@@ -6439,7 +7298,8 @@
     "types": [
       "Unlicht",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pelzebub"
   },
   {
     "id": "0861",
@@ -6447,7 +7307,8 @@
     "types": [
       "Unlicht",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Olangaar"
   },
   {
     "id": "0862",
@@ -6455,28 +7316,32 @@
     "types": [
       "Unlicht",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Barrikadax"
   },
   {
     "id": "0863",
     "name": "Mauzinger",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mauzinger"
   },
   {
     "id": "0864",
     "name": "Gorgasonn",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gorgasonn"
   },
   {
     "id": "0865",
     "name": "Lauchzelot",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lauchzelot"
   },
   {
     "id": "0866",
@@ -6484,7 +7349,8 @@
     "types": [
       "Eis",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pantifrost"
   },
   {
     "id": "0867",
@@ -6492,35 +7358,40 @@
     "types": [
       "Boden",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Oghnatoll"
   },
   {
     "id": "0868",
     "name": "Hokumil",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hokumil"
   },
   {
     "id": "0869",
     "name": "Pokusan",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pokusan"
   },
   {
     "id": "0870",
     "name": "Legios",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Legios"
   },
   {
     "id": "0871",
     "name": "Britzigel",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Britzigel"
   },
   {
     "id": "0872",
@@ -6528,7 +7399,8 @@
     "types": [
       "Eis",
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Snomnom"
   },
   {
     "id": "0873",
@@ -6536,21 +7408,24 @@
     "types": [
       "Eis",
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mottineva"
   },
   {
     "id": "0874",
     "name": "Humanolith",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Humanolith"
   },
   {
     "id": "0875",
     "name": "Kubuin",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kubuin"
   },
   {
     "id": "0876",
@@ -6558,7 +7433,8 @@
     "types": [
       "Psycho",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Servol"
   },
   {
     "id": "0877",
@@ -6566,21 +7442,24 @@
     "types": [
       "Elektro",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Morpeko"
   },
   {
     "id": "0878",
     "name": "Kupfanti",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kupfanti"
   },
   {
     "id": "0879",
     "name": "Patinaraja",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Patinaraja"
   },
   {
     "id": "0880",
@@ -6588,7 +7467,8 @@
     "types": [
       "Elektro",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lectragon"
   },
   {
     "id": "0881",
@@ -6596,7 +7476,8 @@
     "types": [
       "Elektro",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lecryodon"
   },
   {
     "id": "0882",
@@ -6604,7 +7485,8 @@
     "types": [
       "Wasser",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pescragon"
   },
   {
     "id": "0883",
@@ -6612,7 +7494,8 @@
     "types": [
       "Wasser",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pescryodon"
   },
   {
     "id": "0884",
@@ -6620,7 +7503,8 @@
     "types": [
       "Stahl",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Duraludon"
   },
   {
     "id": "0885",
@@ -6628,7 +7512,8 @@
     "types": [
       "Drache",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Grolldra"
   },
   {
     "id": "0886",
@@ -6636,7 +7521,8 @@
     "types": [
       "Drache",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Phandra"
   },
   {
     "id": "0887",
@@ -6644,21 +7530,24 @@
     "types": [
       "Drache",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Katapuldra"
   },
   {
     "id": "0888",
     "name": "Zacian",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zacian"
   },
   {
     "id": "0889",
     "name": "Zamazenta",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zamazenta"
   },
   {
     "id": "0890",
@@ -6666,14 +7555,16 @@
     "types": [
       "Gift",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Endynalos"
   },
   {
     "id": "0891",
     "name": "Dakuma",
     "types": [
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dakuma"
   },
   {
     "id": "0892",
@@ -6681,7 +7572,8 @@
     "types": [
       "Kampf",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wulaosu"
   },
   {
     "id": "0893",
@@ -6689,35 +7581,40 @@
     "types": [
       "Unlicht",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zarude"
   },
   {
     "id": "0894",
     "name": "Regieleki",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Regieleki"
   },
   {
     "id": "0895",
     "name": "Regidrago",
     "types": [
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Regidrago"
   },
   {
     "id": "0896",
     "name": "Polaross",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Polaross"
   },
   {
     "id": "0897",
     "name": "Phantoross",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Phantoross"
   },
   {
     "id": "0898",
@@ -6725,7 +7622,8 @@
     "types": [
       "Psycho",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Coronospa"
   },
   {
     "id": "0899",
@@ -6733,7 +7631,8 @@
     "types": [
       "Normal",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Damythir"
   },
   {
     "id": "0900",
@@ -6741,7 +7640,8 @@
     "types": [
       "Kfer",
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Axantor"
   },
   {
     "id": "0901",
@@ -6749,7 +7649,8 @@
     "types": [
       "Boden",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ursaluna"
   },
   {
     "id": "0902",
@@ -6757,7 +7658,8 @@
     "types": [
       "Wasser",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Salmagnis"
   },
   {
     "id": "0903",
@@ -6765,7 +7667,8 @@
     "types": [
       "Kampf",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Snieboss"
   },
   {
     "id": "0904",
@@ -6773,7 +7676,8 @@
     "types": [
       "Unlicht",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Myriador"
   },
   {
     "id": "0905",
@@ -6781,21 +7685,24 @@
     "types": [
       "Fee",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Cupidos"
   },
   {
     "id": "0906",
     "name": "Felori",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Felori"
   },
   {
     "id": "0907",
     "name": "Feliospa",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Feliospa"
   },
   {
     "id": "0908",
@@ -6803,21 +7710,24 @@
     "types": [
       "Pflanze",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Maskagato"
   },
   {
     "id": "0909",
     "name": "Krokel",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krokel"
   },
   {
     "id": "0910",
     "name": "Lokroko",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lokroko"
   },
   {
     "id": "0911",
@@ -6825,21 +7735,24 @@
     "types": [
       "Feuer",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Skelokrok"
   },
   {
     "id": "0912",
     "name": "Kwaks",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kwaks"
   },
   {
     "id": "0913",
     "name": "Fuentente",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fuentente"
   },
   {
     "id": "0914",
@@ -6847,42 +7760,48 @@
     "types": [
       "Wasser",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Bailonda"
   },
   {
     "id": "0915",
     "name": "Ferkuli",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ferkuli"
   },
   {
     "id": "0916",
     "name": "Fragrunz",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fragrunz"
   },
   {
     "id": "0917",
     "name": "Tarundel",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tarundel"
   },
   {
     "id": "0918",
     "name": "Spinsidias",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Spinsidias"
   },
   {
     "id": "0919",
     "name": "Micrick",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Micrick"
   },
   {
     "id": "0920",
@@ -6890,14 +7809,16 @@
     "types": [
       "Kfer",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lextremo"
   },
   {
     "id": "0921",
     "name": "Pamo",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pamo"
   },
   {
     "id": "0922",
@@ -6905,7 +7826,8 @@
     "types": [
       "Elektro",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pamamo"
   },
   {
     "id": "0923",
@@ -6913,35 +7835,40 @@
     "types": [
       "Elektro",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Pamomamo"
   },
   {
     "id": "0924",
     "name": "Zwieps",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Zwieps"
   },
   {
     "id": "0925",
     "name": "Famieps",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Famieps"
   },
   {
     "id": "0926",
     "name": "Hefel",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hefel"
   },
   {
     "id": "0927",
     "name": "Backel",
     "types": [
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Backel"
   },
   {
     "id": "0928",
@@ -6949,7 +7876,8 @@
     "types": [
       "Pflanze",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Olini"
   },
   {
     "id": "0929",
@@ -6957,7 +7885,8 @@
     "types": [
       "Pflanze",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Olivinio"
   },
   {
     "id": "0930",
@@ -6965,7 +7894,8 @@
     "types": [
       "Pflanze",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Olithena"
   },
   {
     "id": "0931",
@@ -6973,35 +7903,40 @@
     "types": [
       "Normal",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Krawalloro"
   },
   {
     "id": "0932",
     "name": "Geosali",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Geosali"
   },
   {
     "id": "0933",
     "name": "Sedisal",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sedisal"
   },
   {
     "id": "0934",
     "name": "Saltigant",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Saltigant"
   },
   {
     "id": "0935",
     "name": "Knarbon",
     "types": [
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knarbon"
   },
   {
     "id": "0936",
@@ -7009,7 +7944,8 @@
     "types": [
       "Feuer",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Crimanzo"
   },
   {
     "id": "0937",
@@ -7017,21 +7953,24 @@
     "types": [
       "Feuer",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Azugladis"
   },
   {
     "id": "0938",
     "name": "Blipp",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Blipp"
   },
   {
     "id": "0939",
     "name": "Wampitz",
     "types": [
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wampitz"
   },
   {
     "id": "0940",
@@ -7039,7 +7978,8 @@
     "types": [
       "Elektro",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voltrel"
   },
   {
     "id": "0941",
@@ -7047,21 +7987,24 @@
     "types": [
       "Elektro",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Voltrean"
   },
   {
     "id": "0942",
     "name": "Mobtiff",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mobtiff"
   },
   {
     "id": "0943",
     "name": "Mastifioso",
     "types": [
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mastifioso"
   },
   {
     "id": "0944",
@@ -7069,7 +8012,8 @@
     "types": [
       "Gift",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sproxi"
   },
   {
     "id": "0945",
@@ -7077,7 +8021,8 @@
     "types": [
       "Gift",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Affiti"
   },
   {
     "id": "0946",
@@ -7085,7 +8030,8 @@
     "types": [
       "Pflanze",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Weherba"
   },
   {
     "id": "0947",
@@ -7093,7 +8039,8 @@
     "types": [
       "Pflanze",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Horrerba"
   },
   {
     "id": "0948",
@@ -7101,7 +8048,8 @@
     "types": [
       "Boden",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tentagra"
   },
   {
     "id": "0949",
@@ -7109,21 +8057,24 @@
     "types": [
       "Boden",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tenterra"
   },
   {
     "id": "0950",
     "name": "Klibbe",
     "types": [
       "Gestein"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Klibbe"
   },
   {
     "id": "0951",
     "name": "Chilingel",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chilingel"
   },
   {
     "id": "0952",
@@ -7131,14 +8082,16 @@
     "types": [
       "Pflanze",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Halupenjo"
   },
   {
     "id": "0953",
     "name": "Relluk",
     "types": [
       "Kfer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Relluk"
   },
   {
     "id": "0954",
@@ -7146,21 +8099,24 @@
     "types": [
       "Kfer",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Skarabaks"
   },
   {
     "id": "0955",
     "name": "Flattutu",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flattutu"
   },
   {
     "id": "0956",
     "name": "Psiopatra",
     "types": [
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Psiopatra"
   },
   {
     "id": "0957",
@@ -7168,7 +8124,8 @@
     "types": [
       "Fee",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Forgita"
   },
   {
     "id": "0958",
@@ -7176,7 +8133,8 @@
     "types": [
       "Fee",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Tafforgita"
   },
   {
     "id": "0959",
@@ -7184,21 +8142,24 @@
     "types": [
       "Fee",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Granforgita"
   },
   {
     "id": "0960",
     "name": "Schligda",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schligda"
   },
   {
     "id": "0961",
     "name": "Schligdri",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schligdri"
   },
   {
     "id": "0962",
@@ -7206,21 +8167,24 @@
     "types": [
       "Flug",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Adebom"
   },
   {
     "id": "0963",
     "name": "Normifin",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Normifin"
   },
   {
     "id": "0964",
     "name": "Delfinator",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Delfinator"
   },
   {
     "id": "0965",
@@ -7228,7 +8192,8 @@
     "types": [
       "Stahl",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knattox"
   },
   {
     "id": "0966",
@@ -7236,7 +8201,8 @@
     "types": [
       "Stahl",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Knattatox"
   },
   {
     "id": "0967",
@@ -7244,14 +8210,16 @@
     "types": [
       "Drache",
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mopex"
   },
   {
     "id": "0968",
     "name": "Schlurm",
     "types": [
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Schlurm"
   },
   {
     "id": "0969",
@@ -7259,7 +8227,8 @@
     "types": [
       "Gestein",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lumispross"
   },
   {
     "id": "0970",
@@ -7267,21 +8236,24 @@
     "types": [
       "Gestein",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Lumiflora"
   },
   {
     "id": "0971",
     "name": "Gruff",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gruff"
   },
   {
     "id": "0972",
     "name": "Friedwuff",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Friedwuff"
   },
   {
     "id": "0973",
@@ -7289,21 +8261,24 @@
     "types": [
       "Flug",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flaminkno"
   },
   {
     "id": "0974",
     "name": "Flaniwal",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flaniwal"
   },
   {
     "id": "0975",
     "name": "Kolowal",
     "types": [
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kolowal"
   },
   {
     "id": "0976",
@@ -7311,14 +8286,16 @@
     "types": [
       "Wasser",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Agiluza"
   },
   {
     "id": "0977",
     "name": "Heerashai",
     "types": [
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Heerashai"
   },
   {
     "id": "0978",
@@ -7326,7 +8303,8 @@
     "types": [
       "Drache",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Nigiragi"
   },
   {
     "id": "0979",
@@ -7334,7 +8312,8 @@
     "types": [
       "Kampf",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Epitaff"
   },
   {
     "id": "0980",
@@ -7342,7 +8321,8 @@
     "types": [
       "Gift",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Suelord"
   },
   {
     "id": "0981",
@@ -7350,14 +8330,16 @@
     "types": [
       "Normal",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Farigiraf"
   },
   {
     "id": "0982",
     "name": "Dummimisel",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dummimisel"
   },
   {
     "id": "0983",
@@ -7365,7 +8347,8 @@
     "types": [
       "Unlicht",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gladimperio"
   },
   {
     "id": "0984",
@@ -7373,7 +8356,8 @@
     "types": [
       "Boden",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Riesenzahn"
   },
   {
     "id": "0985",
@@ -7381,7 +8365,8 @@
     "types": [
       "Fee",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Br%C3%BCllschweif"
   },
   {
     "id": "0986",
@@ -7389,7 +8374,8 @@
     "types": [
       "Pflanze",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Wutpilz"
   },
   {
     "id": "0987",
@@ -7397,7 +8383,8 @@
     "types": [
       "Geist",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Flatterhaar"
   },
   {
     "id": "0988",
@@ -7405,7 +8392,8 @@
     "types": [
       "Kfer",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Kriechfl%C3%BCgel"
   },
   {
     "id": "0989",
@@ -7413,7 +8401,8 @@
     "types": [
       "Elektro",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sandfell"
   },
   {
     "id": "0990",
@@ -7421,7 +8410,8 @@
     "types": [
       "Boden",
       "Stahl"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisenrad"
   },
   {
     "id": "0991",
@@ -7429,7 +8419,8 @@
     "types": [
       "Eis",
       "Wasser"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisenb%C3%BCndel"
   },
   {
     "id": "0992",
@@ -7437,7 +8428,8 @@
     "types": [
       "Kampf",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisenhand"
   },
   {
     "id": "0993",
@@ -7445,7 +8437,8 @@
     "types": [
       "Unlicht",
       "Flug"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisenhals"
   },
   {
     "id": "0994",
@@ -7453,7 +8446,8 @@
     "types": [
       "Feuer",
       "Gift"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisenfalter"
   },
   {
     "id": "0995",
@@ -7461,7 +8455,8 @@
     "types": [
       "Gestein",
       "Elektro"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisendorn"
   },
   {
     "id": "0996",
@@ -7469,7 +8464,8 @@
     "types": [
       "Drache",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Frospino"
   },
   {
     "id": "0997",
@@ -7477,7 +8473,8 @@
     "types": [
       "Drache",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Cryospino"
   },
   {
     "id": "0998",
@@ -7485,14 +8482,16 @@
     "types": [
       "Drache",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Espinodon"
   },
   {
     "id": "0999",
     "name": "Gierspenst",
     "types": [
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Gierspenst"
   },
   {
     "id": "1000",
@@ -7500,7 +8499,8 @@
     "types": [
       "Stahl",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Monetigo"
   },
   {
     "id": "1001",
@@ -7508,7 +8508,8 @@
     "types": [
       "Unlicht",
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Chongjian"
   },
   {
     "id": "1002",
@@ -7516,7 +8517,8 @@
     "types": [
       "Unlicht",
       "Eis"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Baojian"
   },
   {
     "id": "1003",
@@ -7524,7 +8526,8 @@
     "types": [
       "Unlicht",
       "Boden"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Dinglu"
   },
   {
     "id": "1004",
@@ -7532,7 +8535,8 @@
     "types": [
       "Unlicht",
       "Feuer"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Yuyu"
   },
   {
     "id": "1005",
@@ -7540,7 +8544,8 @@
     "types": [
       "Drache",
       "Unlicht"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Donnersichel"
   },
   {
     "id": "1006",
@@ -7548,7 +8553,8 @@
     "types": [
       "Fee",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisenkrieger"
   },
   {
     "id": "1007",
@@ -7556,7 +8562,8 @@
     "types": [
       "Kampf",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Koraidon"
   },
   {
     "id": "1008",
@@ -7564,7 +8571,8 @@
     "types": [
       "Elektro",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Miraidon"
   },
   {
     "id": "1009",
@@ -7572,7 +8580,8 @@
     "types": [
       "Wasser",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Windewoge"
   },
   {
     "id": "1010",
@@ -7580,7 +8589,8 @@
     "types": [
       "Pflanze",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisenblatt"
   },
   {
     "id": "1011",
@@ -7588,7 +8598,8 @@
     "types": [
       "Pflanze",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Sirapfel"
   },
   {
     "id": "1012",
@@ -7596,7 +8607,8 @@
     "types": [
       "Pflanze",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Mortcha"
   },
   {
     "id": "1013",
@@ -7604,7 +8616,8 @@
     "types": [
       "Pflanze",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Fatalitcha"
   },
   {
     "id": "1014",
@@ -7612,7 +8625,8 @@
     "types": [
       "Gift",
       "Kampf"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Boninu"
   },
   {
     "id": "1015",
@@ -7620,7 +8634,8 @@
     "types": [
       "Gift",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Benesaru"
   },
   {
     "id": "1016",
@@ -7628,14 +8643,16 @@
     "types": [
       "Gift",
       "Fee"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Beatori"
   },
   {
     "id": "1017",
     "name": "Ogerpon",
     "types": [
       "Pflanze"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Ogerpon"
   },
   {
     "id": "1018",
@@ -7643,7 +8660,8 @@
     "types": [
       "Stahl",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Briduradon"
   },
   {
     "id": "1019",
@@ -7651,7 +8669,8 @@
     "types": [
       "Pflanze",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Hydrapfel"
   },
   {
     "id": "1020",
@@ -7659,7 +8678,8 @@
     "types": [
       "Feuer",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Keilflamme"
   },
   {
     "id": "1021",
@@ -7667,7 +8687,8 @@
     "types": [
       "Elektro",
       "Drache"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Furienblitz"
   },
   {
     "id": "1022",
@@ -7675,7 +8696,8 @@
     "types": [
       "Gestein",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisenfels"
   },
   {
     "id": "1023",
@@ -7683,14 +8705,16 @@
     "types": [
       "Stahl",
       "Psycho"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Eisenhaupt"
   },
   {
     "id": "1024",
     "name": "Terapagos",
     "types": [
       "Normal"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Terapagos"
   },
   {
     "id": "1025",
@@ -7698,6 +8722,7 @@
     "types": [
       "Gift",
       "Geist"
-    ]
+    ],
+    "url": "https://www.pokewiki.de/Infamomo"
   }
 ]

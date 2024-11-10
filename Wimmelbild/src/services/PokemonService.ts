@@ -4,6 +4,7 @@ interface PokemonData {
     id: string;
     name: string;
     types: string[];
+    url: string;
 }
 
 export class PokemonService implements IPokemonService {
@@ -53,7 +54,8 @@ export class PokemonService implements IPokemonService {
             x: position.x,
             y: position.y,
             size: this.config.POKEMON_SIZE,
-            image: imagePath
+            image: imagePath,
+            url: pokemonData.url
         };
     }
 
