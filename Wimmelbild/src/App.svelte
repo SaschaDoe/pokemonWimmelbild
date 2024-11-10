@@ -283,19 +283,9 @@
             {discoveredPokemon}
             allPokemon={allPokemonList}
             onClose={() => showPokemonList = false}
+            resetProgress={resetProgress}
         />
     {/if}
-
-    <button 
-        class="reset-button"
-        on:click={() => {
-            if (confirm('Are you sure you want to reset your Pokédex progress?')) {
-                resetProgress();
-            }
-        }}
-    >
-        🔄 Reset Progress
-    </button>
 </main>
 
 <style>

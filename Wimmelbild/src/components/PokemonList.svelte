@@ -5,6 +5,7 @@
     export let discoveredPokemon: Set<number>;
     export let allPokemon: Pokemon[];
     export let onClose: () => void;
+    export let resetProgress: () => void;
 
     let selectedPokemon: Pokemon | null = null;
 
@@ -50,6 +51,19 @@
                 </button>
             {/each}
         </div>
+
+        <div class="reset-button-container">
+            <button 
+                class="reset-button"
+                on:click={() => {
+                    if (confirm('Are you sure you want to reset your Pokédex progress?')) {
+                        resetProgress();
+                    }
+                }}
+            >
+                🔄 Reset Progress
+            </button>
+        </div>
     </div>
 </div>
 
@@ -81,6 +95,8 @@
         width: 80%;
         height: 80%;
         overflow-y: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .close-button {
@@ -101,10 +117,12 @@
     }
 
     .pokemon-grid {
+        flex: 1;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 1rem;
         padding: 1rem;
+        margin-bottom: 1rem;
     }
 
     .pokemon-item {
@@ -168,5 +186,32 @@
         width: 100%;
         height: 100%;
         z-index: 2000;
+    }
+
+    .reset-button-container {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        margin-top: auto;
+    }
+
+    .reset-button {
+        background: rgba(255, 0, 0, 0.8);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: transform 0.2s;
+    }
+
+    .reset-button:hover {
+        transform: scale(1.05);
+        background: rgba(255, 0, 0, 0.9);
     }
 </style> 
