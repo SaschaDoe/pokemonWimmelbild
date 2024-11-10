@@ -32,4 +32,15 @@ export interface IPositionService {
 export interface IPokemonService {
     generatePokemon(position: Position): Promise<Pokemon>;
     getImagePath(id: number): string;
+}
+
+export interface Berry {
+    index: string;
+    name: string;
+    image_url: string;
+    local_image: string;
+    position?: {
+        x: number;
+        y: number;
+    };
 } 
