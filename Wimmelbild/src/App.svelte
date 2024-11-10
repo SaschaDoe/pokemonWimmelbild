@@ -68,6 +68,7 @@
     let wrongBerryAnimations: Set<string> = new Set();
 
     let currentBackground = '/backgrounds/woods.png';
+    let currentMask = '/backgrounds/woods_mask.png';
 
     function saveDiscoveredPokemon() {
         localStorage.setItem('discoveredPokemon', 
@@ -107,7 +108,10 @@
         harvestingBerries = new Set();
         
         try {
-            currentBackground = await backgroundService.getRandomBackground();
+            // Get random background with its mask
+            const bgInfo = await backgroundService.getRandomBackground();
+            currentBackground = bgInfo.image;
+            await backgroundService.loadMask(bgInfo.mask);
 
             const newPokemons: Pokemon[] = [];
             
@@ -127,7 +131,13 @@
                     ) && attempts < 50
                 );
                 
-                const pokemon = await pokemonService.generatePokemon(position);
+                // Get terrain type at position
+                const terrainType = backgroundService.getTerrainTypeAtPosition(
+                    position.x, 
+                    position.y
+                );
+                
+                const pokemon = await pokemonService.generatePokemon(position, terrainType);
                 newPokemons.push(pokemon);
             }
             

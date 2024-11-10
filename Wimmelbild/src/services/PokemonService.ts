@@ -45,15 +45,28 @@ export class PokemonService implements IPokemonService {
         return this.allPokemon;
     }
 
-    async generatePokemon(position: Position): Promise<Pokemon> {
+    async generatePokemon(position: Position, terrainType: string | null = null): Promise<Pokemon> {
         await this.dataLoaded;
         
         if (this.pokemonData.length === 0) {
             throw new Error('Failed to load Pokemon data');
         }
 
-        const randomIndex = Math.floor(Math.random() * this.pokemonData.length);
-        const pokemonData = this.pokemonData[randomIndex];
+        let eligiblePokemon = this.pokemonData;
+        
+        if (terrainType === 'water') {
+            eligiblePokemon = this.pokemonData.filter(pokemon => 
+                pokemon.types.includes('Water') || 
+                pokemon.types.includes('Wasser')  // German type name
+            );
+        }
+
+        if (eligiblePokemon.length === 0) {
+            eligiblePokemon = this.pokemonData; // Fallback to all Pokemon if no matches
+        }
+
+        const randomIndex = Math.floor(Math.random() * eligiblePokemon.length);
+        const pokemonData = eligiblePokemon[randomIndex];
         
         const imagePath = this.getImagePath(parseInt(pokemonData.id), pokemonData);
         
