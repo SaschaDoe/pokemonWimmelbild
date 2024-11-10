@@ -7,9 +7,12 @@
     import TargetDisplay from './components/TargetDisplay.svelte';
     import WinMessage from './components/WinMessage.svelte';
     import PokemonDetails from './components/PokemonDetails.svelte';
+    import PokemonList from './components/PokemonList.svelte';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
+
+    let allPokemonList: Pokemon[] = [];
 
     function getRandomItems<T>(items: T[], count: number): T[] {
         return [...items].sort(() => Math.random() - 0.5).slice(0, count);
@@ -57,10 +60,24 @@
 
     let selectedPokemonForDetails: Pokemon | null = null;
 
+    let showPokemonList = false;
+    let discoveredPokemon: Set<number> = new Set(
+        JSON.parse(localStorage.getItem('discoveredPokemon') || '[]')
+    );
+
+    function saveDiscoveredPokemon() {
+        localStorage.setItem('discoveredPokemon', 
+            JSON.stringify([...discoveredPokemon])
+        );
+    }
+
     onMount(async () => {
         try {
             const berryResponse = await fetch('berry_data.json');
             berryData = await berryResponse.json();
+            
+            await pokemonService.dataLoaded;
+            allPokemonList = pokemonService.getAllPokemon();
             
             await initializeGame();
         } catch (error) {
@@ -130,6 +147,9 @@
             
             if (allBerriesFound && item.id === targetPokemon?.id) {
                 foundItems = [...foundItems, item];
+                discoveredPokemon.add(item.id);
+                discoveredPokemon = discoveredPokemon;
+                saveDiscoveredPokemon();
                 showWinMessage = true;
             }
         } else {
@@ -148,6 +168,16 @@
     function closeDetails() {
         selectedPokemonForDetails = null;
     }
+
+    function togglePokemonList() {
+        showPokemonList = !showPokemonList;
+    }
+
+    function resetProgress() {
+        discoveredPokemon = new Set();
+        saveDiscoveredPokemon();
+        initializeGame();
+    }
 </script>
 
 <main>
@@ -155,6 +185,13 @@
         <div class="loading">Loading...</div>
     {:else}
         <div class="game-container">
+            <button 
+                class="pokedex-button"
+                on:click={togglePokemonList}
+            >
+                📖 Pokédex
+            </button>
+
             <div class="background-container">
                 <img src="/backgrounds/woods.png" alt="Forest background" class="background-image" />
                 
@@ -231,6 +268,25 @@
             {/if}
         </div>
     {/if}
+
+    {#if showPokemonList}
+        <PokemonList
+            {discoveredPokemon}
+            allPokemon={allPokemonList}
+            onClose={() => showPokemonList = false}
+        />
+    {/if}
+
+    <button 
+        class="reset-button"
+        on:click={() => {
+            if (confirm('Are you sure you want to reset your Pokédex progress?')) {
+                resetProgress();
+            }
+        }}
+    >
+        🔄 Reset Progress
+    </button>
 </main>
 
 <style>
@@ -403,5 +459,52 @@
         background: rgba(0, 0, 0, 0.5);
         border-radius: 50%;
         padding: 5px;
+    }
+
+    .pokedex-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: transform 0.2s;
+        z-index: 1500;
+    }
+
+    .pokedex-button:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 1);
+    }
+
+    .reset-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(255, 0, 0, 0.8);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: transform 0.2s;
+        z-index: 1500;
+    }
+
+    .reset-button:hover {
+        transform: scale(1.05);
+        background: rgba(255, 0, 0, 0.9);
     }
 </style>

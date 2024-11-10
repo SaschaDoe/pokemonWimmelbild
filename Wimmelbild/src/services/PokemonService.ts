@@ -10,6 +10,7 @@ interface PokemonData {
 export class PokemonService implements IPokemonService {
     private pokemonData: PokemonData[] = [];
     private dataLoaded: Promise<void>;
+    public allPokemon: Pokemon[] = [];
 
     constructor(private config: GameConfig) {
         this.dataLoaded = this.loadPokemonData();
@@ -20,10 +21,28 @@ export class PokemonService implements IPokemonService {
             const response = await fetch('/pokemon_data.json');
             this.pokemonData = await response.json();
             console.log(`Loaded ${this.pokemonData.length} Pokemon from data file`);
+            
+            this.allPokemon = this.pokemonData.map((data, index) => {
+                const imagePath = this.getImagePath(parseInt(data.id), data);
+                return {
+                    id: parseInt(data.id),
+                    name: data.name,
+                    types: data.types,
+                    image: imagePath,
+                    url: data.url,
+                    x: 0,
+                    y: 0,
+                    size: this.config.POKEMON_SIZE
+                };
+            });
         } catch (error) {
             console.error('Failed to load Pokemon data:', error);
             this.pokemonData = [];
         }
+    }
+
+    getAllPokemon(): Pokemon[] {
+        return this.allPokemon;
     }
 
     async generatePokemon(position: Position): Promise<Pokemon> {
