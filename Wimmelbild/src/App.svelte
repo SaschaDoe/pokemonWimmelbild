@@ -4,13 +4,14 @@
     import { gameConfig } from './config/gameConfig';
     import { PositionService } from './services/PositionService';
     import { PokemonService } from './services/PokemonService';
-    import TargetDisplay from './components/TargetDisplay.svelte';
     import WinMessage from './components/WinMessage.svelte';
     import PokemonDetails from './components/PokemonDetails.svelte';
     import PokemonList from './components/PokemonList.svelte';
+    import { BackgroundService } from './services/BackgroundService';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
+    const backgroundService = new BackgroundService(gameConfig);
 
     let allPokemonList: Pokemon[] = [];
 
@@ -53,7 +54,6 @@
     let harvestingBerries: Set<string> = new Set();
 
     let foundItems: (Pokemon | Berry)[] = [];
-    let targets: (Pokemon | Berry)[] = [];
     let gameWon = false;
 
     let foundBerryCount = 0;
@@ -67,6 +67,8 @@
 
     let wrongBerryAnimations: Set<string> = new Set();
 
+    let currentBackground = '/backgrounds/woods.png';
+
     function saveDiscoveredPokemon() {
         localStorage.setItem('discoveredPokemon', 
             JSON.stringify([...discoveredPokemon])
@@ -75,11 +77,18 @@
 
     onMount(async () => {
         try {
+            // Wait for background service to load
+            await backgroundService.dataLoaded;
+            
+            // Load berry data
             const berryResponse = await fetch('berry_data.json');
             berryData = await berryResponse.json();
             
             await pokemonService.dataLoaded;
             allPokemonList = pokemonService.getAllPokemon();
+            
+            // Set initial background
+            currentBackground = await backgroundService.getRandomBackground();
             
             await initializeGame();
         } catch (error) {
@@ -98,6 +107,8 @@
         harvestingBerries = new Set();
         
         try {
+            currentBackground = await backgroundService.getRandomBackground();
+
             const newPokemons: Pokemon[] = [];
             
             for (let i = 0; i < gameConfig.POKEMON_COUNT; i++) {
@@ -197,7 +208,7 @@
             </button>
 
             <div class="background-container">
-                <img src="/backgrounds/woods.png" alt="Forest background" class="background-image" />
+                <img src={currentBackground} alt="Game background" class="background-image" />
                 
                 <div class="target-panel">
                     <h2>Find these:</h2>
@@ -349,22 +360,6 @@
         font-size: 1.5rem;
     }
 
-    .berry {
-        position: absolute;
-        cursor: pointer;
-        transition: transform 0.2s;
-        z-index: 1;
-    }
-
-    .berry img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .berry:hover {
-        transform: scale(1.1);
-    }
-
     .berry-button {
         position: absolute;
         padding: 0;
@@ -481,30 +476,6 @@
     .pokedex-button:hover {
         transform: scale(1.05);
         background: rgba(255, 255, 255, 1);
-    }
-
-    .reset-button {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        background: rgba(255, 0, 0, 0.8);
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        transition: transform 0.2s;
-        z-index: 1500;
-    }
-
-    .reset-button:hover {
-        transform: scale(1.05);
-        background: rgba(255, 0, 0, 0.9);
     }
 
     .berry-button.wrong-berry {
