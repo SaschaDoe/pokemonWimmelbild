@@ -1,100 +1,79 @@
 <script lang="ts">
-    import { scale } from 'svelte/transition';
-    import { elasticOut } from 'svelte/easing';
+    import type { Pokemon } from '../types/interfaces';
+    import Pokedex from './Pokedex.svelte';
+
     export let onNewGame: () => void;
-
-    // Add confetti on mount
-    import confetti from 'canvas-confetti';
-    import { onMount } from 'svelte';
-
-    onMount(() => {
-        confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 }
-        });
-        // Fire another burst after a small delay
-        setTimeout(() => {
-            confetti({
-                particleCount: 50,
-                angle: 60,
-                spread: 55,
-                origin: { x: 0 }
-            });
-            confetti({
-                particleCount: 50,
-                angle: 120,
-                spread: 55,
-                origin: { x: 1 }
-            });
-        }, 150);
-    });
+    export let foundPokemon: Pokemon | null;
 </script>
 
-<div class="win-message" 
-    transition:scale={{
-        duration: 400,
-        easing: elasticOut,
-        start: 0.3
-    }}>
-    <h2 class="victory-text">You found it!</h2>
-    <button class="play-again-btn" on:click={onNewGame}>
-        Play Again
-    </button>
+<div class="win-message-overlay">
+    <div class="win-message-content">
+        <h2>Congratulations!</h2>
+        <p>You found all the berries and caught the Pokémon {foundPokemon?.name}!</p>
+        
+        {#if foundPokemon}
+            <div class="pokedex-container">
+                <Pokedex pokemon={foundPokemon} />
+            </div>
+        {/if}
+        
+        <button on:click={onNewGame}>Play Again</button>
+    </div>
 </div>
 
 <style>
-    .win-message {
+    .win-message-overlay {
         position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .win-message-content {
         background: white;
         padding: 2rem;
-        border-radius: 10px;
+        border-radius: 1rem;
         text-align: center;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
-        z-index: 1000;
-        animation: glow 2s ease-in-out infinite alternate;
+        max-width: 80%;
+        max-height: 80vh;
+        overflow-y: auto;
     }
 
-    @keyframes glow {
-        from {
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-        }
-        to {
-            box-shadow: 0 0 30px rgba(76, 175, 80, 0.4);
-        }
+    .pokedex-container {
+        margin: 2rem 0;
+        padding: 1rem;
+        background: #f5f5f5;
+        border-radius: 0.5rem;
     }
 
-    .play-again-btn {
-        padding: 10px 20px;
-        font-size: 1.1em;
+    button {
         background: #4CAF50;
         color: white;
         border: none;
-        border-radius: 5px;
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.5rem;
+        font-size: 1.1rem;
         cursor: pointer;
-        margin-top: 1rem;
+        transition: background-color 0.2s;
     }
 
-    .play-again-btn:hover {
+    button:hover {
         background: #45a049;
     }
 
-    .victory-text {
-        animation: bounce 1s ease-in-out infinite alternate;
-        margin: 0 0 1rem 0;
+    h2 {
+        color: #333;
+        margin-bottom: 1rem;
     }
 
-    @keyframes bounce {
-        from { transform: translateY(0); }
-        to { transform: translateY(-10px); }
-    }
-
-    @keyframes spin {
-        0% { transform: scale(1) rotate(0); }
-        50% { transform: scale(1.5) rotate(180deg); }
-        100% { transform: scale(1) rotate(360deg); }
+    p {
+        color: #666;
+        margin-bottom: 1.5rem;
     }
 </style> 

@@ -1,104 +1,123 @@
 <script lang="ts">
     import type { Pokemon } from '../types/interfaces';
-    import Modal from './Modal.svelte';
-    import TypeBadge from './TypeBadge.svelte';
-
+    
     export let pokemon: Pokemon;
-    export let show = false;
+
+    // Function to normalize type names
+    function normalizeTypeName(type: string): string {
+        // Convert to lowercase and remove any spaces or special characters
+        return type.toLowerCase()
+            .replace(/\s+/g, '')
+            .replace(/-/g, '')
+            .trim();
+    }
 </script>
 
-<Modal {show} on:close>
-    <div class="pokedex-entry">
-        <h2>#{pokemon.id.toString().padStart(4, '0')} - {pokemon.name}</h2>
-        
-        <div class="pokemon-image-container">
-            <img src={pokemon.image} alt={pokemon.name} />
-        </div>
-        
-        <div class="pokemon-types">
+<div class="pokedex">
+    <div class="pokemon-image">
+        <img src={pokemon.local_image || pokemon.image} alt={pokemon.name} />
+    </div>
+    <div class="pokemon-info">
+        <h3>{pokemon.name}</h3>
+        <p class="pokemon-id">#{pokemon.pokemon_id || pokemon.id.toString().padStart(4, '0')}</p>
+        <div class="types">
             {#each pokemon.types as type}
-                <TypeBadge {type} />
+                <span class="type {normalizeTypeName(type)}">{type}</span>
             {/each}
         </div>
-
-        <div class="pokemon-info">
-            <p class="note">
-                Die PokéWiki-Seite kann nicht direkt eingebettet werden.
-                Klicken Sie unten, um sie in einem neuen Tab zu öffnen:
-            </p>
-            <a 
-                href={pokemon.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="wiki-link"
-            >
-                Auf PokéWiki öffnen
-                <span class="external-link-icon">↗</span>
-            </a>
-        </div>
     </div>
-</Modal>
+</div>
 
 <style>
-    .pokedex-entry {
-        text-align: center;
-        min-width: 300px;
+    .pokedex {
+        display: flex;
+        gap: 1rem;
         padding: 1rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    .pokemon-image-container {
-        margin: 1.5rem 0;
+    .pokemon-image {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .pokemon-image-container img {
-        width: 200px;
-        height: 200px;
+    .pokemon-image img {
+        width: 100%;
+        height: 100%;
         object-fit: contain;
     }
 
-    .pokemon-types {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: center;
-        margin: 1rem 0;
-    }
-
     .pokemon-info {
-        margin-top: 1.5rem;
+        flex: 1;
+        text-align: left;
     }
 
-    .note {
-        color: #666;
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
-    }
-
-    .wiki-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.8rem 1.5rem;
-        background-color: #4a90e2;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: all 0.2s ease;
-        font-weight: bold;
-    }
-
-    .wiki-link:hover {
-        background-color: #357abd;
-        transform: translateY(-2px);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .external-link-icon {
-        font-size: 1.2em;
-    }
-
-    h2 {
-        margin: 0;
+    h3 {
+        margin: 0 0 0.5rem 0;
         color: #333;
         font-size: 1.5rem;
     }
+
+    .pokemon-id {
+        color: #666;
+        margin: 0 0 0.5rem 0;
+        font-family: monospace;
+    }
+
+    .types {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .type {
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
+        color: white;
+        text-transform: capitalize;
+    }
+
+    /* Type colors */
+    .normal { background-color: #A8A878; }
+    .fire { background-color: #F08030; }
+    .water { background-color: #6890F0; }
+    .electric { background-color: #F8D030; }
+    .grass { background-color: #78C850; }
+    .ice { background-color: #98D8D8; }
+    .fighting { background-color: #C03028; }
+    .poison { background-color: #A040A0; }
+    .ground { background-color: #E0C068; }
+    .flying { background-color: #A890F0; }
+    .psychic { background-color: #F85888; }
+    .bug { background-color: #A8B820; }
+    .rock { background-color: #B8A038; }
+    .ghost { background-color: #705898; }
+    .dragon { background-color: #7038F8; }
+    .dark { background-color: #705848; }
+    .steel { background-color: #B8B8D0; }
+    .fairy { background-color: #EE99AC; }
+
+    /* Updated type colors with all possible variations */
+    .feuer { background-color: #F08030; }
+    .wasser { background-color: #6890F0; }
+    .pflanze { background-color: #78C850; }
+    .elektro { background-color: #F8D030; }
+    .eis { background-color: #98D8D8; }
+    .kampf { background-color: #C03028; }
+    .gift { background-color: #A040A0; }
+    .boden { background-color: #E0C068; }
+    .flug { background-color: #A890F0; }
+    .psycho { background-color: #F85888; }
+    .kaefer { background-color: #A8B820; }
+    .gestein { background-color: #B8A038; }
+    .geist { background-color: #705898; }
+    .drache { background-color: #7038F8; }
+    .unlicht { background-color: #705848; }
+    .stahl { background-color: #B8B8D0; }
+    .fee { background-color: #EE99AC; }
 </style> 

@@ -1,12 +1,19 @@
 export interface Pokemon {
     id: number;
+    pokemon_id: string;
     name: string;
     types: string[];
     x: number;
     y: number;
     size: number;
     image: string;
+    image_url: string;
+    local_image: string;
     url: string;
+    position?: {
+        x: number;
+        y: number;
+    };
 }
 
 export interface GameConfig {

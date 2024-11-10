@@ -1,12 +1,12 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import type { Pokemon } from './types/Pokemon';
-    import type { Berry } from './types/interfaces';
+    import type { Pokemon, Berry } from './types/interfaces';
     import { gameConfig } from './config/gameConfig';
     import { PositionService } from './services/PositionService';
     import { PokemonService } from './services/PokemonService';
     import TargetDisplay from './components/TargetDisplay.svelte';
     import WinMessage from './components/WinMessage.svelte';
+    import PokemonDetails from './components/PokemonDetails.svelte';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
@@ -37,6 +37,8 @@
     let gameWon = false;
 
     let foundBerryCount = 0;
+
+    let selectedPokemonForDetails: Pokemon | null = null;
 
     onMount(async () => {
         try {
@@ -105,6 +107,8 @@
         const isPokemon = 'id' in item;
         
         if (isPokemon) {
+            selectedPokemonForDetails = item;
+            
             const allBerriesFound = targetBerries.every(targetBerry => 
                 foundItems.some(item => !('id' in item) && item.index === targetBerry.index)
             );
@@ -122,6 +126,10 @@
         }
 
         harvestedBerries = harvestedBerries;
+    }
+
+    function closeDetails() {
+        selectedPokemonForDetails = null;
     }
 </script>
 
@@ -182,8 +190,18 @@
                 {/each}
             </div>
 
+            {#if selectedPokemonForDetails && !showWinMessage}
+                <PokemonDetails 
+                    pokemon={selectedPokemonForDetails} 
+                    onClose={closeDetails}
+                />
+            {/if}
+
             {#if showWinMessage}
-                <WinMessage onNewGame={initializeGame} />
+                <WinMessage 
+                    onNewGame={initializeGame} 
+                    foundPokemon={targetPokemon}
+                />
             {/if}
         </div>
     {/if}
