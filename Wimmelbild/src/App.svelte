@@ -65,6 +65,8 @@
         JSON.parse(localStorage.getItem('discoveredPokemon') || '[]')
     );
 
+    let wrongBerryAnimations: Set<string> = new Set();
+
     function saveDiscoveredPokemon() {
         localStorage.setItem('discoveredPokemon', 
             JSON.stringify([...discoveredPokemon])
@@ -139,18 +141,20 @@
         const isPokemon = 'id' in item;
         
         if (isPokemon) {
-            selectedPokemonForDetails = item;
-            
             const allBerriesFound = targetBerries.every(targetBerry => 
                 foundItems.some(item => !('id' in item) && item.index === targetBerry.index)
             );
             
             if (allBerriesFound && item.id === targetPokemon?.id) {
+                // Target Pokemon found - don't show Pokedex, just handle win condition
                 foundItems = [...foundItems, item];
                 discoveredPokemon.add(item.id);
                 discoveredPokemon = discoveredPokemon;
                 saveDiscoveredPokemon();
                 showWinMessage = true;
+            } else {
+                // Not the target Pokemon or berries not found yet - show Pokedex
+                selectedPokemonForDetails = item;
             }
         } else {
             if (targetBerries.some(berry => berry.index === item.index)) {
@@ -159,8 +163,8 @@
                 foundItems = [...foundItems, item];
                 foundBerryCount++;
             } else {
-                harvestedBerries.add(item.index);
-                harvestedBerries = harvestedBerries;
+                wrongBerryAnimations.add(item.index);
+                wrongBerryAnimations = wrongBerryAnimations;
             }
         }
     }
@@ -234,12 +238,17 @@
                             style="left: {berry.position?.x}px; top: {berry.position?.y}px;"
                             on:click={() => handleClick(berry)}
                             class:harvesting={harvestingBerries.has(berry.index)}
+                            class:wrong-berry={wrongBerryAnimations.has(berry.index)}
                             on:animationend={() => {
                                 if (harvestingBerries.has(berry.index)) {
                                     harvestingBerries.delete(berry.index);
                                     harvestedBerries.add(berry.index);
                                     harvestingBerries = harvestingBerries;
                                     harvestedBerries = harvestedBerries;
+                                }
+                                if (wrongBerryAnimations.has(berry.index)) {
+                                    wrongBerryAnimations.delete(berry.index);
+                                    wrongBerryAnimations = wrongBerryAnimations;
                                 }
                             }}
                         >
@@ -506,5 +515,21 @@
     .reset-button:hover {
         transform: scale(1.05);
         background: rgba(255, 0, 0, 0.9);
+    }
+
+    .berry-button.wrong-berry {
+        animation: wrongBerryShake 0.5s ease-in-out;
+    }
+
+    @keyframes wrongBerryShake {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-5px) rotate(-5deg);
+        }
+        75% {
+            transform: translateX(5px) rotate(5deg);
+        }
     }
 </style>
