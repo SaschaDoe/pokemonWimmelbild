@@ -54,7 +54,7 @@ export class PokemonService implements IPokemonService {
         return this.allPokemon;
     }
 
-    async generatePokemon(position: Position, terrainType: string | null = null): Promise<Pokemon> {
+    async generatePokemon(position: Position, terrainTypes: string[] | null = null): Promise<Pokemon> {
         await this.dataLoaded;
         
         if (this.pokemonData.length === 0) {
@@ -63,14 +63,14 @@ export class PokemonService implements IPokemonService {
 
         let eligiblePokemon = this.pokemonData;
         
-        if (terrainType === 'water') {
+        if (terrainTypes) {
             eligiblePokemon = this.pokemonData.filter(pokemon => 
-                pokemon.types.includes('Wasser') ||
-                pokemon.types.includes('Water')
+                pokemon.types.some(type => terrainTypes.includes(type))
             );
 
-            console.log('Water terrain detected:', {
+            console.log('Terrain-specific Pokemon selection:', {
                 position,
+                terrainTypes,
                 eligiblePokemonCount: eligiblePokemon.length,
                 eligiblePokemon: eligiblePokemon.map(p => ({
                     name: p.name,
@@ -79,8 +79,8 @@ export class PokemonService implements IPokemonService {
             });
 
             if (eligiblePokemon.length === 0) {
-                console.warn('No water Pokemon available, position needs to be adjusted');
-                throw new Error('No eligible Pokemon for water terrain');
+                console.warn('No eligible Pokemon for terrain types, position needs to be adjusted');
+                throw new Error(`No eligible Pokemon for terrain types: ${terrainTypes.join(', ')}`);
             }
         }
 
@@ -92,7 +92,7 @@ export class PokemonService implements IPokemonService {
         console.log('Generated Pokemon:', {
             name: pokemonData.name,
             types: pokemonData.types,
-            terrainType,
+            terrainTypes,
             position
         });
 

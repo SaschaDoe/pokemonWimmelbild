@@ -5,13 +5,40 @@ interface BackgroundInfo {
     mask: string;
 }
 
+interface TerrainTypeMapping {
+    color: string;
+    types: string[];
+}
+
 export class BackgroundService {
     private backgrounds: string[] = [];
     public dataLoaded: Promise<void>;
     private currentMaskContext: CanvasRenderingContext2D | null = null;
     private maskCanvas: HTMLCanvasElement;
 
-    readonly WATER_COLOR = '#3f48cc';
+    // Define terrain colors and their corresponding Pokemon types
+    private readonly TERRAIN_TYPES: TerrainTypeMapping[] = [
+        {
+            color: '#3f48cc',  // Blue for water
+            types: ['Wasser', 'Water']
+        },
+        {
+            color: '#7f7f7f',  // Gray for flying
+            types: ['Flug', 'Flying']
+        },
+        {
+            color: '#22b14c',  // Green for bug and grass
+            types: ['Kaefer', 'Bug', 'Pflanze', 'Grass']
+        },
+        {
+            color: '#880015',  // Dark red for normal and electric
+            types: ['Normal', 'Elektro', 'Electric']
+        },
+        {
+            color: '#00a2e8',  // Light blue for ice
+            types: ['Eis', 'Ice']
+        }
+    ];
 
     constructor(private config: GameConfig) {
         this.maskCanvas = document.createElement('canvas');
@@ -101,7 +128,7 @@ export class BackgroundService {
         });
     }
 
-    getTerrainTypeAtPosition(x: number, y: number): string | null {
+    getTerrainTypeAtPosition(x: number, y: number): string[] | null {
         if (!this.currentMaskContext) {
             console.warn('No mask context available for terrain check');
             return null;
@@ -114,17 +141,18 @@ export class BackgroundService {
         const pixel = this.currentMaskContext.getImageData(maskX, maskY, 1, 1).data;
         const color = `#${[pixel[0], pixel[1], pixel[2]].map(x => x.toString(16).padStart(2, '0')).join('')}`;
 
+        // Find matching terrain type
+        const terrain = this.TERRAIN_TYPES.find(t => 
+            t.color.toLowerCase() === color.toLowerCase()
+        );
+
         console.log('Terrain check:', {
             screenPosition: { x, y },
             maskPosition: { x: maskX, y: maskY },
             color: color,
-            isWater: color.toLowerCase() === this.WATER_COLOR.toLowerCase()
+            matchedTerrain: terrain?.types || 'any'
         });
 
-        if (color.toLowerCase() === this.WATER_COLOR.toLowerCase()) {
-            return 'water';
-        }
-
-        return null;
+        return terrain ? terrain.types : null;
     }
 } 
