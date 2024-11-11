@@ -4,12 +4,21 @@
 
     export let pokemon: Pokemon;
     export let onClose: () => void;
+
+    let pokedexComponent: any;
+
+    function handleClose() {
+        if (pokedexComponent) {
+            pokedexComponent.cleanup();
+        }
+        onClose();
+    }
 </script>
 
-<div class="pokemon-details-overlay" on:click|self={onClose}>
+<div class="pokemon-details-overlay" on:click|self={handleClose}>
     <div class="pokemon-details-content">
-        <button class="close-button" on:click={onClose}>×</button>
-        <Pokedex {pokemon} />
+        <button class="close-button" on:click={handleClose}>×</button>
+        <Pokedex {pokemon} bind:this={pokedexComponent} />
     </div>
 </div>
 

@@ -4,6 +4,15 @@
 
     export let onNewGame: () => void;
     export let foundPokemon: Pokemon | null;
+
+    let pokedexComponent: any;
+
+    function handleNewGame() {
+        if (pokedexComponent) {
+            pokedexComponent.cleanup();
+        }
+        onNewGame();
+    }
 </script>
 
 <div class="win-message-overlay">
@@ -13,11 +22,11 @@
         
         {#if foundPokemon}
             <div class="pokedex-container">
-                <Pokedex pokemon={foundPokemon} />
+                <Pokedex pokemon={foundPokemon} bind:this={pokedexComponent} />
             </div>
         {/if}
         
-        <button on:click={onNewGame}>Play Again</button>
+        <button on:click={handleNewGame}>Play Again</button>
     </div>
 </div>
 

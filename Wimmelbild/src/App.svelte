@@ -123,29 +123,47 @@
             const newPokemons: Pokemon[] = [];
             
             for (let i = 0; i < gameConfig.POKEMON_COUNT; i++) {
-                let position;
+                let pokemon: Pokemon | null = null;
                 let attempts = 0;
-                
-                do {
-                    position = positionService.getRandomPosition(gameConfig.POKEMON_SIZE);
-                    attempts++;
-                } while (
-                    positionService.checkOverlap(
-                        position.x, 
-                        position.y, 
-                        gameConfig.POKEMON_SIZE, 
-                        newPokemons
-                    ) && attempts < 50
-                );
-                
-                // Get terrain type at position
-                const terrainType = backgroundService.getTerrainTypeAtPosition(
-                    position.x, 
-                    position.y
-                );
-                
-                const pokemon = await pokemonService.generatePokemon(position, terrainType);
-                newPokemons.push(pokemon);
+                const MAX_ATTEMPTS = 50;
+
+                while (!pokemon && attempts < MAX_ATTEMPTS) {
+                    try {
+                        let position = positionService.getRandomPosition(gameConfig.POKEMON_SIZE);
+                        
+                        // Check for overlap with existing Pokemon
+                        if (positionService.checkOverlap(
+                            position.x, 
+                            position.y, 
+                            gameConfig.POKEMON_SIZE, 
+                            newPokemons
+                        )) {
+                            attempts++;
+                            continue;
+                        }
+
+                        // Get terrain type at position
+                        const terrainType = backgroundService.getTerrainTypeAtPosition(
+                            position.x, 
+                            position.y
+                        );
+
+                        // Try to generate a Pokemon for this position
+                        pokemon = await pokemonService.generatePokemon(position, terrainType);
+                        
+                        if (pokemon) {
+                            newPokemons.push(pokemon);
+                            break;
+                        }
+                    } catch (error) {
+                        console.log('Failed to generate Pokemon at position, trying again:', error);
+                        attempts++;
+                    }
+                }
+
+                if (!pokemon) {
+                    console.error(`Failed to place Pokemon after ${MAX_ATTEMPTS} attempts`);
+                }
             }
             
             pokemons = newPokemons;

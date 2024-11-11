@@ -5,6 +5,9 @@ interface PokemonData {
     name: string;
     types: string[];
     url: string;
+    appearance: string | null;
+    habitat: string | null;
+    species: string | null;
 }
 
 export class PokemonService implements IPokemonService {
@@ -22,17 +25,23 @@ export class PokemonService implements IPokemonService {
             this.pokemonData = await response.json();
             console.log(`Loaded ${this.pokemonData.length} Pokemon from data file`);
             
-            this.allPokemon = this.pokemonData.map((data, index) => {
+            this.allPokemon = this.pokemonData.map((data) => {
                 const imagePath = this.getImagePath(parseInt(data.id), data);
                 return {
                     id: parseInt(data.id),
+                    pokemon_id: data.id,
                     name: data.name,
                     types: data.types,
                     image: imagePath,
                     url: data.url,
+                    appearance: data.appearance,
+                    habitat: data.habitat,
+                    species: data.species,
                     x: 0,
                     y: 0,
-                    size: this.config.POKEMON_SIZE
+                    size: this.config.POKEMON_SIZE,
+                    image_url: '',
+                    local_image: imagePath
                 };
             });
         } catch (error) {
@@ -56,13 +65,23 @@ export class PokemonService implements IPokemonService {
         
         if (terrainType === 'water') {
             eligiblePokemon = this.pokemonData.filter(pokemon => 
-                pokemon.types.includes('Water') || 
-                pokemon.types.includes('Wasser')  // German type name
+                pokemon.types.includes('Wasser') ||
+                pokemon.types.includes('Water')
             );
-        }
 
-        if (eligiblePokemon.length === 0) {
-            eligiblePokemon = this.pokemonData; // Fallback to all Pokemon if no matches
+            console.log('Water terrain detected:', {
+                position,
+                eligiblePokemonCount: eligiblePokemon.length,
+                eligiblePokemon: eligiblePokemon.map(p => ({
+                    name: p.name,
+                    types: p.types
+                }))
+            });
+
+            if (eligiblePokemon.length === 0) {
+                console.warn('No water Pokemon available, position needs to be adjusted');
+                throw new Error('No eligible Pokemon for water terrain');
+            }
         }
 
         const randomIndex = Math.floor(Math.random() * eligiblePokemon.length);
@@ -70,24 +89,28 @@ export class PokemonService implements IPokemonService {
         
         const imagePath = this.getImagePath(parseInt(pokemonData.id), pokemonData);
         
-        console.log(`Generating Pokemon: ${pokemonData.name} (ID: ${pokemonData.id})`, {
+        console.log('Generated Pokemon:', {
             name: pokemonData.name,
-            id: pokemonData.id,
             types: pokemonData.types,
-            imagePath
+            terrainType,
+            position
         });
-        
-        this.testImageExists(imagePath, pokemonData);
-        
+
         return {
             id: parseInt(pokemonData.id),
+            pokemon_id: pokemonData.id,
             name: pokemonData.name,
             types: pokemonData.types,
             x: position.x,
             y: position.y,
             size: this.config.POKEMON_SIZE,
             image: imagePath,
-            url: pokemonData.url
+            url: pokemonData.url,
+            appearance: pokemonData.appearance,
+            habitat: pokemonData.habitat,
+            species: pokemonData.species,
+            image_url: '',
+            local_image: imagePath
         };
     }
 
