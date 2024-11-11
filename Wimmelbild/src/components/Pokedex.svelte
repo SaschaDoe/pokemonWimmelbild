@@ -11,15 +11,25 @@
             .replace(/-/g, '')
             .trim();
     }
+
+    function openWikiPage() {
+        if (pokemon.url) {
+            window.open(pokemon.url, '_blank');
+        }
+    }
 </script>
 
 <div class="pokedex">
-    <div class="pokemon-image">
+    <div class="pokemon-image clickable" on:click={openWikiPage}>
         <img src={pokemon.local_image || pokemon.image} alt={pokemon.name} />
     </div>
     <div class="pokemon-info">
-        <h3>{pokemon.name}</h3>
-        <p class="pokemon-id">#{pokemon.pokemon_id || pokemon.id.toString().padStart(4, '0')}</p>
+        <div class="pokemon-header">
+            <div class="clickable" on:click={openWikiPage}>
+                <h3>{pokemon.name}</h3>
+                <p class="pokemon-id">#{pokemon.pokemon_id || pokemon.id.toString().padStart(4, '0')}</p>
+            </div>
+        </div>
         <div class="types">
             {#each pokemon.types as type}
                 <span class="type {normalizeTypeName(type)}">{type}</span>
@@ -120,4 +130,25 @@
     .unlicht { background-color: #705848; }
     .stahl { background-color: #B8B8D0; }
     .fee { background-color: #EE99AC; }
+
+    .pokemon-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+    }
+
+    .clickable {
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+
+    .clickable:hover {
+        opacity: 0.8;
+    }
+
+    .pokemon-header div {
+        display: flex;
+        flex-direction: column;
+    }
 </style> 
