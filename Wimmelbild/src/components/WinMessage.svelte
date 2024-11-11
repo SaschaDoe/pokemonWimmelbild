@@ -19,14 +19,14 @@
     <div class="win-message-content">
         <h2>Congratulations!</h2>
         <p>You found all the berries and caught the Pokémon {foundPokemon?.name}!</p>
-        
+        <button on:click={handleNewGame}>Play Again</button>
         {#if foundPokemon}
             <div class="pokedex-container">
                 <Pokedex pokemon={foundPokemon} bind:this={pokedexComponent} />
             </div>
         {/if}
         
-        <button on:click={handleNewGame}>Play Again</button>
+        
     </div>
 </div>
 

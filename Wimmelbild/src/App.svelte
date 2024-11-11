@@ -184,15 +184,33 @@
         }
     }
 
+    function handleBerryClick(berry: Berry) {
+        if (targetBerries.some(targetBerry => targetBerry.index === berry.index)) {
+            harvestingBerries.add(berry.index);
+            harvestingBerries = harvestingBerries;
+            foundItems = [...foundItems, berry];
+            foundBerryCount++;
+        } else {
+            wrongBerryAnimations.add(berry.index);
+            wrongBerryAnimations = wrongBerryAnimations;
+        }
+    }
+
     function handleClick(item: Pokemon | Berry) {
         const isPokemon = 'id' in item;
         
         if (isPokemon) {
-            if (gameStateManager.checkWinCondition(foundItems, targetPokemon, targetBerries)) {
+            const allBerriesCollected = targetBerries.every(targetBerry => 
+                foundItems.some(foundItem => !('id' in foundItem) && foundItem.index === targetBerry.index)
+            );
+
+            if (allBerriesCollected && item.id === targetPokemon?.id) {
+                // Show win message when target Pokemon is found and all berries are collected
                 foundItems = [...foundItems, item];
                 gameStateManager.addDiscoveredPokemon(item.id);
                 showWinMessage = true;
             } else {
+                // Show Pokedex for non-target Pokemon or when berries aren't all collected
                 selectedPokemonForDetails = item;
             }
         } else {
@@ -295,17 +313,15 @@
                     {/each}
                 </div>
 
-                {#if selectedPokemonForDetails && !showWinMessage}
-                    <PokemonDetails 
-                        pokemon={selectedPokemonForDetails} 
-                        onClose={closeDetails}
-                    />
-                {/if}
-
                 {#if showWinMessage}
                     <WinMessage 
                         onNewGame={initializeGame} 
                         foundPokemon={targetPokemon}
+                    />
+                {:else if selectedPokemonForDetails}
+                    <PokemonDetails 
+                        pokemon={selectedPokemonForDetails} 
+                        onClose={closeDetails}
                     />
                 {/if}
             </div>
