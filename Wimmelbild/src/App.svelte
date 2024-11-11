@@ -9,10 +9,14 @@
     import PokemonList from './components/PokemonList.svelte';
     import { BackgroundService } from './services/BackgroundService';
     import TitleScreen from './components/TitleScreen.svelte';
+    import { GameStateManager } from './services/GameStateManager';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
     const backgroundService = new BackgroundService(gameConfig);
+    const gameStateManager = new GameStateManager();
+
+    $: discoveredPokemon = gameStateManager.getDiscoveredPokemon();
 
     let allPokemonList: Pokemon[] = [];
 
@@ -62,9 +66,6 @@
     let selectedPokemonForDetails: Pokemon | null = null;
 
     let showPokemonList = false;
-    let discoveredPokemon: Set<number> = new Set(
-        JSON.parse(localStorage.getItem('discoveredPokemon') || '[]')
-    );
 
     let wrongBerryAnimations: Set<string> = new Set();
 
@@ -187,31 +188,15 @@
         const isPokemon = 'id' in item;
         
         if (isPokemon) {
-            const allBerriesFound = targetBerries.every(targetBerry => 
-                foundItems.some(item => !('id' in item) && item.index === targetBerry.index)
-            );
-            
-            if (allBerriesFound && item.id === targetPokemon?.id) {
-                // Target Pokemon found - don't show Pokedex, just handle win condition
+            if (gameStateManager.checkWinCondition(foundItems, targetPokemon, targetBerries)) {
                 foundItems = [...foundItems, item];
-                discoveredPokemon.add(item.id);
-                discoveredPokemon = discoveredPokemon;
-                saveDiscoveredPokemon();
+                gameStateManager.addDiscoveredPokemon(item.id);
                 showWinMessage = true;
             } else {
-                // Not the target Pokemon or berries not found yet - show Pokedex
                 selectedPokemonForDetails = item;
             }
         } else {
-            if (targetBerries.some(berry => berry.index === item.index)) {
-                harvestingBerries.add(item.index);
-                harvestingBerries = harvestingBerries;
-                foundItems = [...foundItems, item];
-                foundBerryCount++;
-            } else {
-                wrongBerryAnimations.add(item.index);
-                wrongBerryAnimations = wrongBerryAnimations;
-            }
+            handleBerryClick(item);
         }
     }
 
@@ -224,8 +209,7 @@
     }
 
     function resetProgress() {
-        discoveredPokemon = new Set();
-        saveDiscoveredPokemon();
+        gameStateManager.resetProgress();
         initializeGame();
     }
 </script>

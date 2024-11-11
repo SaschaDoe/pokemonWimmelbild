@@ -1,4 +1,5 @@
 import type { Pokemon, IPokemonService, Position, GameConfig } from '../types/interfaces';
+import { ImageService } from './ImageService';
 
 interface PokemonData {
     id: string;
@@ -12,11 +13,17 @@ interface PokemonData {
 
 export class PokemonService implements IPokemonService {
     private pokemonData: PokemonData[] = [];
-    private dataLoaded: Promise<void>;
+    private _dataLoaded: Promise<void>;
     public allPokemon: Pokemon[] = [];
+    private imageService: ImageService;
 
     constructor(private config: GameConfig) {
-        this.dataLoaded = this.loadPokemonData();
+        this.imageService = new ImageService();
+        this._dataLoaded = this.loadPokemonData();
+    }
+
+    get dataLoaded(): Promise<void> {
+        return this._dataLoaded;
     }
 
     private async loadPokemonData(): Promise<void> {
@@ -26,28 +33,32 @@ export class PokemonService implements IPokemonService {
             console.log(`Loaded ${this.pokemonData.length} Pokemon from data file`);
             
             this.allPokemon = this.pokemonData.map((data) => {
-                const imagePath = this.getImagePath(parseInt(data.id), data);
-                return {
-                    id: parseInt(data.id),
-                    pokemon_id: data.id,
-                    name: data.name,
-                    types: data.types,
-                    image: imagePath,
-                    url: data.url,
-                    appearance: data.appearance,
-                    habitat: data.habitat,
-                    species: data.species,
-                    x: 0,
-                    y: 0,
-                    size: this.config.POKEMON_SIZE,
-                    image_url: '',
-                    local_image: imagePath
-                };
+                const imagePath = this.imageService.getPokemonImagePath(parseInt(data.id), data);
+                return this.createPokemonObject(data, { x: 0, y: 0 }, imagePath);
             });
         } catch (error) {
             console.error('Failed to load Pokemon data:', error);
             this.pokemonData = [];
         }
+    }
+
+    private createPokemonObject(data: PokemonData, position: Position, imagePath: string): Pokemon {
+        return {
+            id: parseInt(data.id),
+            pokemon_id: data.id,
+            name: data.name,
+            types: data.types,
+            image: imagePath,
+            url: data.url,
+            appearance: data.appearance,
+            habitat: data.habitat,
+            species: data.species,
+            x: position.x,
+            y: position.y,
+            size: this.config.POKEMON_SIZE,
+            image_url: '',
+            local_image: imagePath
+        };
     }
 
     getAllPokemon(): Pokemon[] {
@@ -87,7 +98,7 @@ export class PokemonService implements IPokemonService {
         const randomIndex = Math.floor(Math.random() * eligiblePokemon.length);
         const pokemonData = eligiblePokemon[randomIndex];
         
-        const imagePath = this.getImagePath(parseInt(pokemonData.id), pokemonData);
+        const imagePath = this.imageService.getPokemonImagePath(parseInt(pokemonData.id), pokemonData);
         
         console.log('Generated Pokemon:', {
             name: pokemonData.name,
@@ -112,68 +123,5 @@ export class PokemonService implements IPokemonService {
             image_url: '',
             local_image: imagePath
         };
-    }
-
-    private async testImageExists(imagePath: string, pokemonData: PokemonData): Promise<void> {
-        try {
-            const response = await fetch(imagePath);
-            if (!response.ok) {
-                console.error(`Failed to load image for Pokemon:`, {
-                    name: pokemonData.name,
-                    id: pokemonData.id,
-                    types: pokemonData.types,
-                    path: imagePath,
-                    status: response.status,
-                    statusText: response.statusText
-                });
-            }
-        } catch (error) {
-            console.error(`Error testing image existence for Pokemon:`, {
-                name: pokemonData.name,
-                id: pokemonData.id,
-                types: pokemonData.types,
-                path: imagePath,
-                error
-            });
-        }
-    }
-
-    getImagePath(id: number, pokemonData?: PokemonData): string {
-        if (!pokemonData) {
-            pokemonData = this.pokemonData.find(p => parseInt(p.id) === id);
-            if (!pokemonData) {
-                throw new Error(`No data found for Pokemon ID ${id}`);
-            }
-        }
-
-        try {
-            const idStr = id.toString();
-            const paddedId = idStr.length >= 4 ? idStr : idStr.padStart(4, '0');
-            const nameWithId = `${paddedId}${pokemonData.name}`;
-            
-            let filename: string;
-            if (pokemonData.types.length === 0) {
-                filename = nameWithId;
-            } else {
-                filename = `${nameWithId}-${pokemonData.types.join('-')}`;
-            }
-            
-            const path = `/pokemon_images/${filename}.png`;
-            
-            console.log(`Constructed image path for ${pokemonData.name}:`, {
-                id: paddedId,
-                name: pokemonData.name,
-                types: pokemonData.types,
-                path
-            });
-            
-            return path;
-        } catch (error) {
-            console.error(`Error creating image path for Pokemon ${id}:`, {
-                error,
-                pokemonData
-            });
-            return '/pokemon_images/missing.png';
-        }
     }
 } 
