@@ -3,6 +3,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig({
   plugins: [svelte()],
+  base: './',
   resolve: {
     alias: {
       '@': '/src'
@@ -10,7 +11,9 @@ export default defineConfig({
   },
   // This helps with asset handling
   build: {
+    outDir: 'dist',
     assetsDir: 'assets',
+    sourcemap: true,
     rollupOptions: {
       output: {
         assetFileNames: 'assets/[name].[ext]'

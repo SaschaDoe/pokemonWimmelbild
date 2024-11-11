@@ -48,7 +48,7 @@ export class BackgroundService {
     private async loadBackgrounds(): Promise<void> {
         try {
             console.log('Loading background list from JSON...');
-            const response = await fetch('/backgrounds/list.json');
+            const response = await fetch('./backgrounds/list.json');
             this.backgrounds = await response.json();
             console.log('Available backgrounds:', this.backgrounds);
         } catch (error) {
@@ -64,8 +64,8 @@ export class BackgroundService {
         if (this.backgrounds.length === 0) {
             console.warn('No backgrounds available, using default');
             return {
-                image: '/backgrounds/woods.png',
-                mask: '/backgrounds/woods_mask.png'
+                image: './backgrounds/woods.png',
+                mask: './backgrounds/woods_mask.png'
             };
         }
 
@@ -74,8 +74,8 @@ export class BackgroundService {
         const maskName = bgName.replace('.png', '_mask.png');
 
         const backgroundInfo = {
-            image: `/backgrounds/${bgName}`,
-            mask: `/backgrounds/${maskName}`
+            image: `./backgrounds/${bgName}`,
+            mask: `./backgrounds/${maskName}`
         };
 
         console.log('Selected background:', {
