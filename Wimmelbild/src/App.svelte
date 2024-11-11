@@ -8,6 +8,7 @@
     import PokemonDetails from './components/PokemonDetails.svelte';
     import PokemonList from './components/PokemonList.svelte';
     import { BackgroundService } from './services/BackgroundService';
+    import TitleScreen from './components/TitleScreen.svelte';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
@@ -70,10 +71,16 @@
     let currentBackground = '/backgrounds/woods.png';
     let currentMask = '/backgrounds/woods_mask.png';
 
+    let gameStarted = false;
+
     function saveDiscoveredPokemon() {
         localStorage.setItem('discoveredPokemon', 
             JSON.stringify([...discoveredPokemon])
         );
+    }
+
+    function handleGameStart() {
+        gameStarted = true;
     }
 
     onMount(async () => {
@@ -205,109 +212,113 @@
     }
 </script>
 
-<main>
-    {#if isLoading}
-        <div class="loading">Loading...</div>
-    {:else}
-        <div class="game-container">
-            <button 
-                class="pokedex-button"
-                on:click={togglePokemonList}
-            >
-                📖 Pokédex
-            </button>
+{#if !gameStarted}
+    <TitleScreen on:start={handleGameStart} />
+{:else}
+    <main>
+        {#if isLoading}
+            <div class="loading">Loading...</div>
+        {:else}
+            <div class="game-container">
+                <button 
+                    class="pokedex-button"
+                    on:click={togglePokemonList}
+                >
+                    📖 Pokédex
+                </button>
 
-            <div class="background-container">
-                <img src={currentBackground} alt="Game background" class="background-image" />
-                
-                <div class="target-panel">
-                    <h2>Find these:</h2>
-                    {#each targetBerries as berry, index (berry.index + '_target')}
-                        <div class="target-item" class:found={foundItems.some(item => !('id' in item) && item.index === berry.index)}>
-                            <img src={berry.local_image} alt={berry.name} />
-                        </div>
+                <div class="background-container">
+                    <img src={currentBackground} alt="Game background" class="background-image" />
+                    
+                    <div class="target-panel">
+                        <h2>Find these:</h2>
+                        {#each targetBerries as berry, index (berry.index + '_target')}
+                            <div class="target-item" class:found={foundItems.some(item => !('id' in item) && item.index === berry.index)}>
+                                <img src={berry.local_image} alt={berry.name} />
+                            </div>
+                        {/each}
+
+                        {#if targetPokemon}
+                            <div class="target-item" class:found={foundItems.some(item => 'id' in item && item.id === targetPokemon?.id)}>
+                                <div class="pokemon-target-wrapper" class:locked={foundBerryCount < targetBerries.length}>
+                                    <img src={targetPokemon.image} alt={targetPokemon.name} />
+                                    {#if foundBerryCount < targetBerries.length}
+                                        <div class="locked-overlay">
+                                            🔒
+                                        </div>
+                                    {/if}
+                                </div>
+                            </div>
+                        {/if}
+                    </div>
+
+                    {#each pokemons as pokemon, index (`pokemon_${pokemon.id}_${index}`)}
+                        <button
+                            class="pokemon-button"
+                            style="left: {pokemon.x}px; top: {pokemon.y}px; width: {pokemon.size}px; height: {pokemon.size}px;"
+                            on:click={() => handleClick(pokemon)}
+                        >
+                            <img src={pokemon.image} alt={pokemon.name} class="pokemon-image" />
+                        </button>
                     {/each}
 
-                    {#if targetPokemon}
-                        <div class="target-item" class:found={foundItems.some(item => 'id' in item && item.id === targetPokemon?.id)}>
-                            <div class="pokemon-target-wrapper" class:locked={foundBerryCount < targetBerries.length}>
-                                <img src={targetPokemon.image} alt={targetPokemon.name} />
-                                {#if foundBerryCount < targetBerries.length}
-                                    <div class="locked-overlay">
-                                        🔒
-                                    </div>
-                                {/if}
-                            </div>
-                        </div>
-                    {/if}
+                    {#each selectedBerries as berry, index (`berry_${berry.index}_${index}`)}
+                        {#if !harvestedBerries.has(berry.index)}
+                            <button
+                                class="berry-button"
+                                style="left: {berry.position?.x}px; top: {berry.position?.y}px;"
+                                on:click={() => handleClick(berry)}
+                                class:harvesting={harvestingBerries.has(berry.index)}
+                                class:wrong-berry={wrongBerryAnimations.has(berry.index)}
+                                on:animationend={() => {
+                                    if (harvestingBerries.has(berry.index)) {
+                                        harvestingBerries.delete(berry.index);
+                                        harvestedBerries.add(berry.index);
+                                        harvestingBerries = harvestingBerries;
+                                        harvestedBerries = harvestedBerries;
+                                    }
+                                    if (wrongBerryAnimations.has(berry.index)) {
+                                        wrongBerryAnimations.delete(berry.index);
+                                        wrongBerryAnimations = wrongBerryAnimations;
+                                    }
+                                }}
+                            >
+                                <img 
+                                    src={berry.local_image} 
+                                    alt={berry.name} 
+                                    class="berry-image" 
+                                />
+                            </button>
+                        {/if}
+                    {/each}
                 </div>
 
-                {#each pokemons as pokemon, index (`pokemon_${pokemon.id}_${index}`)}
-                    <button
-                        class="pokemon-button"
-                        style="left: {pokemon.x}px; top: {pokemon.y}px; width: {pokemon.size}px; height: {pokemon.size}px;"
-                        on:click={() => handleClick(pokemon)}
-                    >
-                        <img src={pokemon.image} alt={pokemon.name} class="pokemon-image" />
-                    </button>
-                {/each}
+                {#if selectedPokemonForDetails && !showWinMessage}
+                    <PokemonDetails 
+                        pokemon={selectedPokemonForDetails} 
+                        onClose={closeDetails}
+                    />
+                {/if}
 
-                {#each selectedBerries as berry, index (`berry_${berry.index}_${index}`)}
-                    {#if !harvestedBerries.has(berry.index)}
-                        <button
-                            class="berry-button"
-                            style="left: {berry.position?.x}px; top: {berry.position?.y}px;"
-                            on:click={() => handleClick(berry)}
-                            class:harvesting={harvestingBerries.has(berry.index)}
-                            class:wrong-berry={wrongBerryAnimations.has(berry.index)}
-                            on:animationend={() => {
-                                if (harvestingBerries.has(berry.index)) {
-                                    harvestingBerries.delete(berry.index);
-                                    harvestedBerries.add(berry.index);
-                                    harvestingBerries = harvestingBerries;
-                                    harvestedBerries = harvestedBerries;
-                                }
-                                if (wrongBerryAnimations.has(berry.index)) {
-                                    wrongBerryAnimations.delete(berry.index);
-                                    wrongBerryAnimations = wrongBerryAnimations;
-                                }
-                            }}
-                        >
-                            <img 
-                                src={berry.local_image} 
-                                alt={berry.name} 
-                                class="berry-image" 
-                            />
-                        </button>
-                    {/if}
-                {/each}
+                {#if showWinMessage}
+                    <WinMessage 
+                        onNewGame={initializeGame} 
+                        foundPokemon={targetPokemon}
+                    />
+                {/if}
             </div>
+        {/if}
 
-            {#if selectedPokemonForDetails && !showWinMessage}
-                <PokemonDetails 
-                    pokemon={selectedPokemonForDetails} 
-                    onClose={closeDetails}
-                />
-            {/if}
-
-            {#if showWinMessage}
-                <WinMessage 
-                    onNewGame={initializeGame} 
-                    foundPokemon={targetPokemon}
-                />
-            {/if}
-        </div>
-    {/if}
-
-    {#if showPokemonList}
-        <PokemonList
-            {discoveredPokemon}
-            allPokemon={allPokemonList}
-            onClose={() => showPokemonList = false}
-            resetProgress={resetProgress}
-        />
-    {/if}
-</main>
+        {#if showPokemonList}
+            <PokemonList
+                {discoveredPokemon}
+                allPokemon={allPokemonList}
+                onClose={() => showPokemonList = false}
+                resetProgress={resetProgress}
+            />
+        {/if}
+    </main>
+{/if}
 
 <style>
     :global(body) {
