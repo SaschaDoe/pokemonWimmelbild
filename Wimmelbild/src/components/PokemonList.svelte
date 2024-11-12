@@ -29,13 +29,29 @@
 
     let isAnimating = false;
 
+    let oldCount = 0;
+    let isCounterAnimating = false;
+
     async function handleCelebration(pokemonId: number) {
         if (!pokemonListElement) return;
         
-        // Set animating state to true
+        // Set animating states
         isAnimating = true;
+        isCounterAnimating = true;
         
-        // Reset reveal state
+        // Store old count before increment
+        oldCount = discoveredPokemon.size;
+        
+        // Wait for counter animation to complete (2.5s for full animation)
+        await new Promise(resolve => setTimeout(resolve, 2500));
+        
+        // Update counter and wait for fade transition
+        isCounterAnimating = false;
+        
+        // Small pause after counter animation before starting scroll
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
+        // Rest of the celebration (scroll, reveal, etc.)
         readyToReveal = false;
         
         // Find the pokemon element
@@ -134,7 +150,22 @@
             on:click={() => !isAnimating && onClose()}
             disabled={isAnimating}
         >×</button>
-        <h2>Pokédex ({discoveredPokemon.size}/{allPokemon.length})</h2>
+        <div class="sticky-header">
+            <h2>
+                <span class="pokedex-title">
+                    Pokédex (
+                    {#if isCounterAnimating}
+                        <span class="counter-wrapper">
+                            <span class="old-count">{oldCount}</span>
+                            <span class="increment-animation">+1</span>
+                        </span>
+                    {:else}
+                        <span class="counter-number">{discoveredPokemon.size}</span>
+                    {/if}
+                    /{allPokemon.length})
+                </span>
+            </h2>
+        </div>
         <div class="pokemon-grid">
             {#each sortedPokemon as pokemon (pokemon.id)}
                 <button 
@@ -205,7 +236,7 @@
 
     .pokemon-list-content {
         background: white;
-        padding: 2rem;
+        padding: 0;
         border-radius: 1rem;
         position: relative;
         width: 80%;
@@ -216,7 +247,7 @@
     }
 
     .close-button {
-        position: absolute;
+        position: fixed;
         top: 10px;
         right: 10px;
         background: none;
@@ -226,6 +257,7 @@
         color: #666;
         padding: 5px 10px;
         border-radius: 50%;
+        z-index: 2100;
     }
 
     .close-button:hover {
@@ -498,5 +530,176 @@
 
     .pokemon-item.found-pokemon:hover {
         transform: scale(1.05);
+    }
+
+    .sticky-header {
+        position: sticky;
+        top: 0;
+        background: white;
+        padding: 1rem;
+        z-index: 2000;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .pokedex-title {
+        position: relative;
+        display: inline-block;
+        font-size: 1.5em;
+        animation: titleAnimation 2.5s ease-in-out;
+    }
+
+    @keyframes titleAnimation {
+        0%, 80% {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        100% {
+            background: none;
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: initial;
+            text-shadow: none;
+            color: #333;
+        }
+    }
+
+    .counter-wrapper {
+        display: inline-block;
+        position: relative;
+        min-width: 2em;
+        text-align: center;
+    }
+
+    .old-count {
+        display: inline-block;
+        color: #333;
+        animation: countExit 2s ease-in-out forwards;
+        font-weight: bold;
+        -webkit-text-fill-color: initial;
+    }
+
+    .increment-animation {
+        display: inline-block;
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #4CAF50;
+        font-weight: bold;
+        animation: incrementPopNew 2s ease-in-out forwards;
+        font-size: 1.2em;
+        text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        -webkit-text-fill-color: initial;
+    }
+
+    .counter-number {
+        display: inline-block;
+        font-weight: bold;
+        color: #333;
+        animation: numberAppear 0.5s ease-in-out;
+    }
+
+    @keyframes numberAppear {
+        0% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes countExit {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        20% {
+            transform: scale(1.5);
+            color: #FFD700;
+        }
+        40% {
+            transform: scale(1.2) rotate(-10deg);
+            color: #FFA500;
+        }
+        60% {
+            transform: scale(1.3) rotate(10deg);
+            color: #FF8C00;
+        }
+        80% {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 0;
+        }
+    }
+
+    @keyframes incrementPopNew {
+        0% {
+            transform: translate(0, -50%) scale(0);
+            opacity: 0;
+            color: #4CAF50;
+        }
+        20% {
+            transform: translate(0, -50%) scale(2);
+            opacity: 1;
+            color: #45a049;
+        }
+        40% {
+            transform: translate(20px, -50%) scale(1.5);
+            color: #388E3C;
+        }
+        60% {
+            transform: translate(-20px, -50%) scale(1.8);
+            color: #2E7D32;
+        }
+        80% {
+            transform: translate(0, -50%) scale(1.2);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(0, -50%) scale(1);
+            opacity: 0;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding: 0.5rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    /* Add a shine effect to the title */
+    .pokedex-title::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent
+        );
+        animation: shine 4s infinite;
+    }
+
+    @keyframes shine {
+        0% {
+            transform: translateX(-100%);
+        }
+        20%, 100% {
+            transform: translateX(100%);
+        }
     }
 </style> 
