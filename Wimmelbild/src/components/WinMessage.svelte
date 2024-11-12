@@ -17,8 +17,6 @@
 
 <div class="win-message-overlay">
     <div class="win-message-content">
-        <h2>Congratulations!</h2>
-        <p>You found all the berries and caught the Pokémon {foundPokemon?.name}!</p>
         <button on:click={handleNewGame}>Play Again</button>
         {#if foundPokemon}
             <div class="pokedex-container">

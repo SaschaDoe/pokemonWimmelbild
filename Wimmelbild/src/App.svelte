@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount, tick } from 'svelte';
     import type { Pokemon, Berry } from './types/interfaces';
     import { gameConfig } from './config/gameConfig';
     import { PositionService } from './services/PositionService';
@@ -73,6 +73,8 @@
     let currentMask = '/backgrounds/woods_mask.png';
 
     let gameStarted = false;
+
+    let showingCelebration = false;
 
     function saveDiscoveredPokemon() {
         localStorage.setItem('discoveredPokemon', 
@@ -196,6 +198,20 @@
         }
     }
 
+    async function handlePokemonFound(pokemon: Pokemon) {
+        showingCelebration = true;
+        showPokemonList = true;
+        
+        await tick();
+        
+        setTimeout(() => {
+            showPokemonList = false;
+            showingCelebration = false;
+            gameStateManager.addDiscoveredPokemon(pokemon.id);
+            showWinMessage = true;
+        }, 10000);
+    }
+
     function handleClick(item: Pokemon | Berry) {
         const isPokemon = 'id' in item;
         
@@ -205,12 +221,11 @@
             );
 
             if (allBerriesCollected && item.id === targetPokemon?.id) {
-                // Show win message when target Pokemon is found and all berries are collected
                 foundItems = [...foundItems, item];
-                gameStateManager.addDiscoveredPokemon(item.id);
-                showWinMessage = true;
+                // Remove this line as we'll add it after celebration
+                // gameStateManager.addDiscoveredPokemon(item.id);
+                handlePokemonFound(item);
             } else {
-                // Show Pokedex for non-target Pokemon or when berries aren't all collected
                 selectedPokemonForDetails = item;
             }
         } else {
@@ -242,7 +257,8 @@
             <div class="game-container">
                 <button 
                     class="pokedex-button"
-                    on:click={togglePokemonList}
+                    on:click={() => !showingCelebration && togglePokemonList()}
+                    disabled={showingCelebration}
                 >
                     📖 Pokédex
                 </button>
@@ -276,7 +292,8 @@
                         <button
                             class="pokemon-button"
                             style="left: {pokemon.x}px; top: {pokemon.y}px; width: {pokemon.size}px; height: {pokemon.size}px;"
-                            on:click={() => handleClick(pokemon)}
+                            on:click={() => !showingCelebration && handleClick(pokemon)}
+                            disabled={showingCelebration}
                         >
                             <img src={pokemon.image} alt={pokemon.name} class="pokemon-image" />
                         </button>
@@ -327,17 +344,17 @@
             </div>
         {/if}
 
-        {#if showPokemonList}
+        {#if showPokemonList || showingCelebration}
             <PokemonList
-                {discoveredPokemon}
+                discoveredPokemon={discoveredPokemon}
                 allPokemon={allPokemonList}
-                onClose={() => showPokemonList = false}
+                onClose={() => !showingCelebration && (showPokemonList = false)}
                 resetProgress={resetProgress}
+                celebratePokemonId={showingCelebration ? targetPokemon?.id : null}
             />
         {/if}
     </main>
 {/if}
-
 <style>
     :global(body) {
         margin: 0;
@@ -532,4 +549,16 @@
             transform: translateX(5px) rotate(5deg);
         }
     }
+
+    .pokemon-button:disabled,
+    .pokedex-button:disabled {
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+
+    .pokemon-button:disabled:hover,
+    .pokedex-button:disabled:hover {
+        transform: none;
+    }
 </style>
+
