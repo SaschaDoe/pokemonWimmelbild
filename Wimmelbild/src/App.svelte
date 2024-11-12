@@ -10,13 +10,20 @@
     import { BackgroundService } from './services/BackgroundService';
     import TitleScreen from './components/TitleScreen.svelte';
     import { GameStateManager } from './services/GameStateManager';
+    import { writable } from 'svelte/store';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
     const backgroundService = new BackgroundService(gameConfig);
     const gameStateManager = new GameStateManager();
 
-    $: discoveredPokemon = gameStateManager.getDiscoveredPokemon();
+    // Create a writable store for discoveredPokemon
+    const discoveredPokemonStore = writable(new Set());
+
+    // Update the store whenever gameStateManager changes
+    $: {
+        discoveredPokemonStore.set(gameStateManager.getDiscoveredPokemon());
+    }
 
     let allPokemonList: Pokemon[] = [];
 
@@ -78,7 +85,7 @@
 
     function saveDiscoveredPokemon() {
         localStorage.setItem('discoveredPokemon', 
-            JSON.stringify([...discoveredPokemon])
+            JSON.stringify([...discoveredPokemonStore.get()])
         );
     }
 
@@ -204,10 +211,20 @@
         
         await tick();
         
+        // Add to discovered Pokemon right after counter animation (3 seconds)
+        setTimeout(() => {
+            gameStateManager.addDiscoveredPokemon(pokemon.id);
+            // Update the store manually
+            discoveredPokemonStore.update(set => {
+                set.add(pokemon.id);
+                return set;
+            });
+        }, 3000);
+        
+        // Close pokemon list and show win message after all animations
         setTimeout(() => {
             showPokemonList = false;
             showingCelebration = false;
-            gameStateManager.addDiscoveredPokemon(pokemon.id);
             showWinMessage = true;
         }, 10000);
     }
@@ -222,7 +239,7 @@
 
             if (allBerriesCollected && item.id === targetPokemon?.id) {
                 foundItems = [...foundItems, item];
-                // Remove this line as we'll add it after celebration
+                // Remove this line as we'll add it after counter animation
                 // gameStateManager.addDiscoveredPokemon(item.id);
                 handlePokemonFound(item);
             } else {
@@ -346,7 +363,7 @@
 
         {#if showPokemonList || showingCelebration}
             <PokemonList
-                discoveredPokemon={discoveredPokemon}
+                discoveredPokemon={$discoveredPokemonStore}
                 allPokemon={allPokemonList}
                 onClose={() => !showingCelebration && (showPokemonList = false)}
                 resetProgress={resetProgress}
