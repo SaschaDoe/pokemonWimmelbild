@@ -122,15 +122,25 @@
         gameStarted = true;
     }
 
+    // Initialize these at the top with your other state variables
+    let currentBackgroundNumber = 0;
+    let totalBackgroundCount = 0;
+
+    // Add state for current background info
+    let currentBackgroundInfo: BackgroundInfo | null = null;
+
+    // Add reactive declarations for background progress
+    $: currentBackgroundNumber = backgroundService ? backgroundService.getCurrentBackgroundNumber() : 0;
+    $: allBackgroundsNumber = backgroundService ? backgroundService.getTotalBackgrounds() : 0;
+
     onMount(async () => {
         try {
             await badgeManager.initialize();
-            // Wait for background service to load
             await backgroundService.dataLoaded;
             
             // Update the background counts after loading
-            totalBackgrounds = backgroundService.getTotalBackgrounds();
-            remainingBackgrounds = backgroundService.getRemainingBackgrounds();
+            currentBackgroundNumber = backgroundService.getCurrentBackgroundNumber();
+            allBackgroundsNumber = backgroundService.getTotalBackgrounds();
             
             // Load berry data
             const berryResponse = await fetch('berry_data.json');
@@ -166,12 +176,16 @@
         
         try {
             // Get random background with its mask
-            const bgInfo = await backgroundService.getRandomBackground();
-            currentBackground = bgInfo.image;
-            await backgroundService.loadMask(bgInfo.mask);
+            currentBackgroundInfo = await backgroundService.getRandomBackground();
+            currentBackground = currentBackgroundInfo.image;
+            await backgroundService.loadMask(currentBackgroundInfo.mask);
+            
+            // Update the background numbers
+            currentBackgroundNumber = backgroundService.getCurrentBackgroundNumber();
+            totalBackgroundCount = backgroundService.getTotalBackgrounds();
             
             // Initialize scary mode with the current background
-            pokemonService.initializeGameMode(bgInfo.image);
+            pokemonService.initializeGameMode(currentBackgroundInfo.image);
             
             // Update the remaining backgrounds count
             remainingBackgrounds = backgroundService.getRemainingBackgrounds();
@@ -280,7 +294,7 @@
             await new Promise(resolve => setTimeout(resolve, 1000));
             
             // Add current badge and get its ID
-            const badgeId = badgeManager.addCurrentBadge();
+            const badgeId = badgeManager.getCurrentBadge();
             
             // Show badge celebration
             showBadgeList = true;
@@ -295,8 +309,7 @@
             showingBadgeCelebration = false;
             celebratingBadgeId = null;
 
-            // Force background reset and show win message
-            backgroundService.resetProgress();
+            // Show win message - but DON'T initialize game yet
             showWinMessage = true;
         } else {
             // Normal Pokemon found celebration
@@ -385,18 +398,27 @@
             CHEAT_MODE: !settings.CHEAT_MODE
         });
     }
+
+    function handleNewGame() {
+        if (pokedexComponent) {
+            pokedexComponent.cleanup();
+        }
+        backgroundService.prepareNextBackground();
+        onNewGame();
+    }
 </script>
 
-<BackgroundProgress 
-    {totalBackgrounds}
-    {remainingBackgrounds}
-/>
+{#if !isLoading}
+    <BackgroundProgress 
+        {currentBackgroundNumber}
+        {allBackgroundsNumber}
+    />
+{/if}
 
 {#if currentRegion}
     <BadgeProgress 
-        currentRegion={currentRegion}
-        totalBadges={badgesInCurrentRegion}
-        collectedBadges={collectedBadgesInCurrentRegion}
+        {currentRegion}
+        badgeManager={badgeManager}
         onClick={() => showBadgeList = true}
     />
 {/if}
@@ -499,6 +521,9 @@
                     <WinMessage 
                         onNewGame={initializeGame} 
                         foundPokemon={targetPokemon}
+                        {backgroundService}
+                        {badgeManager}
+                        isArenaWin={currentBackgroundInfo?.isArena || false}
                     />
                 {:else if selectedPokemonForDetails}
                     <PokemonDetails 
@@ -516,6 +541,7 @@
                 onClose={() => !showingCelebration && (showPokemonList = false)}
                 resetProgress={resetProgress}
                 celebratePokemonId={showingCelebration ? targetPokemon?.id : null}
+                {showingCelebration}
             />
         {/if}
     </main>

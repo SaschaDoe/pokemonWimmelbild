@@ -1,15 +1,14 @@
 <script lang="ts">
-    export let totalBackgrounds: number;
-    export let remainingBackgrounds: number;
+    export let currentBackgroundNumber: number;
+    export let allBackgroundsNumber: number;
     
-    $: progress = totalBackgrounds > 0 
-        ? ((totalBackgrounds - remainingBackgrounds) / totalBackgrounds) * 100 
+    $: progress = allBackgroundsNumber > 0 
+        ? (currentBackgroundNumber / allBackgroundsNumber) * 100 
         : 0;
 
-    $: isVisible = totalBackgrounds > 0;
+
 </script>
 
-{#if isVisible}
     <div class="progress-container">
         <div class="progress-bar">
             <div class="progress" style="width: {progress}%">
@@ -17,16 +16,15 @@
             </div>
         </div>
         <div class="progress-text">
-            Backgrounds: {totalBackgrounds - remainingBackgrounds}/{totalBackgrounds}
+            Level: {currentBackgroundNumber}/{allBackgroundsNumber}
         </div>
     </div>
-{/if}
 
 <style>
     .progress-container {
         position: fixed;
         top: 20px;
-        left: calc(50% - 230px);
+        left: calc(50% - 120px);
         transform: translateX(-50%);
         z-index: 1000;
         display: flex;

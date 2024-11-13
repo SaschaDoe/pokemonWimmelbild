@@ -7,7 +7,7 @@ export interface GameSettings {
 export class ConfigService {
     private static instance: ConfigService;
     private settings: GameSettings = {
-        CHEAT_MODE: false,      // Skip to last background
+        CHEAT_MODE: true,      // Skip to last background
         FILL_BACKGROUNDS: false, // Fill all backgrounds when resetting
         DEBUG_MODE: false       // Enable debug logging
     };

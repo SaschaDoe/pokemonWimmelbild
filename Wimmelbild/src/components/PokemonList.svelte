@@ -8,6 +8,7 @@
     export let onClose: () => void;
     export let resetProgress: () => void;
     export let celebratePokemonId: number | null = null;
+    export let showingCelebration = false;
 
     let selectedPokemon: Pokemon | null = null;
     let pokemonListElement: HTMLElement;
@@ -143,7 +144,7 @@
     <div class="celebration-overlay"></div>
 {/if}
 
-<div class="pokemon-list-overlay" on:click|self={!isAnimating && onClose}>
+<div class="pokemon-list-overlay" on:click|self={() => !isAnimating && onClose()}>
     <div class="pokemon-list-content" bind:this={pokemonListElement}>
         <button 
             class="close-button" 
@@ -152,7 +153,7 @@
         >×</button>
         <div class="sticky-header">
             <h2>
-                <span class="pokedex-title">
+                <span class="pokedex-title" class:celebrating={showingCelebration}>
                     Pokédex (
                     {#if isCounterAnimating}
                         <span class="counter-wrapper">
@@ -241,7 +242,8 @@
         position: relative;
         width: 80%;
         height: 80%;
-        overflow-y: auto;
+        overflow-y: auto;    /* Keep vertical scroll */
+        overflow-x: hidden;  /* Hide horizontal scroll */
         display: flex;
         flex-direction: column;
     }
@@ -265,7 +267,6 @@
     }
 
     .pokemon-grid {
-        flex: 1;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 1rem;
@@ -540,13 +541,18 @@
         z-index: 2000;
         border-bottom: 1px solid #eee;
         margin-bottom: 1rem;
-        text-align: center;
+        width: 100%;
     }
 
     .pokedex-title {
         position: relative;
         display: inline-block;
         font-size: 1.5em;
+        color: #333;
+    }
+
+    /* Only apply animation when celebrating */
+    .pokedex-title.celebrating {
         animation: titleAnimation 2.5s ease-in-out;
     }
 
@@ -564,6 +570,23 @@
             text-shadow: none;
             color: #333;
         }
+    }
+
+    /* Only show shine effect during celebration */
+    .pokedex-title.celebrating::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent
+        );
+        animation: shine 4s infinite;
     }
 
     .counter-wrapper {

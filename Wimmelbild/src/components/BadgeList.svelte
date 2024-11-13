@@ -26,11 +26,32 @@
         }));
     }
 
-    // Immediately scroll to badge when component mounts and has a celebrating badge
-    $: if (celebratingBadgeId && badgeListElement) {
+    $: if (celebratingBadgeId && !collectedBadges.has(celebratingBadgeId)) {
+        collectedBadges = new Set([...collectedBadges, celebratingBadgeId]);
+    }
+
+    async function handleCelebration(badgeId: string) {
+        if (!badgeListElement || isAnimating) return;
+        
+        isAnimating = true;
+        
+        const badgeElement = badgeListElement.querySelector(`[data-badge-id="${badgeId}"]`);
+        if (!badgeElement) {
+            isAnimating = false;
+            return;
+        }
+
+        badgeElement.classList.add('celebrating');
+        
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        
+        isAnimating = false;
+        onClose();
+    }
+
+    $: if (celebratingBadgeId && badgeListElement && !isAnimating) {
         const badgeElement = badgeListElement.querySelector(`[data-badge-id="${celebratingBadgeId}"]`);
         if (badgeElement) {
-            // Small delay to ensure DOM is ready
             setTimeout(() => {
                 const container = badgeListElement;
                 const elementRect = badgeElement.getBoundingClientRect();
@@ -42,7 +63,6 @@
                     behavior: 'smooth'
                 });
 
-                // Start celebration after scroll
                 setTimeout(() => {
                     if (!isAnimating) {
                         handleCelebration(celebratingBadgeId);
@@ -50,28 +70,6 @@
                 }, 1000);
             }, 100);
         }
-    }
-
-    async function handleCelebration(badgeId: string) {
-        if (!badgeListElement || isAnimating) return;
-        
-        isAnimating = true;
-        
-        // Find the badge element
-        const badgeElement = badgeListElement.querySelector(`[data-badge-id="${badgeId}"]`);
-        if (!badgeElement) {
-            isAnimating = false;
-            return;
-        }
-
-        // Start celebration animation immediately since we're already scrolled
-        badgeElement.classList.add('celebrating');
-        
-        // Wait for animation
-        await new Promise(resolve => setTimeout(resolve, 5000));
-        
-        isAnimating = false;
-        onClose();
     }
 </script>
 

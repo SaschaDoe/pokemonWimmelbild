@@ -1,9 +1,13 @@
 <script lang="ts">
     import type { Pokemon } from '../types/interfaces';
+    import type { BackgroundService } from '../services/BackgroundService';
+    import type { BadgeManager } from '../services/BadgeManager';
     import Pokedex from './Pokedex.svelte';
 
     export let onNewGame: () => void;
     export let foundPokemon: Pokemon | null;
+    export let backgroundService: BackgroundService;
+    export let badgeManager: BadgeManager;
     export let isArenaWin: boolean = false;
 
     let pokedexComponent: any;
@@ -12,13 +16,22 @@
         if (pokedexComponent) {
             pokedexComponent.cleanup();
         }
+        
+        if (isArenaWin) {
+            backgroundService.completeArenaCycle();
+            badgeManager.addCurrentBadge();
+        } else {
+            // Normal progression - just increment background
+            backgroundService.incrementBackgroundNumber();
+        }
+        
         onNewGame();
     }
 </script>
 
 <div class="win-message-overlay">
     <div class="win-message-content">
-        <button on:click={handleNewGame}>Play Again</button>
+        <button on:click={handleNewGame}>Weiter</button>
         {#if foundPokemon}
             <div class="pokedex-container">
                 <Pokedex pokemon={foundPokemon} bind:this={pokedexComponent} />

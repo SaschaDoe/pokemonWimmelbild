@@ -1,20 +1,22 @@
 <script lang="ts">
+    import type { BadgeManager } from '../services/BadgeManager';
+
     export let currentRegion: string;
-    export let totalBadges: number;
-    export let collectedBadges: number;
+    export let badgeManager: BadgeManager;
     export let onClick: () => void;
     
-    $: progress = (collectedBadges / totalBadges) * 100;
+    // Subscribe to the store directly
+    const badgeProgress = badgeManager.badgeProgressStore;
 </script>
 
-<div class="progress-container" on:click={onClick} role="button" tabindex="0">
+<div class="progress-container" on:click={onClick}>
     <div class="progress-bar">
-        <div class="progress" style="width: {progress}%">
+        <div class="progress" style="width: {($badgeProgress.currentBadgeIndex / $badgeProgress.totalBadgesInRegion) * 100}%">
             <img src="ash.png" alt="Ash" class="progress-marker" />
         </div>
     </div>
     <div class="progress-text">
-        {currentRegion}: {collectedBadges}/{totalBadges} Orden
+        {$badgeProgress.currentRegion}: {$badgeProgress.currentBadgeIndex}/{$badgeProgress.totalBadgesInRegion} Orden
     </div>
 </div>
 
@@ -22,7 +24,7 @@
     .progress-container {
         position: fixed;
         top: 20px;
-        left: calc(50% + 230px);
+        left: calc(50% + 120px);
         transform: translateX(-50%);
         z-index: 1000;
         display: flex;

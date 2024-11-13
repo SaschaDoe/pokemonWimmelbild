@@ -22,6 +22,9 @@ export class BackgroundService {
     private maskCanvas: HTMLCanvasElement;
     private localStorageService: LocalStorageService;
     private configService: ConfigService;
+    private currentBackgroundInfo: BackgroundInfo | null = null;
+    private needsNewBackground: boolean = false;
+    private currentBackgroundNumber: number = 0;
     
     // Define terrain colors and their corresponding Pokemon types
     private readonly TERRAIN_TYPES: TerrainTypeMapping[] = [
@@ -73,27 +76,34 @@ export class BackgroundService {
             
             const settings = this.configService.getSettings();
             
-            // Load unused backgrounds from localStorage or initialize new
             if (settings.CHEAT_MODE) {
-                // In cheat mode, leave only one background before arena
+                // In cheat mode, set current background to total number
+                this.currentBackgroundNumber = this.backgrounds.length;
                 this.unusedBackgrounds = [this.backgrounds[0]];
-                console.log('CHEAT MODE: Only one background remaining before arena');
+                console.log('CHEAT MODE: Set to last background');
             } else {
+                // Load current background number from localStorage
+                this.currentBackgroundNumber = this.localStorageService.load<number>(
+                    'current_background_number',
+                    0
+                );
                 this.unusedBackgrounds = this.localStorageService.load<string[]>(
                     'unused_backgrounds',
                     [...this.backgrounds]
                 );
             }
             
-            console.log('Available backgrounds:', {
+            console.log('Backgrounds loaded:', {
                 total: this.backgrounds.length,
+                current: this.currentBackgroundNumber,
                 unused: this.unusedBackgrounds.length,
-                settings
+                cheatMode: settings.CHEAT_MODE
             });
         } catch (error) {
             console.error('Failed to load backgrounds:', error);
             this.backgrounds = ['woods.png'];
             this.unusedBackgrounds = ['woods.png'];
+            this.currentBackgroundNumber = 0;
         }
     }
 
@@ -117,60 +127,92 @@ export class BackgroundService {
     public resetProgress(): void {
         const settings = this.configService.getSettings();
         
-        if (this.unusedBackgrounds.length === 0 || settings.FILL_BACKGROUNDS) {
-            // Reset to all backgrounds if:
-            // - We've used all backgrounds (completed Arena)
-            // - OR if FILL_BACKGROUNDS is true
+        if (settings.CHEAT_MODE) {
+            // In cheat mode, set to last background to trigger arena
+            this.currentBackgroundNumber = this.backgrounds.length;
+            this.unusedBackgrounds = [];
+        } else {
+            // Normal reset - start from beginning
             this.unusedBackgrounds = [...this.backgrounds];
-        } else if (settings.CHEAT_MODE) {
-            // In cheat mode, reset to one background remaining
-            this.unusedBackgrounds = [this.backgrounds[0]];
+            this.currentBackgroundNumber = 0;
         }
         
+        this.needsNewBackground = true;
+        this.currentBackgroundInfo = null;
+        this.localStorageService.save('current_background_number', this.currentBackgroundNumber);
+        this.localStorageService.save('current_background', null);
         this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
+    }
+
+    public completeArenaCycle(): void {
+        // Reset everything to start a new cycle
+        this.unusedBackgrounds = [...this.backgrounds];
+        this.currentBackgroundNumber = 0;
+        this.needsNewBackground = true;
+        this.currentBackgroundInfo = null;
+        
+        // Save the reset state
+        this.localStorageService.save('current_background_number', this.currentBackgroundNumber);
+        this.localStorageService.save('current_background', null);
+        this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
+        
+        console.log('Arena cycle completed, starting new cycle');
     }
 
     async getRandomBackground(): Promise<BackgroundInfo> {
         await this.dataLoaded;
-        
-        if (this.backgrounds.length === 0) {
-            return {
-                image: './backgrounds/woods.png',
-                mask: './backgrounds/woods_mask.png',
-                isArena: false
-            };
+
+        // Return current background if we don't need a new one
+        if (!this.needsNewBackground && this.currentBackgroundInfo) {
+            return this.currentBackgroundInfo;
         }
 
-        // If all backgrounds are used, show arena
-        if (this.unusedBackgrounds.length === 0) {
+        // Reset flag
+        this.needsNewBackground = false;
+
+        const settings = this.configService.getSettings();
+
+        // If all backgrounds are used or in CHEAT_MODE, show arena
+        if (this.unusedBackgrounds.length === 0 || 
+            (settings.CHEAT_MODE && this.currentBackgroundNumber >= this.backgrounds.length)) {
             const bgName = this.ARENA_BACKGROUND;
             const maskName = bgName.replace('.png', '_mask.png');
-            
-            return {
-                image: `./backgrounds/${bgName}`,
-                mask: `./backgrounds/${maskName}`,
+            const backgroundInfo = {
+                image: `/backgrounds/${bgName}`,
+                mask: `/backgrounds/${maskName}`,
                 isArena: true
             };
+            
+            this.currentBackgroundInfo = backgroundInfo;
+            this.localStorageService.save('current_background', bgName);
+            
+            console.log('Loading arena background for final battle');
+            return backgroundInfo;
         }
 
         // Get next background from unused pool
         const bgName = this.unusedBackgrounds.pop()!;
         const maskName = bgName.replace('.png', '_mask.png');
         
-        // Save updated unused backgrounds
-        this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
-
-        console.log('Selected background:', {
-            name: bgName,
-            remainingBackgrounds: this.unusedBackgrounds.length,
-            isCheatMode: this.configService.getSettings().CHEAT_MODE
-        });
-
-        return {
-            image: `./backgrounds/${bgName}`,
-            mask: `./backgrounds/${maskName}`,
+        const backgroundInfo = {
+            image: `/backgrounds/${bgName}`,
+            mask: `/backgrounds/${maskName}`,
             isArena: false
         };
+
+        // Save the new state
+        this.currentBackgroundInfo = backgroundInfo;
+        this.localStorageService.save('current_background', bgName);
+        this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
+
+        console.log('Background progression:', {
+            current: bgName,
+            currentNumber: this.currentBackgroundNumber,
+            remainingBackgrounds: this.unusedBackgrounds.length,
+            isArena: false
+        });
+
+        return backgroundInfo;
     }
 
     async loadMask(maskUrl: string): Promise<void> {
@@ -255,5 +297,24 @@ export class BackgroundService {
 
     public getRemainingBackgrounds(): number {
         return this.unusedBackgrounds.length;
+    }
+
+    // Add method to force next background
+    public prepareNextBackground(): void {
+        this.needsNewBackground = true;
+        this.currentBackgroundInfo = null;
+        this.localStorageService.save('current_background', null);
+    }
+
+    public getCurrentBackgroundNumber(): number {
+        return this.currentBackgroundNumber;
+    }
+
+    public incrementBackgroundNumber(): void {
+        if (this.currentBackgroundNumber < this.backgrounds.length) {
+            this.currentBackgroundNumber++;
+            this.localStorageService.save('current_background_number', this.currentBackgroundNumber);
+            this.needsNewBackground = true;
+        }
     }
 } 
