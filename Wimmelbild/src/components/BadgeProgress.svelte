@@ -1,32 +1,28 @@
 <script lang="ts">
-    export let totalBackgrounds: number;
-    export let remainingBackgrounds: number;
+    export let currentRegion: string;
+    export let totalBadges: number;
+    export let collectedBadges: number;
+    export let onClick: () => void;
     
-    $: progress = totalBackgrounds > 0 
-        ? ((totalBackgrounds - remainingBackgrounds) / totalBackgrounds) * 100 
-        : 0;
-
-    $: isVisible = totalBackgrounds > 0;
+    $: progress = (collectedBadges / totalBadges) * 100;
 </script>
 
-{#if isVisible}
-    <div class="progress-container">
-        <div class="progress-bar">
-            <div class="progress" style="width: {progress}%">
-                <img src="ash.png" alt="Ash" class="progress-marker" />
-            </div>
-        </div>
-        <div class="progress-text">
-            Backgrounds: {totalBackgrounds - remainingBackgrounds}/{totalBackgrounds}
+<div class="progress-container" on:click={onClick} role="button" tabindex="0">
+    <div class="progress-bar">
+        <div class="progress" style="width: {progress}%">
+            <img src="ash.png" alt="Ash" class="progress-marker" />
         </div>
     </div>
-{/if}
+    <div class="progress-text">
+        {currentRegion}: {collectedBadges}/{totalBadges} Orden
+    </div>
+</div>
 
 <style>
     .progress-container {
         position: fixed;
         top: 20px;
-        left: calc(50% - 230px);
+        left: calc(50% + 230px);
         transform: translateX(-50%);
         z-index: 1000;
         display: flex;
@@ -36,6 +32,12 @@
         background: rgba(0, 0, 0, 0.5);
         padding: 10px;
         border-radius: 15px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .progress-container:hover {
+        transform: translateX(-50%) scale(1.05);
     }
 
     .progress-bar {

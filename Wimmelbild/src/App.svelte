@@ -13,12 +13,19 @@
     import { writable } from 'svelte/store';
     import BackgroundProgress from './components/BackgroundProgress.svelte';
     import { LocalStorageService } from './services/LocalStorageService';
+    import { BadgeService } from './services/BadgeService';
+    import BadgeProgress from './components/BadgeProgress.svelte';
+    import BadgeList from './components/BadgeList.svelte';
+    import { BadgeManager } from './services/BadgeManager';
+    import { ConfigService } from './services/ConfigService';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
     const backgroundService = new BackgroundService(gameConfig);
     const gameStateManager = new GameStateManager();
     const localStorageService = new LocalStorageService();
+    const badgeService = new BadgeService();
+    const badgeManager = new BadgeManager();
 
     // Create a writable store for discoveredPokemon
     const discoveredPokemonStore = writable(new Set());
@@ -89,6 +96,22 @@
     let totalBackgrounds = 0;
     let remainingBackgrounds = 0;
 
+    // Add these variables for badge tracking
+    let currentRegionIndex = 0;
+    let regions: string[] = [];
+    let currentRegion = '';
+    let badgesInCurrentRegion = 0;
+    let collectedBadgesInCurrentRegion = 0;
+
+    let showBadgeList = false;
+    let collectedBadges = new Set<string>();  // You'll need to manage this with your game state
+
+    let showingBadgeCelebration = false;
+    let celebratingBadgeId: string | null = null;
+
+    // Get config service instance
+    const configService = ConfigService.getInstance();
+    
     function saveDiscoveredPokemon() {
         localStorage.setItem('discoveredPokemon', 
             JSON.stringify([...discoveredPokemonStore.get()])
@@ -101,6 +124,7 @@
 
     onMount(async () => {
         try {
+            await badgeManager.initialize();
             // Wait for background service to load
             await backgroundService.dataLoaded;
             
@@ -119,6 +143,12 @@
             currentBackground = await backgroundService.getRandomBackground();
             
             await initializeGame();
+            await badgeService.dataLoaded;
+            const badgeData = await fetch('/badges.json');
+            const badgesByRegion = await badgeData.json();
+            regions = Object.keys(badgesByRegion);
+            currentRegion = regions[currentRegionIndex];
+            updateBadgeProgress();
         } catch (error) {
             console.error('Error loading data:', error);
             isLoading = false;
@@ -222,28 +252,71 @@
     }
 
     async function handlePokemonFound(pokemon: Pokemon) {
-        pokemonService.endScaryMode(); // End scary mode when Pokemon is found
-        showingCelebration = true;
-        showPokemonList = true;
+        pokemonService.endScaryMode();
         
-        await tick();
-        
-        // Add to discovered Pokemon right after counter animation (3 seconds)
-        setTimeout(() => {
-            gameStateManager.addDiscoveredPokemon(pokemon.id);
-            // Update the store manually
-            discoveredPokemonStore.update(set => {
-                set.add(pokemon.id);
-                return set;
-            });
-        }, 3000);
-        
-        // Close pokemon list and show win message after all animations
-        setTimeout(() => {
+        const bgInfo = await backgroundService.getRandomBackground();
+        if (bgInfo.isArena) {
+            // First show normal Pokemon celebration
+            showingCelebration = true;
+            showPokemonList = true;
+
+            // Add to discovered Pokemon after counter animation
+            setTimeout(() => {
+                gameStateManager.addDiscoveredPokemon(pokemon.id);
+                discoveredPokemonStore.update(set => {
+                    set.add(pokemon.id);
+                    return set;
+                });
+            }, 3000);
+
+            // Wait for Pokemon celebration to complete
+            await new Promise(resolve => setTimeout(resolve, 8000));
+            
+            // Hide Pokemon list
             showPokemonList = false;
             showingCelebration = false;
+            
+            // Short pause before badge celebration
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // Add current badge and get its ID
+            const badgeId = badgeManager.addCurrentBadge();
+            
+            // Show badge celebration
+            showBadgeList = true;
+            showingBadgeCelebration = true;
+            celebratingBadgeId = badgeId;
+
+            // Wait for badge celebration to complete
+            await new Promise(resolve => setTimeout(resolve, 8000));
+            
+            // Clean up badge celebration
+            showBadgeList = false;
+            showingBadgeCelebration = false;
+            celebratingBadgeId = null;
+
+            // Force background reset and show win message
+            backgroundService.resetProgress();
             showWinMessage = true;
-        }, 10000);
+        } else {
+            // Normal Pokemon found celebration
+            showingCelebration = true;
+            showPokemonList = true;
+            
+            setTimeout(() => {
+                gameStateManager.addDiscoveredPokemon(pokemon.id);
+                discoveredPokemonStore.update(set => {
+                    set.add(pokemon.id);
+                    return set;
+                });
+            }, 3000);
+            
+            setTimeout(() => {
+                showPokemonList = false;
+                showingCelebration = false;
+                showWinMessage = true;
+            }, 10000);
+        }
     }
 
     function handleClick(item: Pokemon | Berry) {
@@ -279,6 +352,7 @@
         pokemonService.cleanup();
         gameStateManager.resetProgress();
         backgroundService.resetProgress();
+        badgeManager.resetProgress();
         localStorageService.resetAll();
         initializeGame();
     }
@@ -286,12 +360,57 @@
     onDestroy(() => {
         pokemonService.cleanup();
     });
+
+    function updateBadgeProgress() {
+        if (regions.length > 0) {
+            currentRegion = regions[currentRegionIndex];
+            const regionBadges = badgeService.getBadgesByRegion(currentRegion);
+            badgesInCurrentRegion = regionBadges.length;
+            // Here you would get the actual collected badges count from your game state
+            // For now, it's just a placeholder
+            collectedBadgesInCurrentRegion = 0; // Update this based on your game state
+        }
+    }
+
+    // Add function to move to next region
+    function moveToNextRegion() {
+        currentRegionIndex = (currentRegionIndex + 1) % regions.length;
+        updateBadgeProgress();
+    }
+
+    // Example: Update settings if needed
+    function toggleCheatMode() {
+        const settings = configService.getSettings();
+        configService.updateSettings({
+            CHEAT_MODE: !settings.CHEAT_MODE
+        });
+    }
 </script>
 
 <BackgroundProgress 
     {totalBackgrounds}
     {remainingBackgrounds}
 />
+
+{#if currentRegion}
+    <BadgeProgress 
+        currentRegion={currentRegion}
+        totalBadges={badgesInCurrentRegion}
+        collectedBadges={collectedBadgesInCurrentRegion}
+        onClick={() => showBadgeList = true}
+    />
+{/if}
+
+{#if showBadgeList}
+    <BadgeList
+        {badgeService}
+        collectedBadges={badgeManager.getCollectedBadges()}
+        currentRegion={badgeManager.getCurrentRegion()}
+        onClose={() => !showingBadgeCelebration && (showBadgeList = false)}
+        {celebratingBadgeId}
+        {showingBadgeCelebration}
+    />
+{/if}
 
 {#if !gameStarted}
     <TitleScreen on:start={handleGameStart} />

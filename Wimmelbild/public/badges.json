@@ -1,0 +1,84 @@
+{
+  "Kanto": [
+    "Fels",
+    "Quell",
+    "Donner",
+    "Farb",
+    "Seelen",
+    "Sumpf",
+    "Vulkan",
+    "Erd"
+  ],
+  "Johto": [
+    "Flügel",
+    "Insekt",
+    "Basis",
+    "Phantom",
+    "Faust",
+    "Stahl",
+    "Eis",
+    "Drachen"
+  ],
+  "Hoenn": [
+    "Stein",
+    "Knöchel",
+    "Dynamo",
+    "Hitze",
+    "Balance",
+    "Feder",
+    "Mental",
+    "Schauer"
+  ],
+  "Sinnoh": [
+    "Kohle",
+    "Wald",
+    "Berg",
+    "Fenn",
+    "Relikt",
+    "Minen",
+    "Firn",
+    "Licht"
+  ],
+  "Einall": [
+    "Tri",
+    "Grund",
+    "Gift",
+    "Käfer",
+    "Volt",
+    "Seismo",
+    "Jet",
+    "Eiszapf",
+    "Legenden",
+    "Wellen"
+  ],
+  "Kalos": [
+    "Krabbel",
+    "Wall",
+    "Rauf",
+    "Blatt",
+    "Ampere",
+    "Feen",
+    "Psi",
+    "Eisberg"
+  ],
+  "Galar": [
+    "Pflanzen",
+    "Wasser",
+    "Feuer",
+    "Kampf",
+    "Geister",
+    "Feen",
+    "Gesteins",
+    "Drachen"
+  ],
+  "Paldea": [
+    "Käfer",
+    "Pflanzen",
+    "Elektro",
+    "Wasser",
+    "Normal",
+    "Geister",
+    "Psycho",
+    "Eis"
+  ]
+}

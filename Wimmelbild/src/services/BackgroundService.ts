@@ -1,9 +1,11 @@
 import type { GameConfig } from '../types/interfaces';
 import { LocalStorageService } from './LocalStorageService';
+import { ConfigService } from './ConfigService';
 
 interface BackgroundInfo {
     image: string;
     mask: string;
+    isArena?: boolean;
 }
 
 interface TerrainTypeMapping {
@@ -14,11 +16,13 @@ interface TerrainTypeMapping {
 export class BackgroundService {
     private backgrounds: string[] = [];
     private unusedBackgrounds: string[] = [];
+    private readonly ARENA_BACKGROUND = 'arena.png';
     public dataLoaded: Promise<void>;
     private currentMaskContext: CanvasRenderingContext2D | null = null;
     private maskCanvas: HTMLCanvasElement;
     private localStorageService: LocalStorageService;
-
+    private configService: ConfigService;
+    
     // Define terrain colors and their corresponding Pokemon types
     private readonly TERRAIN_TYPES: TerrainTypeMapping[] = [
         {
@@ -54,6 +58,7 @@ export class BackgroundService {
     constructor(private config: GameConfig) {
         this.maskCanvas = document.createElement('canvas');
         this.localStorageService = new LocalStorageService();
+        this.configService = ConfigService.getInstance();
         this.dataLoaded = this.loadBackgrounds();
     }
 
@@ -61,21 +66,32 @@ export class BackgroundService {
         try {
             console.log('Loading background list from JSON...');
             const response = await fetch('./backgrounds/list.json');
-            this.backgrounds = await response.json();
+            let allBackgrounds: string[] = await response.json();
+            
+            // Remove arena from regular backgrounds
+            this.backgrounds = allBackgrounds.filter(bg => bg !== this.ARENA_BACKGROUND);
+            
+            const settings = this.configService.getSettings();
             
             // Load unused backgrounds from localStorage or initialize new
-            this.unusedBackgrounds = this.localStorageService.load<string[]>(
-                'unused_backgrounds',
-                [...this.backgrounds]
-            );
+            if (settings.CHEAT_MODE) {
+                // In cheat mode, leave only one background before arena
+                this.unusedBackgrounds = [this.backgrounds[0]];
+                console.log('CHEAT MODE: Only one background remaining before arena');
+            } else {
+                this.unusedBackgrounds = this.localStorageService.load<string[]>(
+                    'unused_backgrounds',
+                    [...this.backgrounds]
+                );
+            }
             
             console.log('Available backgrounds:', {
                 total: this.backgrounds.length,
-                unused: this.unusedBackgrounds.length
+                unused: this.unusedBackgrounds.length,
+                settings
             });
         } catch (error) {
             console.error('Failed to load backgrounds:', error);
-            console.log('Falling back to default background: woods.png');
             this.backgrounds = ['woods.png'];
             this.unusedBackgrounds = ['woods.png'];
         }
@@ -99,7 +115,18 @@ export class BackgroundService {
     }
 
     public resetProgress(): void {
-        this.unusedBackgrounds = [...this.backgrounds];
+        const settings = this.configService.getSettings();
+        
+        if (this.unusedBackgrounds.length === 0 || settings.FILL_BACKGROUNDS) {
+            // Reset to all backgrounds if:
+            // - We've used all backgrounds (completed Arena)
+            // - OR if FILL_BACKGROUNDS is true
+            this.unusedBackgrounds = [...this.backgrounds];
+        } else if (settings.CHEAT_MODE) {
+            // In cheat mode, reset to one background remaining
+            this.unusedBackgrounds = [this.backgrounds[0]];
+        }
+        
         this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
     }
 
@@ -107,34 +134,43 @@ export class BackgroundService {
         await this.dataLoaded;
         
         if (this.backgrounds.length === 0) {
-            console.warn('No backgrounds available, using default');
             return {
                 image: './backgrounds/woods.png',
-                mask: './backgrounds/woods_mask.png'
+                mask: './backgrounds/woods_mask.png',
+                isArena: false
             };
         }
 
-        // Shuffle if needed and get next background
+        // If all backgrounds are used, show arena
         if (this.unusedBackgrounds.length === 0) {
-            this.shuffleBackgrounds();
+            const bgName = this.ARENA_BACKGROUND;
+            const maskName = bgName.replace('.png', '_mask.png');
+            
+            return {
+                image: `./backgrounds/${bgName}`,
+                mask: `./backgrounds/${maskName}`,
+                isArena: true
+            };
         }
 
-        const bgName = this.unusedBackgrounds.pop()!; // Remove and get the last background
+        // Get next background from unused pool
+        const bgName = this.unusedBackgrounds.pop()!;
         const maskName = bgName.replace('.png', '_mask.png');
-
-        const backgroundInfo = {
-            image: `./backgrounds/${bgName}`,
-            mask: `./backgrounds/${maskName}`
-        };
+        
+        // Save updated unused backgrounds
+        this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
 
         console.log('Selected background:', {
-            backgroundName: bgName,
-            maskName: maskName,
-            remainingUnused: this.unusedBackgrounds.length,
-            fullPaths: backgroundInfo
+            name: bgName,
+            remainingBackgrounds: this.unusedBackgrounds.length,
+            isCheatMode: this.configService.getSettings().CHEAT_MODE
         });
 
-        return backgroundInfo;
+        return {
+            image: `./backgrounds/${bgName}`,
+            mask: `./backgrounds/${maskName}`,
+            isArena: false
+        };
     }
 
     async loadMask(maskUrl: string): Promise<void> {

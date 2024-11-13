@@ -4,10 +4,11 @@
 
     export let onNewGame: () => void;
     export let foundPokemon: Pokemon | null;
+    export let isArenaWin: boolean = false;
 
     let pokedexComponent: any;
 
-    function handleNewGame() {
+    async function handleNewGame() {
         if (pokedexComponent) {
             pokedexComponent.cleanup();
         }
@@ -23,8 +24,6 @@
                 <Pokedex pokemon={foundPokemon} bind:this={pokedexComponent} />
             </div>
         {/if}
-        
-        
     </div>
 </div>
 

@@ -50,4 +50,14 @@ export interface Berry {
         x: number;
         y: number;
     };
+}
+
+export interface Badge {
+    name: string;
+    region: string;
+    image: string;
+}
+
+export interface BadgesByRegion {
+    [region: string]: string[];
 } 
