@@ -1,6 +1,6 @@
 import type { GameConfig } from '../types/interfaces';
 import { LocalStorageService } from './LocalStorageService';
-import { ConfigService } from './ConfigService';
+import { ConfigService } from '../config/ConfigService';
 
 interface BackgroundInfo {
     image: string;

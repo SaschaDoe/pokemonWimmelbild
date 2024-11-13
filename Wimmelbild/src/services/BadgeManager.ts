@@ -1,7 +1,7 @@
 import { LocalStorageService } from './LocalStorageService';
 import type { Badge } from '../types/interfaces';
 import { writable } from 'svelte/store';
-import { ConfigService } from './ConfigService';
+import { ConfigService } from '../config/ConfigService';
 
 export class BadgeManager {
     private localStorageService: LocalStorageService;

@@ -17,7 +17,7 @@
     import BadgeProgress from './components/BadgeProgress.svelte';
     import BadgeList from './components/BadgeList.svelte';
     import { BadgeManager } from './services/BadgeManager';
-    import { ConfigService } from './services/ConfigService';
+    import { ConfigService } from './config/ConfigService';
     import WinScreen from './components/WinScreen.svelte';
 
     const positionService = new PositionService(gameConfig);
