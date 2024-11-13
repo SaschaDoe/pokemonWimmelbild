@@ -337,6 +337,7 @@
                 showingBadgeCelebration = false;
                 celebratingBadgeId = null;
             showWinMessage = true;
+            }
         } else {
             // Normal Pokemon found celebration
             showingCelebration = true;
