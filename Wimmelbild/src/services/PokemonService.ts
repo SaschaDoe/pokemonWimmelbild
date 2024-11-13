@@ -1,5 +1,6 @@
 import type { Pokemon, IPokemonService, Position, GameConfig } from '../types/interfaces';
 import { ImageService } from './ImageService';
+import { WeatherService } from './WeatherService';
 
 interface PokemonData {
     id: string;
@@ -12,15 +13,65 @@ interface PokemonData {
     evolution: string | null;
 }
 
+interface GameMode {
+    isScaryNight: boolean;
+}
+
 export class PokemonService implements IPokemonService {
     private pokemonData: PokemonData[] = [];
     private _dataLoaded: Promise<void>;
     public allPokemon: Pokemon[] = [];
     private imageService: ImageService;
+    private gameMode: GameMode = { isScaryNight: false };
+    private weatherService: WeatherService;
 
     constructor(private config: GameConfig) {
         this.imageService = new ImageService();
+        this.weatherService = new WeatherService();
         this._dataLoaded = this.loadPokemonData();
+    }
+
+    private shouldActivateScaryMode(backgroundPath: string): boolean {
+        // Don't activate scary mode for underwater backgrounds
+        if (backgroundPath.toLowerCase().includes('underwater')) {
+            return false;
+        }
+        // 5% chance for other backgrounds
+        return Math.random() < 0.05;
+    }
+
+    public initializeGameMode(backgroundPath: string) {
+        this.gameMode.isScaryNight = this.shouldActivateScaryMode(backgroundPath);
+        if (this.gameMode.isScaryNight) {
+            console.log('Activating scary night mode! 👻');
+            this.weatherService.start();
+            this.addDarkOverlay();
+        }
+    }
+
+    private addDarkOverlay() {
+        const overlay = document.createElement('div');
+        overlay.id = 'scary-mode-overlay';
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0, 0, 20, 0.5)';
+        overlay.style.pointerEvents = 'none';
+        overlay.style.zIndex = '0';
+        document.body.appendChild(overlay);
+    }
+
+    public endScaryMode() {
+        if (this.gameMode.isScaryNight) {
+            this.gameMode.isScaryNight = false;
+            this.weatherService.stop();
+            const overlay = document.getElementById('scary-mode-overlay');
+            if (overlay) {
+                overlay.remove();
+            }
+        }
     }
 
     get dataLoaded(): Promise<void> {
@@ -69,36 +120,26 @@ export class PokemonService implements IPokemonService {
 
     async generatePokemon(position: Position, terrainTypes: string[] | null = null): Promise<Pokemon> {
         await this.dataLoaded;
-        console.log('ConsoleTerrain: Terrain types:', terrainTypes);
+        
         if (this.pokemonData.length === 0) {
             throw new Error('Failed to load Pokemon data');
         }
 
         let eligiblePokemon = this.pokemonData;
         
-        if (terrainTypes) {
-            console.log('Filtering Pokemon for terrain types:', {
-                terrainTypes,
-                position,
-                totalPokemon: this.pokemonData.length
-            });
-
+        if (this.gameMode.isScaryNight) {
+            eligiblePokemon = this.pokemonData.filter(pokemon => 
+                pokemon.types.some(type => ['Psycho', 'Geist', 'Unlicht'].includes(type))
+            );
+        } else if (terrainTypes) {
             eligiblePokemon = this.pokemonData.filter(pokemon => 
                 pokemon.types.some(type => terrainTypes.includes(type))
             );
+        }
 
-            console.log('Filtered Pokemon:', {
-                eligibleCount: eligiblePokemon.length,
-                firstFewEligible: eligiblePokemon.slice(0, 3).map(p => ({
-                    name: p.name,
-                    types: p.types
-                }))
-            });
-
-            if (eligiblePokemon.length === 0) {
-                console.warn('No eligible Pokemon for terrain types, falling back to any Pokemon');
-                eligiblePokemon = this.pokemonData;
-            }
+        if (eligiblePokemon.length === 0) {
+            console.warn('No eligible Pokemon found, falling back to any Pokemon');
+            eligiblePokemon = this.pokemonData;
         }
 
         const randomIndex = Math.floor(Math.random() * eligiblePokemon.length);
@@ -106,29 +147,10 @@ export class PokemonService implements IPokemonService {
         
         const imagePath = this.imageService.getPokemonImagePath(parseInt(pokemonData.id), pokemonData);
         
-        console.log('Generated Pokemon:', {
-            name: pokemonData.name,
-            types: pokemonData.types,
-            terrainTypes,
-            position
-        });
+        return this.createPokemonObject(pokemonData, position, imagePath);
+    }
 
-        return {
-            id: parseInt(pokemonData.id),
-            pokemon_id: pokemonData.id,
-            name: pokemonData.name,
-            types: pokemonData.types,
-            x: position.x,
-            y: position.y,
-            size: this.config.POKEMON_SIZE,
-            image: imagePath,
-            url: pokemonData.url,
-            appearance: pokemonData.appearance,
-            habitat: pokemonData.habitat,
-            species: pokemonData.species,
-            evolution: pokemonData.evolution,
-            image_url: '',
-            local_image: imagePath
-        };
+    public cleanup() {
+        this.endScaryMode();
     }
 } 

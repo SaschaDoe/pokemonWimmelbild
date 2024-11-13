@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount, tick } from 'svelte';
+    import { onMount, tick, onDestroy } from 'svelte';
     import type { Pokemon, Berry } from './types/interfaces';
     import { gameConfig } from './config/gameConfig';
     import { PositionService } from './services/PositionService';
@@ -140,6 +140,9 @@
             currentBackground = bgInfo.image;
             await backgroundService.loadMask(bgInfo.mask);
             
+            // Initialize scary mode with the current background
+            pokemonService.initializeGameMode(bgInfo.image);
+            
             // Update the remaining backgrounds count
             remainingBackgrounds = backgroundService.getRemainingBackgrounds();
 
@@ -219,6 +222,7 @@
     }
 
     async function handlePokemonFound(pokemon: Pokemon) {
+        pokemonService.endScaryMode(); // End scary mode when Pokemon is found
         showingCelebration = true;
         showPokemonList = true;
         
@@ -272,11 +276,16 @@
     }
 
     function resetProgress() {
+        pokemonService.cleanup();
         gameStateManager.resetProgress();
         backgroundService.resetProgress();
         localStorageService.resetAll();
         initializeGame();
     }
+
+    onDestroy(() => {
+        pokemonService.cleanup();
+    });
 </script>
 
 <BackgroundProgress 
