@@ -18,6 +18,7 @@
     import BadgeList from './components/BadgeList.svelte';
     import { BadgeManager } from './services/BadgeManager';
     import { ConfigService } from './services/ConfigService';
+    import WinScreen from './components/WinScreen.svelte';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
@@ -118,8 +119,26 @@
         );
     }
 
-    function handleGameStart() {
+    let maxRounds: number | undefined;
+    let currentRound = 0;
+
+    function handleGameStart(event: CustomEvent) {
+        maxRounds = event.detail.maxRounds;
+        currentRound = 0;
         gameStarted = true;
+        initializeGame();
+    }
+
+    function checkRoundLimit() {
+        if (maxRounds !== undefined) {
+            currentRound++;
+            console.log(`Round ${currentRound} of ${maxRounds}`);
+            if (currentRound >= maxRounds) {
+                // Reset game and go back to title screen
+                gameStarted = false;
+                maxRounds = 0;
+            }
+        }
     }
 
     // Initialize these at the top with your other state variables
@@ -132,6 +151,9 @@
     // Add reactive declarations for background progress
     $: currentBackgroundNumber = backgroundService ? backgroundService.getCurrentBackgroundNumber() : 0;
     $: allBackgroundsNumber = backgroundService ? backgroundService.getTotalBackgrounds() : 0;
+
+    // Add state for win screen
+    let showWinScreen = false;
 
     onMount(async () => {
         try {
@@ -251,6 +273,8 @@
             console.error('Failed to initialize game:', error);
             isLoading = false;
         }
+
+        checkRoundLimit();
     }
 
     function handleBerryClick(berry: Berry) {
@@ -294,23 +318,29 @@
             await new Promise(resolve => setTimeout(resolve, 1000));
             
             // Add current badge and get its ID
-            const badgeId = badgeManager.getCurrentBadge();
+            const badgeId = badgeManager.addCurrentBadge();
             
-            // Show badge celebration
-            showBadgeList = true;
-            showingBadgeCelebration = true;
-            celebratingBadgeId = badgeId;
+            // Check if all badges are collected
+            if (badgeManager.hasCollectedAllBadges()) {
+                showWinScreen = true;
+            } else {
+                // Show badge celebration
+                showBadgeList = true;
+                showingBadgeCelebration = true;
+                celebratingBadgeId = badgeId;
 
-            // Wait for badge celebration to complete
-            await new Promise(resolve => setTimeout(resolve, 8000));
-            
-            // Clean up badge celebration
-            showBadgeList = false;
-            showingBadgeCelebration = false;
-            celebratingBadgeId = null;
+                // Wait for badge celebration to complete
+                await new Promise(resolve => setTimeout(resolve, 8000));
+                
+                // Clean up badge celebration
+                showBadgeList = false;
+                showingBadgeCelebration = false;
+                celebratingBadgeId = null;
 
-            // Show win message - but DON'T initialize game yet
-            showWinMessage = true;
+                // Show win message
+                showWinMessage = true;
+            }
+
         } else {
             // Normal Pokemon found celebration
             showingCelebration = true;
@@ -328,7 +358,9 @@
                 showPokemonList = false;
                 showingCelebration = false;
                 showWinMessage = true;
+              
             }, 10000);
+           
         }
     }
 
@@ -405,6 +437,14 @@
         }
         backgroundService.prepareNextBackground();
         onNewGame();
+    }
+
+    function handleGameReset() {
+        // Reset badges and backgrounds but keep Pokemon
+        backgroundService.resetProgress();
+        badgeManager.resetProgress();
+        showWinScreen = false;
+        initializeGame();
     }
 </script>
 
@@ -546,6 +586,11 @@
         {/if}
     </main>
 {/if}
+
+{#if showWinScreen}
+    <WinScreen onReset={handleGameReset} />
+{/if}
+
 <style>
     :global(body) {
         margin: 0;

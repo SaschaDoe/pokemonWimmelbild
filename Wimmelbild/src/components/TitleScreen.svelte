@@ -3,11 +3,13 @@
     const dispatch = createEventDispatcher();
 
     let password = '';
+    let maxRounds = '';
     let error = false;
 
     function handleSubmit() {
         if (password === 'poke') {
-            dispatch('start');
+            const rounds = maxRounds ? parseInt(maxRounds+1) : undefined;
+            dispatch('start', { maxRounds: rounds });
         } else {
             error = true;
             password = '';
@@ -17,7 +19,7 @@
 
 <div class="title-screen">
     <div class="title-content">
-        <h1>PokeSearch</h1>
+        <h1>Poke-Wimmelbild</h1>
         <form on:submit|preventDefault={handleSubmit}>
             <div class="input-group">
                 <input
@@ -31,7 +33,17 @@
                     <p class="error-message">Incorrect password</p>
                 {/if}
             </div>
-            <button type="submit">Start Game</button>
+            <div class="input-group">
+                <input
+                    type="number"
+                    bind:value={maxRounds}
+                    placeholder="Maximale Anzahl Runden"
+                    min="1"
+                    class="rounds-input"
+                />
+                <p class="hint-text">Leer lassen für unendlich viele Runden</p>
+            </div>
+            <button type="submit">Start</button>
         </form>
     </div>
 </div>
@@ -110,5 +122,31 @@
     button:hover {
         background: #45a049;
         transform: scale(1.02);
+    }
+
+    .rounds-input {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #ddd;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.2s;
+        margin-bottom: 0.5rem;
+    }
+
+    .rounds-input:focus {
+        border-color: #29539b;
+    }
+
+    .hint-text {
+        color: #666;
+        font-size: 0.8rem;
+        margin: 0;
+        text-align: left;
+    }
+
+    .input-group + .input-group {
+        margin-top: 1rem;
     }
 </style> 
