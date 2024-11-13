@@ -1,3 +1,4 @@
+import { ConfigService } from '../config/ConfigService';
 import type { Pokemon, IPokemonService, Position, GameConfig } from '../types/interfaces';
 import { ImageService } from './ImageService';
 import { WeatherService } from './WeatherService';
@@ -24,69 +25,47 @@ export class PokemonService implements IPokemonService {
     private imageService: ImageService;
     private gameMode: GameMode = { isScaryNight: false };
     private weatherService: WeatherService;
+    private configService: ConfigService;
+    private pokemonByType: Map<string, Pokemon[]> = new Map();
 
     constructor(private config: GameConfig) {
         this.imageService = new ImageService();
         this.weatherService = new WeatherService();
+        this.configService = ConfigService.getInstance();
         this._dataLoaded = this.loadPokemonData();
-    }
-
-    private shouldActivateScaryMode(backgroundPath: string): boolean {
-        // Don't activate scary mode for underwater backgrounds
-        if (backgroundPath.toLowerCase().includes('underwater')) {
-            return false;
-        }
-        // 5% chance for other backgrounds
-        return Math.random() < 0.05;
-    }
-
-    public initializeGameMode(backgroundPath: string) {
-        this.gameMode.isScaryNight = this.shouldActivateScaryMode(backgroundPath);
-        if (this.gameMode.isScaryNight) {
-            console.log('Activating scary night mode! 👻');
-            this.weatherService.start();
-            this.addDarkOverlay();
-        }
-    }
-
-    private addDarkOverlay() {
-        const overlay = document.createElement('div');
-        overlay.id = 'scary-mode-overlay';
-        overlay.style.position = 'fixed';
-        overlay.style.top = '0';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.backgroundColor = 'rgba(0, 0, 20, 0.5)';
-        overlay.style.pointerEvents = 'none';
-        overlay.style.zIndex = '0';
-        document.body.appendChild(overlay);
-    }
-
-    public endScaryMode() {
-        if (this.gameMode.isScaryNight) {
-            this.gameMode.isScaryNight = false;
-            this.weatherService.stop();
-            const overlay = document.getElementById('scary-mode-overlay');
-            if (overlay) {
-                overlay.remove();
-            }
-        }
     }
 
     get dataLoaded(): Promise<void> {
         return this._dataLoaded;
     }
 
+    private addPokemonToTypeMap(pokemon: Pokemon) {
+        pokemon.types.forEach(type => {
+            if (!this.pokemonByType.has(type)) {
+                this.pokemonByType.set(type, []);
+            }
+            this.pokemonByType.get(type)!.push(pokemon);
+        });
+    }
+
     private async loadPokemonData(): Promise<void> {
         try {
             const response = await fetch('/pokemon_data.json');
             this.pokemonData = await response.json();
-            console.log(`Loaded ${this.pokemonData.length} Pokemon from data file`);
             
             this.allPokemon = this.pokemonData.map((data) => {
                 const imagePath = this.imageService.getPokemonImagePath(parseInt(data.id), data);
-                return this.createPokemonObject(data, { x: 0, y: 0 }, imagePath);
+                const pokemon = this.createPokemonObject(data, { x: 0, y: 0 }, imagePath);
+                this.addPokemonToTypeMap(pokemon);
+                return pokemon;
+            });
+
+            console.log('Pokemon loaded:', {
+                total: this.allPokemon.length,
+                typeDistribution: Array.from(this.pokemonByType.entries()).map(([type, pokemons]) => ({
+                    type,
+                    count: pokemons.length
+                }))
             });
         } catch (error) {
             console.error('Failed to load Pokemon data:', error);
@@ -114,8 +93,34 @@ export class PokemonService implements IPokemonService {
         };
     }
 
-    getAllPokemon(): Pokemon[] {
-        return this.allPokemon;
+    public initializeGameMode(backgroundPath: string) {
+        this.gameMode.isScaryNight = this.shouldActivateScaryMode(backgroundPath);
+        if (this.gameMode.isScaryNight) {
+            console.log('Activating scary night mode! 👻');
+            this.weatherService.start();
+            this.addDarkOverlay();
+        }
+    }
+
+    private shouldActivateScaryMode(backgroundPath: string): boolean {
+        if (backgroundPath.toLowerCase().includes('underwater')) {
+            return false;
+        }
+        return Math.random() < 0.05;
+    }
+
+    private addDarkOverlay() {
+        const overlay = document.createElement('div');
+        overlay.id = 'scary-mode-overlay';
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0, 0, 20, 0.5)';
+        overlay.style.pointerEvents = 'none';
+        overlay.style.zIndex = '0';
+        document.body.appendChild(overlay);
     }
 
     async generatePokemon(position: Position, terrainTypes: string[] | null = null): Promise<Pokemon> {
@@ -125,32 +130,61 @@ export class PokemonService implements IPokemonService {
             throw new Error('Failed to load Pokemon data');
         }
 
-        let eligiblePokemon = this.pokemonData;
+        let eligiblePokemon: Pokemon[] = [];
         
         if (this.gameMode.isScaryNight) {
-            eligiblePokemon = this.pokemonData.filter(pokemon => 
-                pokemon.types.some(type => ['Psycho', 'Geist', 'Unlicht'].includes(type))
-            );
+            // In scary mode, only use psychic/ghost/dark types
+            const scaryTypes = ['Psycho', 'Geist', 'Unlicht'];
+            scaryTypes.forEach(type => {
+                const typePokemons = this.pokemonByType.get(type) || [];
+                eligiblePokemon.push(...typePokemons);
+            });
+            eligiblePokemon = [...new Set(eligiblePokemon)]; // Remove duplicates
         } else if (terrainTypes) {
-            eligiblePokemon = this.pokemonData.filter(pokemon => 
-                pokemon.types.some(type => terrainTypes.includes(type))
-            );
+            // Use type map for terrain-based selection
+            terrainTypes.forEach(type => {
+                const typePokemons = this.pokemonByType.get(type) || [];
+                eligiblePokemon.push(...typePokemons);
+            });
+            eligiblePokemon = [...new Set(eligiblePokemon)]; // Remove duplicates
         }
 
+        // Fallback to all Pokemon if no eligible ones found
         if (eligiblePokemon.length === 0) {
-            console.warn('No eligible Pokemon found, falling back to any Pokemon');
-            eligiblePokemon = this.pokemonData;
+            eligiblePokemon = this.allPokemon;
         }
 
         const randomIndex = Math.floor(Math.random() * eligiblePokemon.length);
-        const pokemonData = eligiblePokemon[randomIndex];
+        const selectedPokemon = eligiblePokemon[randomIndex];
         
-        const imagePath = this.imageService.getPokemonImagePath(parseInt(pokemonData.id), pokemonData);
-        
-        return this.createPokemonObject(pokemonData, position, imagePath);
+        return {
+            ...selectedPokemon,
+            x: position.x,
+            y: position.y,
+            size: this.config.POKEMON_SIZE
+        };
+    }
+
+    public endScaryMode() {
+        if (this.gameMode.isScaryNight) {
+            this.gameMode.isScaryNight = false;
+            this.weatherService.stop();
+            const overlay = document.getElementById('scary-mode-overlay');
+            if (overlay) {
+                overlay.remove();
+            }
+        }
     }
 
     public cleanup() {
         this.endScaryMode();
+    }
+
+    public getAllPokemon(): Pokemon[] {
+        return this.allPokemon;
+    }
+
+    public getImagePath(id: number): string {
+        return this.imageService.getPokemonImagePath(id, this.pokemonData.find(p => parseInt(p.id) === id));
     }
 } 

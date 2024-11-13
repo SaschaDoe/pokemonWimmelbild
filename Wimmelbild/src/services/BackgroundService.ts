@@ -171,11 +171,11 @@ export class BackgroundService {
         this.needsNewBackground = false;
 
         const settings = this.configService.getSettings();
-
+        let bgName = "";
         // If all backgrounds are used or in CHEAT_MODE, show arena
         if (this.unusedBackgrounds.length === 0 || 
             (settings.CHEAT_MODE && this.currentBackgroundNumber >= this.backgrounds.length)) {
-            const bgName = this.ARENA_BACKGROUND;
+            bgName = this.ARENA_BACKGROUND;
             const maskName = bgName.replace('.png', '_mask.png');
             const backgroundInfo = {
                 image: `/backgrounds/${bgName}`,
@@ -188,10 +188,16 @@ export class BackgroundService {
             
             console.log('Loading arena background for final battle');
             return backgroundInfo;
+        }else{
+            bgName = this.unusedBackgrounds.pop()!;
+            if(bgName === this.ARENA_BACKGROUND){
+                bgName = this.unusedBackgrounds.pop()!;
+                console.warn('Arena background used twice in a row, this should not happen!');
+            }
         }
 
         // Get next background from unused pool
-        const bgName = this.unusedBackgrounds.pop()!;
+       
         const maskName = bgName.replace('.png', '_mask.png');
         
         const backgroundInfo = {
