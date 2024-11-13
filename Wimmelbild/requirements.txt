@@ -1,0 +1,46 @@
+
+# Game Features Supported:
+# - Pokemon data fetching and display
+# - Random berry placement with collision detection
+# - Pokemon discovery system
+# - Local storage for game state persistence
+# - Responsive design for different screen sizes
+# - Animation system for Pokemon reveals
+# - Pokedex feature for discovered Pokemon
+# - Background theme changes
+# - Title screen with game instructions
+# - Win condition tracking
+# - SOLID principles implementation with service architecture
+# Game Features Supported:
+# - Pokemon data fetching and display
+#   - Fetches Pokemon data from PokeAPI
+#   - Displays Pokemon sprites and names in target panel
+#   - Shows detailed Pokemon info in Pokedex view
+
+# - Berry interaction system
+#   - Random berry placement avoiding overlaps
+#   - Click detection on berries
+#   - Visual feedback when clicking correct/incorrect berries
+#   - Berries disappear when correctly matched
+#   - Target panel updates to show found berries in green
+
+# - Pokemon discovery mechanics
+#   - Pokemon revealed when all target berries found
+#   - Celebration animation plays on discovery
+#   - Discovered Pokemon added to Pokedex
+#   - Progress persists between sessions
+
+# - UI/UX Features
+#   - Responsive layout adapts to screen size
+#   - Smooth animations for berry/Pokemon reveals
+#   - Clear visual feedback for player actions
+#   - Intuitive drag-and-drop berry matching
+#   - Polished title screen with instructions
+
+# - Technical Implementation
+#   - SOLID principles with service architecture
+#   - Local storage for game state
+#   - Efficient collision detection
+#   - Modular component structure
+#   - Type-safe TypeScript implementation
+#   - Background theme changes based on progress

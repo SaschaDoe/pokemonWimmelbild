@@ -11,6 +11,7 @@
     import TitleScreen from './components/TitleScreen.svelte';
     import { GameStateManager } from './services/GameStateManager';
     import { writable } from 'svelte/store';
+    import BackgroundProgress from './components/BackgroundProgress.svelte';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
@@ -83,6 +84,9 @@
 
     let showingCelebration = false;
 
+    let totalBackgrounds = 0;
+    let remainingBackgrounds = 0;
+
     function saveDiscoveredPokemon() {
         localStorage.setItem('discoveredPokemon', 
             JSON.stringify([...discoveredPokemonStore.get()])
@@ -97,6 +101,10 @@
         try {
             // Wait for background service to load
             await backgroundService.dataLoaded;
+            
+            // Update the background counts after loading
+            totalBackgrounds = backgroundService.getTotalBackgrounds();
+            remainingBackgrounds = backgroundService.getRemainingBackgrounds();
             
             // Load berry data
             const berryResponse = await fetch('berry_data.json');
@@ -129,6 +137,9 @@
             const bgInfo = await backgroundService.getRandomBackground();
             currentBackground = bgInfo.image;
             await backgroundService.loadMask(bgInfo.mask);
+            
+            // Update the remaining backgrounds count
+            remainingBackgrounds = backgroundService.getRemainingBackgrounds();
 
             const newPokemons: Pokemon[] = [];
             
@@ -263,6 +274,11 @@
         initializeGame();
     }
 </script>
+
+<BackgroundProgress 
+    {totalBackgrounds}
+    {remainingBackgrounds}
+/>
 
 {#if !gameStarted}
     <TitleScreen on:start={handleGameStart} />

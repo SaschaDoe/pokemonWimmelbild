@@ -12,6 +12,7 @@ interface TerrainTypeMapping {
 
 export class BackgroundService {
     private backgrounds: string[] = [];
+    private unusedBackgrounds: string[] = [];
     public dataLoaded: Promise<void>;
     private currentMaskContext: CanvasRenderingContext2D | null = null;
     private maskCanvas: HTMLCanvasElement;
@@ -37,6 +38,10 @@ export class BackgroundService {
         {
             color: '#00a2e8',  // Light blue for ice
             types: ['Eis', 'Ice']
+        },
+        {
+            color: '#a349a4',  // magenta
+            types: ['Boden', 'Ground', 'Gestein', 'Rock', 'Stahl', 'Steel']
         }
     ];
 
@@ -50,11 +55,28 @@ export class BackgroundService {
             console.log('Loading background list from JSON...');
             const response = await fetch('./backgrounds/list.json');
             this.backgrounds = await response.json();
+            this.unusedBackgrounds = [...this.backgrounds]; // Initialize unused backgrounds
             console.log('Available backgrounds:', this.backgrounds);
         } catch (error) {
             console.error('Failed to load backgrounds:', error);
             console.log('Falling back to default background: woods.png');
             this.backgrounds = ['woods.png'];
+            this.unusedBackgrounds = ['woods.png'];
+        }
+    }
+
+    private shuffleBackgrounds(): void {
+        // Reset unused backgrounds if all have been used
+        if (this.unusedBackgrounds.length === 0) {
+            console.log('All backgrounds used, resetting pool');
+            this.unusedBackgrounds = [...this.backgrounds];
+        }
+        
+        // Fisher-Yates shuffle algorithm for remaining backgrounds
+        for (let i = this.unusedBackgrounds.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.unusedBackgrounds[i], this.unusedBackgrounds[j]] = 
+            [this.unusedBackgrounds[j], this.unusedBackgrounds[i]];
         }
     }
 
@@ -69,8 +91,12 @@ export class BackgroundService {
             };
         }
 
-        const randomIndex = Math.floor(Math.random() * this.backgrounds.length);
-        const bgName = this.backgrounds[randomIndex];
+        // Shuffle if needed and get next background
+        if (this.unusedBackgrounds.length === 0) {
+            this.shuffleBackgrounds();
+        }
+
+        const bgName = this.unusedBackgrounds.pop()!; // Remove and get the last background
         const maskName = bgName.replace('.png', '_mask.png');
 
         const backgroundInfo = {
@@ -81,6 +107,7 @@ export class BackgroundService {
         console.log('Selected background:', {
             backgroundName: bgName,
             maskName: maskName,
+            remainingUnused: this.unusedBackgrounds.length,
             fullPaths: backgroundInfo
         });
 
@@ -139,6 +166,8 @@ export class BackgroundService {
         const maskY = Math.floor((y / window.innerHeight) * this.maskCanvas.height);
 
         const pixel = this.currentMaskContext.getImageData(maskX, maskY, 1, 1).data;
+
+        // For other colors, use the existing exact matching
         const color = `#${[pixel[0], pixel[1], pixel[2]].map(x => x.toString(16).padStart(2, '0')).join('')}`;
 
         // Find matching terrain type
@@ -146,13 +175,26 @@ export class BackgroundService {
             t.color.toLowerCase() === color.toLowerCase()
         );
 
+        if(color === '#a349a4'){
+            console.log("found");
+        }
+
         console.log('Terrain check:', {
             screenPosition: { x, y },
             maskPosition: { x: maskX, y: maskY },
+            rgbValues: [pixel[0], pixel[1], pixel[2]],
             color: color,
             matchedTerrain: terrain?.types || 'any'
         });
 
         return terrain ? terrain.types : null;
+    }
+
+    public getTotalBackgrounds(): number {
+        return this.backgrounds.length;
+    }
+
+    public getRemainingBackgrounds(): number {
+        return this.unusedBackgrounds.length;
     }
 } 

@@ -67,7 +67,7 @@ export class PokemonService implements IPokemonService {
 
     async generatePokemon(position: Position, terrainTypes: string[] | null = null): Promise<Pokemon> {
         await this.dataLoaded;
-        
+        console.log('ConsoleTerrain: Terrain types:', terrainTypes);
         if (this.pokemonData.length === 0) {
             throw new Error('Failed to load Pokemon data');
         }
@@ -75,23 +75,27 @@ export class PokemonService implements IPokemonService {
         let eligiblePokemon = this.pokemonData;
         
         if (terrainTypes) {
+            console.log('Filtering Pokemon for terrain types:', {
+                terrainTypes,
+                position,
+                totalPokemon: this.pokemonData.length
+            });
+
             eligiblePokemon = this.pokemonData.filter(pokemon => 
                 pokemon.types.some(type => terrainTypes.includes(type))
             );
 
-            console.log('Terrain-specific Pokemon selection:', {
-                position,
-                terrainTypes,
-                eligiblePokemonCount: eligiblePokemon.length,
-                eligiblePokemon: eligiblePokemon.map(p => ({
+            console.log('Filtered Pokemon:', {
+                eligibleCount: eligiblePokemon.length,
+                firstFewEligible: eligiblePokemon.slice(0, 3).map(p => ({
                     name: p.name,
                     types: p.types
                 }))
             });
 
             if (eligiblePokemon.length === 0) {
-                console.warn('No eligible Pokemon for terrain types, position needs to be adjusted');
-                throw new Error(`No eligible Pokemon for terrain types: ${terrainTypes.join(', ')}`);
+                console.warn('No eligible Pokemon for terrain types, falling back to any Pokemon');
+                eligiblePokemon = this.pokemonData;
             }
         }
 

@@ -1,47 +1,64 @@
-import type { Pokemon, IPositionService, Position, GameConfig } from '../types/interfaces';
+import type { Position, Pokemon } from '../types/interfaces';
+import type { GameConfig } from '../types/interfaces';
 
-export class PositionService implements IPositionService {
+export class PositionService {
+    private readonly PROGRESS_BAR_AREA = {
+        top: 20,
+        height: 80, // Increased to account for the progress bar and text
+        left: window.innerWidth / 2 - 120, // 200px width + some padding
+        width: 240 // 200px width + some padding
+    };
+
     constructor(private config: GameConfig) {}
 
-    getRandomPosition(size: number): Position {
-        const maxX = window.innerWidth - size - this.config.SCREEN_PADDING;
-        const maxY = window.innerHeight - size - this.config.SCREEN_PADDING;
-        
-        return {
-            x: Math.random() * maxX + this.config.SCREEN_PADDING,
-            y: Math.random() * maxY + this.config.SCREEN_PADDING
-        };
+    private isPositionInProgressBar(x: number, y: number, size: number): boolean {
+        return (
+            y < (this.PROGRESS_BAR_AREA.top + this.PROGRESS_BAR_AREA.height) &&
+            x > this.PROGRESS_BAR_AREA.left - size &&
+            x < (this.PROGRESS_BAR_AREA.left + this.PROGRESS_BAR_AREA.width)
+        );
     }
 
-    checkOverlap(newX: number, newY: number, newSize: number, existingPokemons: Pokemon[]): boolean {
-        // Check overlap with target display area (top-right corner)
-        const targetDisplayOverlap = this.checkTargetDisplayOverlap(newX, newY, newSize);
-        if (targetDisplayOverlap) {
+    public getRandomPosition(size: number): Position {
+        const padding = size + 20; // Add some padding around the edges
+        let x: number;
+        let y: number;
+        let attempts = 0;
+        const maxAttempts = 50;
+
+        do {
+            x = Math.random() * (window.innerWidth - size - padding * 2) + padding;
+            y = Math.random() * (window.innerHeight - size - padding * 2) + padding;
+            attempts++;
+
+            // Break the loop if we've tried too many times
+            if (attempts > maxAttempts) {
+                console.warn('Max position attempts reached, using last generated position');
+                break;
+            }
+        } while (
+            this.isPositionInProgressBar(x, y, size) || // Check progress bar area
+            y < 100 || // Keep away from top of screen
+            x > (window.innerWidth - 220) || // Keep away from right edge (target panel)
+            x < 100 // Keep away from left edge (pokedex button)
+        );
+
+        return { x, y };
+    }
+
+    public checkOverlap(x: number, y: number, size: number, existingItems: Pokemon[]): boolean {
+        // First check if position overlaps with the progress bar
+        if (this.isPositionInProgressBar(x, y, size)) {
             return true;
         }
 
-        // Check overlap with existing Pokemon
-        return existingPokemons.some(pokemon => {
+        // Then check overlap with existing items
+        return existingItems.some(item => {
             const distance = Math.sqrt(
-                Math.pow(newX - pokemon.x, 2) + Math.pow(newY - pokemon.y, 2)
+                Math.pow(x - item.x, 2) + 
+                Math.pow(y - item.y, 2)
             );
-            return distance < (newSize + pokemon.size) * this.config.OVERLAP_THRESHOLD;
+            return distance < (size + item.size) / 2;
         });
-    }
-
-    private checkTargetDisplayOverlap(x: number, y: number, size: number): boolean {
-        // Target display is positioned in the top-right corner
-        const targetArea = {
-            x: window.innerWidth - this.config.TARGET_PANEL_WIDTH - 20, // 20px margin
-            y: 20, // From the top
-            width: this.config.TARGET_PANEL_WIDTH,
-            height: this.config.TARGET_PANEL_HEIGHT
-        };
-
-        // Check if the Pokemon overlaps with the target display area
-        return !(x + size < targetArea.x || // Pokemon is left of target area
-                x > targetArea.x + targetArea.width || // Pokemon is right of target area
-                y + size < targetArea.y || // Pokemon is above target area
-                y > targetArea.y + targetArea.height); // Pokemon is below target area
     }
 } 
