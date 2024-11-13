@@ -1,4 +1,5 @@
 import type { GameConfig } from '../types/interfaces';
+import { LocalStorageService } from './LocalStorageService';
 
 interface BackgroundInfo {
     image: string;
@@ -16,6 +17,7 @@ export class BackgroundService {
     public dataLoaded: Promise<void>;
     private currentMaskContext: CanvasRenderingContext2D | null = null;
     private maskCanvas: HTMLCanvasElement;
+    private localStorageService: LocalStorageService;
 
     // Define terrain colors and their corresponding Pokemon types
     private readonly TERRAIN_TYPES: TerrainTypeMapping[] = [
@@ -47,6 +49,7 @@ export class BackgroundService {
 
     constructor(private config: GameConfig) {
         this.maskCanvas = document.createElement('canvas');
+        this.localStorageService = new LocalStorageService();
         this.dataLoaded = this.loadBackgrounds();
     }
 
@@ -55,8 +58,17 @@ export class BackgroundService {
             console.log('Loading background list from JSON...');
             const response = await fetch('./backgrounds/list.json');
             this.backgrounds = await response.json();
-            this.unusedBackgrounds = [...this.backgrounds]; // Initialize unused backgrounds
-            console.log('Available backgrounds:', this.backgrounds);
+            
+            // Load unused backgrounds from localStorage or initialize new
+            this.unusedBackgrounds = this.localStorageService.load<string[]>(
+                'unused_backgrounds',
+                [...this.backgrounds]
+            );
+            
+            console.log('Available backgrounds:', {
+                total: this.backgrounds.length,
+                unused: this.unusedBackgrounds.length
+            });
         } catch (error) {
             console.error('Failed to load backgrounds:', error);
             console.log('Falling back to default background: woods.png');
@@ -66,18 +78,25 @@ export class BackgroundService {
     }
 
     private shuffleBackgrounds(): void {
-        // Reset unused backgrounds if all have been used
         if (this.unusedBackgrounds.length === 0) {
             console.log('All backgrounds used, resetting pool');
             this.unusedBackgrounds = [...this.backgrounds];
         }
         
-        // Fisher-Yates shuffle algorithm for remaining backgrounds
+        // Fisher-Yates shuffle
         for (let i = this.unusedBackgrounds.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [this.unusedBackgrounds[i], this.unusedBackgrounds[j]] = 
             [this.unusedBackgrounds[j], this.unusedBackgrounds[i]];
         }
+
+        // Save to localStorage after shuffle
+        this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
+    }
+
+    public resetProgress(): void {
+        this.unusedBackgrounds = [...this.backgrounds];
+        this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
     }
 
     async getRandomBackground(): Promise<BackgroundInfo> {

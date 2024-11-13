@@ -12,11 +12,13 @@
     import { GameStateManager } from './services/GameStateManager';
     import { writable } from 'svelte/store';
     import BackgroundProgress from './components/BackgroundProgress.svelte';
+    import { LocalStorageService } from './services/LocalStorageService';
 
     const positionService = new PositionService(gameConfig);
     const pokemonService = new PokemonService(gameConfig);
     const backgroundService = new BackgroundService(gameConfig);
     const gameStateManager = new GameStateManager();
+    const localStorageService = new LocalStorageService();
 
     // Create a writable store for discoveredPokemon
     const discoveredPokemonStore = writable(new Set());
@@ -271,6 +273,8 @@
 
     function resetProgress() {
         gameStateManager.resetProgress();
+        backgroundService.resetProgress();
+        localStorageService.resetAll();
         initializeGame();
     }
 </script>
