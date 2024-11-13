@@ -7,16 +7,13 @@ export interface Pokemon {
     y: number;
     size: number;
     image: string;
-    image_url: string;
-    local_image: string;
     url: string;
     appearance: string | null;
     habitat: string | null;
     species: string | null;
-    position?: {
-        x: number;
-        y: number;
-    };
+    evolution: string | null;
+    image_url: string;
+    local_image: string;
 }
 
 export interface GameConfig {

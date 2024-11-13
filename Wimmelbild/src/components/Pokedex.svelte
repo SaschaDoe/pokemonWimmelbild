@@ -1,10 +1,12 @@
 <script lang="ts">
     import type { Pokemon } from '../types/interfaces';
     import { SpeechService } from '../services/SpeechService';
+    import { TextGenerationService } from '../services/TextGenerationService';
     
     export let pokemon: Pokemon;
 
     const speechService = new SpeechService();
+    const textGenerationService = new TextGenerationService();
     let isPlaying = false;
     let isLoading = false;
     let audioElement: HTMLAudioElement | null = null;
@@ -33,14 +35,12 @@
         if (isLoading) return;
 
         if (audioElement && isPlaying) {
-            // Pause current audio
             audioElement.pause();
             isPlaying = false;
             return;
         }
 
         if (audioElement && !isPlaying) {
-            // Resume paused audio
             audioElement.play();
             isPlaying = true;
             return;
@@ -49,17 +49,7 @@
         // Start new audio
         try {
             isLoading = true;
-            let textToSpeak = `${pokemon.name}. `;
-
-            if (pokemon.appearance) {
-                textToSpeak += `Aussehen. ${pokemon.appearance}. `;
-            }
-            if (pokemon.habitat) {
-                textToSpeak += `Lebensraum. [pause] ${pokemon.habitat}. `;
-            }
-            if (pokemon.species) {
-                textToSpeak += `${pokemon.species}`;
-            }
+            const textToSpeak = textGenerationService.generatePokemonDescription(pokemon);
 
             const audioUrl = await speechService.generateSpeech(textToSpeak);
             

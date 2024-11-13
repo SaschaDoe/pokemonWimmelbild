@@ -9,6 +9,7 @@ interface PokemonData {
     appearance: string | null;
     habitat: string | null;
     species: string | null;
+    evolution: string | null;
 }
 
 export class PokemonService implements IPokemonService {
@@ -53,6 +54,7 @@ export class PokemonService implements IPokemonService {
             appearance: data.appearance,
             habitat: data.habitat,
             species: data.species,
+            evolution: data.evolution,
             x: position.x,
             y: position.y,
             size: this.config.POKEMON_SIZE,
@@ -124,6 +126,7 @@ export class PokemonService implements IPokemonService {
             appearance: pokemonData.appearance,
             habitat: pokemonData.habitat,
             species: pokemonData.species,
+            evolution: pokemonData.evolution,
             image_url: '',
             local_image: imagePath
         };

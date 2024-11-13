@@ -44,6 +44,10 @@ export class BackgroundService {
         {
             color: '#a349a4',  // magenta
             types: ['Boden', 'Ground', 'Gestein', 'Rock', 'Stahl', 'Steel']
+        },
+        {
+            color: '#ed1c24',  // red
+            types: ['Feuer', 'Fire', 'Gestein', 'Rock', 'Stahl', 'Steel']
         }
     ];
 

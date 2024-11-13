@@ -19,7 +19,7 @@ export class SpeechService {
             formData.append('format', 'mp3');
             formData.append('speed', '1.0');
             formData.append('pitch', '0');
-            formData.append('emotion', 'good');
+            formData.append('emotion', 'neutral');
             formData.append('pause_sentence', '300');
             formData.append('pause_paragraph', '400');
             formData.append('bitrate', '48000');
