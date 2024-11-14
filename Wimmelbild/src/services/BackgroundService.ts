@@ -29,6 +29,10 @@ export class BackgroundService {
     // Define terrain colors and their corresponding Pokemon types
     private readonly TERRAIN_TYPES: TerrainTypeMapping[] = [
         {
+            color: '##000000',  // Black
+            types: ['Nichts', 'Nothing']
+        },
+        {
             color: '#3f48cc',  // Blue for water
             types: ['Wasser', 'Water']
         },
@@ -37,12 +41,12 @@ export class BackgroundService {
             types: ['Flug', 'Flying']
         },
         {
-            color: '#22b14c',  // Green for bug and grass
+            color: '#22b14c',  // Green 
             types: ['Kaefer', 'Bug', 'Pflanze', 'Grass']
         },
         {
-            color: '#880015',  // Dark red for normal and electric
-            types: ['Normal', 'Elektro', 'Electric']
+            color: '#880015',  // Dark red 
+            types: ['Normal', 'Elektro', 'Electric', "Gift", "Poison"]
         },
         {
             color: '#00a2e8',  // Light blue for ice
@@ -55,6 +59,10 @@ export class BackgroundService {
         {
             color: '#ed1c24',  // red
             types: ['Feuer', 'Fire', 'Gestein', 'Rock', 'Stahl', 'Steel']
+        },
+        {
+            color: '#ff7f27',  // orange
+            types: ['Kampf', 'Fighting']
         }
     ];
 

@@ -130,6 +130,11 @@ export class PokemonService implements IPokemonService {
             throw new Error('Failed to load Pokemon data');
         }
 
+        // Check for "no Pokemon" terrain types
+        if (terrainTypes && terrainTypes.some(type => type === 'Nichts' || type === 'Nothing')) {
+            throw new Error('No Pokemon allowed in this terrain');
+        }
+
         let eligiblePokemon: Pokemon[] = [];
         
         if (this.gameMode.isScaryNight) {

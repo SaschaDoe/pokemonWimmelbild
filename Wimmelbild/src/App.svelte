@@ -241,7 +241,16 @@
                         );
 
                         // Try to generate a Pokemon for this position
-                        pokemon = await pokemonService.generatePokemon(position, terrainType);
+                        try {
+                            pokemon = await pokemonService.generatePokemon(position, terrainType);
+                        } catch (error) {
+                            if (error.message === 'No Pokemon allowed in this terrain') {
+                                // Skip this position and try another one
+                                attempts++;
+                                continue;
+                            }
+                            throw error;
+                        }
                         
                         if (pokemon) {
                             newPokemons.push(pokemon);
