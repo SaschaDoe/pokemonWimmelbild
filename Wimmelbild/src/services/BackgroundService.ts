@@ -79,7 +79,7 @@ export class BackgroundService {
             const response = await fetch('./backgrounds/list.json');
             let allBackgrounds: string[] = await response.json();
             
-            // Remove arena from regular backgrounds
+            // Remove arena from both lists - it should only be used for final battle
             this.backgrounds = allBackgrounds.filter(bg => bg !== this.ARENA_BACKGROUND);
             
             const settings = this.configService.getSettings();
@@ -167,26 +167,34 @@ export class BackgroundService {
         console.log('Arena cycle completed, starting new cycle');
     }
 
+    private getMaskName(bgName: string): string {
+        return bgName.endsWith('.jpg') ? 
+            bgName.replace('.jpg', '_mask.png') : 
+            bgName.replace('.png', '_mask.png');
+    }
+
     async getRandomBackground(): Promise<BackgroundInfo> {
         await this.dataLoaded;
 
-        // Return current background if we don't need a new one
         if (!this.needsNewBackground && this.currentBackgroundInfo) {
             return this.currentBackgroundInfo;
         }
 
-        // Reset flag
         this.needsNewBackground = false;
 
-        const settings = this.configService.getSettings();
-        let bgName = "";
-        // If all backgrounds are used or in CHEAT_MODE, show arena
-        if (this.unusedBackgrounds.length === 0 || 
-            (settings.CHEAT_MODE && this.currentBackgroundNumber >= this.backgrounds.length)) {
-            bgName = this.ARENA_BACKGROUND;
-            const maskName = bgName.endsWith('.jpg') ? 
-                bgName.replace('.jpg', '_mask.jpg') : 
-                bgName.replace('.png', '_mask.png');
+        if (this.backgrounds.length === 0) {
+            return {
+                image: '/backgrounds/woods.png',
+                mask: '/backgrounds/woods_mask.png',
+                isArena: false
+            };
+        }
+
+        // If all backgrounds are used, show arena
+        if (this.unusedBackgrounds.length === 0) {
+            const bgName = this.ARENA_BACKGROUND;
+            const maskName = this.getMaskName(bgName);
+            
             const backgroundInfo = {
                 image: `/backgrounds/${bgName}`,
                 mask: `/backgrounds/${maskName}`,
@@ -196,16 +204,13 @@ export class BackgroundService {
             this.currentBackgroundInfo = backgroundInfo;
             this.localStorageService.save('current_background', bgName);
             
-            console.log('Loading arena background for final battle');
             return backgroundInfo;
-        }else{
-            bgName = this.unusedBackgrounds.pop()!;
-           
         }
 
-        // Get next background from unused pool
-       
-        const maskName = bgName.replace('.png', '_mask.png');
+        // Get random background from unused pool without removing it
+        const randomIndex = Math.floor(Math.random() * this.unusedBackgrounds.length);
+        const bgName = this.unusedBackgrounds[randomIndex];
+        const maskName = this.getMaskName(bgName);
         
         const backgroundInfo = {
             image: `/backgrounds/${bgName}`,
@@ -213,17 +218,9 @@ export class BackgroundService {
             isArena: false
         };
 
-        // Save the new state
+        // Save current background info but don't remove from unused list yet
         this.currentBackgroundInfo = backgroundInfo;
         this.localStorageService.save('current_background', bgName);
-        this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
-
-        console.log('Background progression:', {
-            current: bgName,
-            currentNumber: this.currentBackgroundNumber,
-            remainingBackgrounds: this.unusedBackgrounds.length,
-            isArena: false
-        });
 
         return backgroundInfo;
     }
@@ -328,6 +325,22 @@ export class BackgroundService {
             this.currentBackgroundNumber++;
             this.localStorageService.save('current_background_number', this.currentBackgroundNumber);
             this.needsNewBackground = true;
+        }
+    }
+
+    // Add method to remove current background from unused list
+    public removeCurrentBackground(): void {
+        if (this.currentBackgroundInfo && !this.currentBackgroundInfo.isArena) {
+            const currentBgName = this.currentBackgroundInfo.image.split('/').pop()!;
+            const index = this.unusedBackgrounds.indexOf(currentBgName);
+            if (index > -1) {
+                this.unusedBackgrounds.splice(index, 1);
+                this.localStorageService.save('unused_backgrounds', this.unusedBackgrounds);
+                console.log('Removed background:', {
+                    removed: currentBgName,
+                    remaining: this.unusedBackgrounds.length
+                });
+            }
         }
     }
 } 

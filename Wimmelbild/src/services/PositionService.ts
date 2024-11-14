@@ -43,8 +43,8 @@ export class PositionService {
         const maxAttempts = 50;
 
         do {
-            x = Math.random() * (window.innerWidth - size - padding * 2) + padding;
-            y = Math.random() * (window.innerHeight - size - padding * 2) + padding;
+            x = Math.random() * (window.innerWidth - size - padding) + padding;
+            y = Math.random() * (window.innerHeight - size);
             attempts++;
 
             if (attempts > maxAttempts) {

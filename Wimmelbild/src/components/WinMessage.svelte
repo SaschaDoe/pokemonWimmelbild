@@ -21,7 +21,7 @@
             backgroundService.completeArenaCycle();
             badgeManager.addCurrentBadge();
         } else {
-            // Normal progression - just increment background
+            backgroundService.removeCurrentBackground();
             backgroundService.incrementBackgroundNumber();
         }
         
