@@ -200,10 +200,7 @@ export class BackgroundService {
             return backgroundInfo;
         }else{
             bgName = this.unusedBackgrounds.pop()!;
-            if(bgName === this.ARENA_BACKGROUND){
-                bgName = this.unusedBackgrounds.pop()!;
-                console.warn('Arena background used twice in a row, this should not happen!');
-            }
+           
         }
 
         // Get next background from unused pool
