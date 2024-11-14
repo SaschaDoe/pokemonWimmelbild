@@ -318,7 +318,7 @@
             await new Promise(resolve => setTimeout(resolve, 1000));
             
             // Add current badge and get its ID
-            const badgeId = badgeManager.addCurrentBadge();
+            const badgeId = badgeManager.getCurrentBadgeId();
             
             // Check if all badges are collected
             if (badgeManager.hasCollectedAllBadges()) {

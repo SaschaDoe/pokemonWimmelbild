@@ -4,6 +4,12 @@ import { writable } from 'svelte/store';
 import { ConfigService } from '../config/ConfigService';
 
 export class BadgeManager {
+    getCurrentBadgeId() {
+        const currentRegion = this.getCurrentRegion();
+        const currentBadge = this.getCurrentBadgeName();
+        return `${currentRegion}_${currentBadge}`;
+    }
+
     private localStorageService: LocalStorageService;
     private configService: ConfigService;
     private collectedBadges: Set<string>;
@@ -97,9 +103,7 @@ export class BadgeManager {
     }
 
     public addCurrentBadge(): string {
-        const currentRegion = this.getCurrentRegion();
-        const currentBadge = this.getCurrentBadgeName();
-        const badgeId = `${currentRegion}_${currentBadge}`;
+        const badgeId = this.getCurrentBadgeId();
         
         this.collectedBadges.add(badgeId);
         this.moveToNextBadge();
