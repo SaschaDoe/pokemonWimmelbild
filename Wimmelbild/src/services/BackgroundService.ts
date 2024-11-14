@@ -176,7 +176,9 @@ export class BackgroundService {
         if (this.unusedBackgrounds.length === 0 || 
             (settings.CHEAT_MODE && this.currentBackgroundNumber >= this.backgrounds.length)) {
             bgName = this.ARENA_BACKGROUND;
-            const maskName = bgName.replace('.png', '_mask.png');
+            const maskName = bgName.endsWith('.jpg') ? 
+                bgName.replace('.jpg', '_mask.jpg') : 
+                bgName.replace('.png', '_mask.png');
             const backgroundInfo = {
                 image: `/backgrounds/${bgName}`,
                 mask: `/backgrounds/${maskName}`,
